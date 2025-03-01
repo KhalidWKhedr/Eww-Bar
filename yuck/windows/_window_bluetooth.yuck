@@ -1,0 +1,14 @@
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;                        window_bluetooth (window definition)           ;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+(defwindow window_bluetooth
+  :monitor 1
+  :geometry (geometry :x "68%"
+                      :y "0px"
+                      :height "10%"
+                      :width "20%")
+  :stacking "fg"
+  :namespace "window_bluetooth"
+  (bluetooth))
+ 

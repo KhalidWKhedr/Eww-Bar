@@ -1,0 +1,20 @@
+;; Brightness Widget
+(defwidget brightness []
+  (box :class "brightness_box"
+       :orientation "h"
+       :valign "center"
+       :halign "center"
+       :active true        ;; Make widget interactive
+       (circular-progress :class "brightness-ring"
+                          :tooltip "Brightness ${current-brightness}"  ;; Tooltip text when hovered
+                          :value current-brightness
+                          :thickness 3
+                          :clockwise true
+                          :start-at 0
+                          (button :class "brightness-icon"
+                                  :onclick "scripts/popup brightness"
+                                  ""))))
+
+;; Polling the brightness value
+(defpoll current-brightness :interval "1s"
+  "brightnessctl -m -d amdgpu_bl1 | awk -F, '{print substr($4, 0, length($4)-1)}' | tr -d '%'")

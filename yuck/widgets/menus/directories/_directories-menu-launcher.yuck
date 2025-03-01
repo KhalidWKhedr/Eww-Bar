@@ -1,0 +1,15 @@
+;; Widget to launch the directory menu
+(defwidget directory_menu_launcher []
+    
+    (box :orientation "h"
+        :class "directory_menu_launcher"
+        :valign "center"
+        :halign "center"
+
+        (button :class "directory_menu_button"
+                :tooltip "Directories"
+                :onclick "${eww} update show_folder=$(eww get show_folder | grep -q true && echo false || echo true)"
+                :height 40
+                :width 40
+                :style "font-size: 25px; padding-right: 8px" 
+                        "")))

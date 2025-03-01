@@ -1,0 +1,53 @@
+;; Full Bar Layout
+(defwidget bar1 []
+     (box :orientation "h"
+          :class "bar1_eww"
+          :space-evenly true
+               
+         ;; Left Section
+          (box :class "bar1_left"
+               :halign "start"
+               :hexpand true
+               :space-evenly false
+               (power_menu_launcher)
+               (power_menu)
+               (active_window))
+           
+         ;; Center-Left Section
+          (box :class "bar1_left_center"
+               :hexpand false
+               :space-evenly false 
+               :halign "start"        
+               (directory_menu_launcher)
+               (directory_menu)
+               (tools_menu_launcher)
+               (tools_menu)
+               (active_media))
+               
+
+         ;; Center-Right Section
+          (box :class "bar1_center"
+               :halign "end"
+               :hexpand false
+               :halign "center"
+               :space-evenly false
+               (launcher)
+               (workspaces)
+               (media_player_launcher))
+
+         ;; Right Section
+          (box :class "bar1_right_container"
+               :hexpand false
+               :space-evenly false
+               :halign "end"
+               (resource_volume)
+               (resource_brightness)
+               (resource_battery)
+               (resource_bluetooth))
+                  
+          (box :class "bar1_right"
+               :halign "end"
+               :hexpand false
+               :space-evenly false
+               (date&time)
+               (systemtray))))

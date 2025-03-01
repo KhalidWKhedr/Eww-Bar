@@ -1,0 +1,32 @@
+/** Bluetooth ***********************************/
+
+.resource_bluetooth {
+    margin-left: 2px;
+    margin-bottom: 3px;
+    margin-top: 3px;
+}
+
+.resource_bluetooth_container {
+    background-color: $color9; 
+    box-shadow: $box-shadow-inset;
+    border-radius: 20px 15px 15px 20px;
+}
+
+.bluetooth_circle {
+    color: $foreground; 
+}
+
+.bluetooth_button {
+    color: $foreground;
+    background-color: $color5;
+    box-shadow: $box-shadow-inset;
+
+    &:hover {
+        color: $color2;
+        background-color: $color4;
+    }
+}
+
+.label_bluetooth {
+    color: $foreground;
+}

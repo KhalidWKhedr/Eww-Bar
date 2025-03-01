@@ -1,0 +1,21 @@
+;; Poll Battery Icon and Percentage
+(defpoll battery-icon :interval "1s" "bash /home/khalidwaleedkhedr/.config/eww/scripts/battery icon")
+(defpoll battery-percentage :interval "1s" "bash /home/khalidwaleedkhedr/.config/eww/scripts/battery percent")
+
+(defwidget battery []
+        (box :class "battery_box"
+             :orientation "h"
+             :valign "center"
+             :halign "center"
+             :active true         ;; Make widget interactive
+             :tooltip "Battery ${battery-percentage}"
+
+            (circular-progress  :class "battery-ring"
+                                :tooltip "Battery ${battery-percentage}"
+                                :value battery-percentage   ;; Progress bar value
+                                :thickness 3
+                                :clockwise true
+                                :start-at battery-percentage  ;; Start angle based on battery percentage
+                        
+                                (button :class "battery-icon"
+                                        :onclick "scripts/battery icon" battery-icon))))  ;; Set the label to the battery icon

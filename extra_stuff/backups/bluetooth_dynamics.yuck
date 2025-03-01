@@ -1,0 +1,35 @@
+(defwidget bluetooth []
+  (let [devices [{:name "Device A" :options ["" "󰂱" ""]}
+                 {:name "Device B" :options [""]}]]
+    (box :class "bluetooth-devices"
+         :orientation "v"
+         :space-evenly "true"
+         :halign "left"
+         :valign "left"
+
+         ;; Labels Box
+         (box :class "labels"
+              :orientation "h"
+              (label :class "label_devices" :text "Devices")
+              (label :class "label_options" :text "Options"))
+
+         ;; Generate Device Boxes
+         (map (fn [{:keys [name options]}]
+                (box :class "device"
+                     :orientation "h"
+                     :space-evenly "true"
+                     :halign "left"
+                     :valign "left"
+                     (button :class "volume_button"
+                             :style "font-size: 15px; padding-left: 0px"
+                             :onclick (str "scripts/popup " name)
+                             name)
+                     (box :class "device-options"
+                          :orientation "h"
+                          (map (fn [icon]
+                                 (button :class "bluetooth_option"
+                                         :style "font-size: 15px"
+                                         :onclick (str "scripts/action " icon)
+                                         icon))
+                               options))))
+              devices))))

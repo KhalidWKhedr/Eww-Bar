@@ -1,0 +1,98 @@
+(defwidget resources []
+
+  (box :class "resource_container"
+       :orientation "h"
+       :valign "center"
+       :halign "center"
+       :space-evenly false
+       :hexpand false
+       :vexpand false
+
+       (box :class "sub_box_container"
+
+           (box :class "sub_box_0"
+                (eventbox :class "volume_event"
+                          :onscroll "bash scripts/widgets/volume_scroll.sh {}"
+                          (box :class "resource_sub_container"
+                               (circular-progress :class "volume_circle"
+                                                  :tooltip "Volume ${current-volume}%"
+                                                  :value current-volume
+                                                  :start-at 0
+                                                  :thickness 3
+                                                  :clockwise true
+                                                  :width 40
+                                                  :height 40
+                                                  (button :class "volume_button"
+                                                          :style "font-size: 20px; padding-left: 1px"
+                                                          :onclick "scripts/popup audio"
+                                                          " "))
+                               (label :class "label_volume"
+                                      :text "${current-volume}%"
+                                      :style "font-size: 15px; padding-left: 1px"))))
+
+           (box :class "sub_box_1"
+                (eventbox :class "brightness_event"
+                          :onscroll "bash scripts/widgets/brightness_scroll.sh {}"
+                          (box :class "resource_sub_container"
+                               (circular-progress :class "brightness_circle"
+                                                  :tooltip "Brightness ${current-brightness}%"
+                                                  :value current-brightness
+                                                  :thickness 3
+                                                  :clockwise true
+                                                  :start-at 0
+                                                  :width 40
+                                                  :height 40
+                                                  (button :class "brightness_button"
+                                                          :style "font-size: 30px; padding-right: 0px; padding-top: 3px"
+                                                          :onclick "scripts/popup brightness"
+                                                          "☀"))
+                               (label :class "label_brightness"
+                                      :width 40
+                                      :height 40
+                                      :text "${current-brightness}%"
+                                      :style "font-size: 15px; padding-left: 1px"))))
+
+           (box :class "sub_box_2"
+                (eventbox :class "battery_event"
+                          :onscroll "bash scripts/widgets/battery_scroll.sh {}"
+                          (box :class "resource_sub_container"
+                               (circular-progress :class "battery_circle"
+                                                  :tooltip "Battery ${battery-percentage}%"
+                                                  :value battery-percentage
+                                                  :thickness 3
+                                                  :clockwise true
+                                                  :start-at 0
+                                                  :width 40
+                                                  :height 40
+                                                  (button :class "battery_button"
+                                                          :style "font-size: 22px; padding-right: 0px"
+                                                          :onclick "scripts/battery icon"
+                                                          "${battery-icon}"))
+                               (label :class "label_battery"
+                                      :width 40
+                                      :height 40
+                                      :text "${battery-percentage}%"
+                                      :style "font-size: 15px; padding-left: 1px"))))
+
+           (box :class "sub_box_3"
+                (eventbox :class "bluetooth_event"
+                          :onscroll ""
+                          (box :class "resource_sub_container"
+                               (circular-progress :class "bluetooth_circle"
+                                                  :tooltip "Bluetooth Battery ${bluetooth-battery}%"
+                                                  :value bluetooth-battery
+                                                  :thickness 3
+                                                  :clockwise true
+                                                  :start-at 0
+                                                  :width 40
+                                                  :height 40
+                                                  (button :class "bluetooth_button"
+                                                          :style "font-size: 26px; padding-right: 0px"
+                                                          :onclick "${eww} update show_bluetooth=$(eww get show_bluetooth | grep -q true && echo false || echo true); \
+                                                                      [ $(eww get show_bluetooth) = true ] && ${eww} open window_bluetooth || ${eww} close window_bluetooth"
+                                                          ""))
+                               (label :class "label_bluetooth"
+                                      :width 40
+                                      :height 40
+                                      :text "${bluetooth-battery}%"
+                                      :style "font-size: 15px; padding-left: 1px")))))))

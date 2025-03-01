@@ -1,0 +1,19 @@
+; Poll Current Volume (updated to handle interactivity)
+(defpoll current-volume :interval "1s"
+  "pactl get-sink-volume @DEFAULT_SINK@ | grep -oP '\\d+%' | head -n1 | tr -d '%' || echo 0")
+;;volume widget
+(defwidget volume []
+  (box :class "volume_box"
+       :orientation "h"
+       :valign "center"
+       :halign "center"
+       :active true         ;; Make widget interactive
+       (circular-progress :class "volume-ring"
+                          :tooltip "Volume ${current-volume}"  ;; Tooltip text when hovered
+                          :value current-volume
+                          :thickness 3
+                          :clockwise true
+                          :start-at 0
+                          (button :class "volume-icon"
+                                  :onclick "scripts/popup audio"
+                                   " "))))

@@ -1,0 +1,41 @@
+/** Systray ***********************************/
+
+.systray {
+    margin-left: 5px;
+    margin-right: 10px;
+    font-size: 15px;
+    color: $color6;
+    padding: 5px;
+    background-color: $color1;
+    border-radius: 10px;
+    box-shadow: $box-shadow-inset;
+    margin-bottom: 1px;
+    margin-bottom: 2px;
+    margin-top: 3px;
+
+    menuitem {;
+        border-radius: 0px;
+        padding: 8px 12px;
+        background-color: $color2;
+        transition: all 0.2s ease;
+
+        &:backdrop {
+            background-color: $color2;
+        }
+    }
+
+    menuitem arrow {
+        min-width: 16px;
+        min-height: 16px;
+
+        &:dir(ltr) {
+            -gtk-icon-source: -gtk-icontheme('pan-end-symbolic');
+            margin-left: 10px;
+            margin-right: 0;
+        }
+    }
+
+    menuitem:hover {
+        background-color: $color3;
+    }
+}

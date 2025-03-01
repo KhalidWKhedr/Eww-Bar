@@ -1,0 +1,17 @@
+/** Power-Menu Launcher ***********************************/
+
+.power_menu_launcher {
+    margin-right: 10px;
+}
+
+.power_menu_button {
+    color: $color7;
+    border-radius: 20px;
+    box-shadow: $box-shadow-deep;
+    background-color: $color3; 
+    
+    &:hover {
+        box-shadow: $box-shadow-inset;
+        color: $color8; 
+    }
+}

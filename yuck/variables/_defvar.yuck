@@ -1,0 +1,55 @@
+;; ====================================
+;; Variables
+;; ====================================
+
+;; ** Paths ***********************************;;
+
+;; Path to aesthetic bar config files
+(defvar eww "eww -c $HOME/.config/eww/")
+
+;; ** Utilities ***********************************;;
+
+;; Defines screenshot mode (e.g., "area", "fullscreen")
+(defvar screenshot_mode "area")
+
+;; Turn Bluetooth off or On
+(defvar toggle_bluetooth '')
+
+;; ** Expanders ***********************************;;
+
+;; Toggles visibility of power-menu
+(defvar show_power false)
+
+;; Toggles visibility of directory-menu
+(defvar show_folder false)
+
+;; Toggles visibility of tools-menu
+(defvar show_tools false)
+
+;; Toggles visibility of resource-menu
+(defvar show_resources false)
+
+;; Toggles visibility of power expander
+(defvar expand_power false)
+
+;; Toggles visibility of date expander
+(defvar expand_date false)
+
+;; ** Window Toggles ***********************************;;
+
+;; Media Window
+(defvar show_media false)
+
+;; Notification Window
+(defvar show_notifications false)
+
+;; End Notifications
+(defvar end-notifications '')
+
+;; Calendar Window
+(defvar show_calendar '')
+
+;; Bluetooth Window
+(defvar show_bluetooth '')
+
+(defvar bluetooth-enabled false) ; Initially set to true (Bluetooth on)

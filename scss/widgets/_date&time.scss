@@ -1,0 +1,53 @@
+/** Date/Time ***********************************/
+
+.datetime_container {
+    border-radius: 20px;
+    background-color: $color3;
+    box-shadow: $box-shadow-inset;
+}
+
+.time_hour, 
+.time_minute, 
+.time_second, 
+.time_date {
+    margin-right: 2px;
+    margin-left: 2px;
+    border-radius: 20px;
+    color: $foreground;
+    background-color: $color5;
+    box-shadow: $box-shadow-deep;
+
+    &:hover {
+        color: $color9;
+        background-color: $color6;
+    }
+}
+
+.time_date, .time_second {
+    box-shadow: none;
+}
+
+.date_hoverbox {
+
+}
+
+.date_container {
+}
+
+.date_revealer {
+}
+
+.date_buttons {
+    border-radius: 10px;
+    box-shadow: $box-shadow-inset;
+
+}
+
+.hover_revealer {
+    color: $color3;
+    border-radius: 20px;
+    &:hover {
+        color: $color3;
+        box-shadow: $box-shadow-inset;
+    }
+}

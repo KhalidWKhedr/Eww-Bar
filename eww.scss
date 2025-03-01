@@ -1,0 +1,38 @@
+/** Imports ***********************************/
+
+/** Globals **/
+@import "./scss/generic/_global.scss";
+@import "./scss/generic/_colors.scss";
+@import "./scss/generic/_variables.scss";
+
+/** Windows **/
+@import "./scss/windows/_bar0.scss";
+@import "./scss/windows/_bar1.scss";
+@import "./scss/windows/_bluetooth.scss";
+@import "./scss/windows/_calendar.scss";
+@import "./scss/windows/_media-player.scss"
+
+/** Widgets **/
+@import "./scss/widgets/_active_media.scss";
+@import "./scss/widgets/_active_window.scss";
+@import "./scss/widgets/_date&time.scss";
+@import "./scss/widgets/_launcher.scss";
+@import "./scss/widgets/_media-launcher.scss";
+@import "./scss/widgets/_systray.scss";
+@import "./scss/widgets/_tooltip.scss";
+@import "./scss/widgets/_workspaces.scss";
+
+/** Menu Widgets **/
+@import "./scss/widgets/menus/directories/_directories-menu-launcher.scss";
+@import "./scss/widgets/menus/directories/_directories-menu.scss";
+@import "./scss/widgets/menus/power/_power-menu-launcher.scss";
+@import "./scss/widgets/menus/power/_power-menu.scss";
+@import "./scss/widgets/menus/tools/_tools-menu-launcher.scss";
+@import "./scss/widgets/menus/tools/_tools-menu.scss";
+
+/** Resource Widgets **/
+@import "./scss/widgets/resources/_all.scss";
+@import "./scss/widgets/resources/_battery.scss";
+@import "./scss/widgets/resources/_bluetooth.scss";
+@import "./scss/widgets/resources/_brightness.scss";
+@import "./scss/widgets/resources/_volume.scss";

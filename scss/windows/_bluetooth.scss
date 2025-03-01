@@ -1,0 +1,99 @@
+/** Bluetooth Widget Styles ***********************************/
+
+/* Main Container */
+.box_widget_bluetooth {
+  	background-color: $color0;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+}
+
+/* Scan Box */
+.box_heading {
+		background-color: $color2;
+    border-top: 1px solid $color4;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+}
+
+.box_scan{
+		background-color: $color6;
+		border-radius: 20px;
+}
+
+/* Labels */
+.label_scan,
+.label_toggle {
+		color: $color2;
+		background-color: $color6;
+		border-radius: 20px;
+}
+
+.box_power{
+		background-color: $color6;
+		border-radius: 20px;
+}
+	
+.button_scan,
+.bluetooth_toggle {
+		color: $color2;
+  	background-color: $color5;
+  	box-shadow: $box-shadow-deep;
+  	border-radius: 20px;
+  	border: 1px solid $color6;
+}
+
+.button_scan:hover,
+.bluetooth_toggle:hover {
+  	background-color: $color3;
+  	box-shadow: $box-shadow-inset;
+}
+
+/******************************/
+
+.box_labels {
+		background-color: $color5;
+}
+
+.label_devices,
+.label_options {
+		color: $color2;
+ 		background-color: $color6;
+ 		border-radius: 20px;
+ 		//box-shadow: $box-shadow-inset;
+}
+
+.label_devices:hover,
+.label_options:hover {
+  // Hover effect for labels
+  // box-shadow: $box-shadow-inset;
+  // background-color: $color2;
+  // color: $color6;
+}
+
+/* Devices Section */
+.container_devices {
+  // background-color: $color2;
+  // border-radius: 20px;
+  // margin-top: 0px;
+}
+
+.device_name {
+  margin-top: 10px;
+}
+
+.bluetooth_trust,
+.bluetooth_link,
+.bluetooth_connect {
+  margin-top: 10px;
+  color: $color12;
+  box-shadow: $box-shadow-deep;
+}
+
+/* Options Section */
+.container_options {
+  // Styles for options container if needed
+}
+
+
+/* Additional Utility Classes (if needed) */
+// Add utility styles for padding, margins, alignments, etc.

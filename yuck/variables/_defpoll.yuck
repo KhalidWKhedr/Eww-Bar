@@ -1,0 +1,13 @@
+;; ====================================
+;; Polling Definitions
+;; ====================================
+
+;; Bluetooth battery polling every 5 seconds
+(defpoll bluetooth-battery :interval "5s"
+  "bluetoothctl info $(bluetoothctl devices | grep 'Device' | awk '{print $2}' | head -n 1) | grep 'Battery Percentage' | awk '{print $3}' | sed 's/0x//g' | while read hex_value; do echo $((16#$hex_value)); done")
+
+;; Time Polling
+(defpoll hour :interval "1s" "date '+%H'")  ;; Hour (24-hour format)
+(defpoll min  :interval "1s" "date '+%M'")  ;; Minute
+(defpoll sec  :interval "1s" "date '+%S'")  ;; Second
+(defpoll date :interval "1s" "date '+%a, %d %b %Y'")  ;; Weekday, DD MMM YYYY

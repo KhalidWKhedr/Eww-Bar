@@ -1,0 +1,74 @@
+(defwidget power_menu []
+  ;; Parent Icon to trigger the menu
+  (eventbox :onhover "${eww} update power=true"
+            :onhoverlost "${eww} update power=false"
+    (box :orientation "h" 
+         :class "power_menu"
+
+    ;; Example Parent Icon (customize as needed)
+
+         ;; Power Options (expand on hover)
+         (expander :class "power_expander"
+                   :expanded power
+                   (box :class "power_options"
+                        :orientation "h"
+                        :space-evenly "false"
+
+                        ;; Sleep option
+                        (box :class "power_option"
+                             :onclick "systemctl suspend"
+                             (button :class "sleep-icon power-icon"
+                                     :height 30
+                                     :width 30
+                                     :valign "center"
+                                     :halign "center"
+                                     ""))  ;; Sleep Button         
+
+                        ;; Hibernate option
+                        (box :class "power_option"
+                             :onclick "systemctl hibernate"
+                             (button :class "hibernate-icon power-icon" 
+                                     :height 30
+                                     :width 30
+                                     :valign "center"
+                                     :halign "center"
+                                     ""))  ;; Hibernate Button   
+
+                        ;; Logout option
+                        (box :class "power_option"
+                             :onclick "logout-command"
+                             (button :class "logout-icon power-icon" 
+                                     :height 30
+                                     :width 30
+                                     :valign "center"
+                                     :halign "center"
+                                     ""))  ;; Logout Button
+
+                        ;; Lock Screen option
+                        (box :class "power_option"
+                             :onclick "betterlockscreen -l"
+                             (button :class "lock-icon power-icon" 
+                                     :height 30
+                                     :width 30
+                                     :valign "center"
+                                     :halign "center"
+                                     ""))  ;; Lock Screen Button
+
+                        ;; Shutdown option
+                        (box :class "power_option"
+                             :onclick "shutdown now"
+                             (button :class "shutdown-icon power-icon" 
+                                     :height 30
+                                     :width 30
+                                     :valign "center"
+                                     :halign "center"
+                                     ""))  ;; Shutdown Button       
+
+                        ;; Reboot option
+                        (box :class "power_option"
+                             :onclick "reboot"
+                             (button :class "reboot-icon power-icon" 
+                                     :height 30
+                                     :width 30
+                                     ""))
+ 

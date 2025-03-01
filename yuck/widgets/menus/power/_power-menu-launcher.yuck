@@ -1,0 +1,16 @@
+;; Power Menu Launcher Widget
+(defwidget power_menu_launcher []
+        
+  (box :orientation "h"
+       :class "power_menu_launcher"
+       :valign "center"
+       :halign "center"
+
+       (button :class "power_menu_button"
+               :tooltip "Power"
+               :onclick "${eww} update show_power=$(eww get show_power | grep -q true && echo false || echo true)"
+               :height 30
+               :width 30
+               :style "font-size: 25px; 
+                       padding-right: 0px" 
+                       "󱐌")))

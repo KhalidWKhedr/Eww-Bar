@@ -1,0 +1,47 @@
+/** Calendar  ***********************************/
+
+calendar {
+  background: $color0;
+
+  &.view {
+    background-color: $color0;
+    border-radius: 10px;
+  }
+
+  &.button {
+    background: $color2;
+    border-radius: 50%; 
+    color: $color4;
+
+
+    &:hover {
+      color: $color3;
+    }
+
+    &:disabled {
+      color: $color3;
+    }
+  }
+
+  &.header {
+    background-color: $color2;
+    border-top: 1px solid $color4;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+  }
+
+  &.highlight {
+    color: $color6;
+  }
+
+  &:selected {
+    color: $color3;
+    background: $color6;
+    border-radius: 0.2em;
+
+  }
+
+  &:indeterminate {
+    color: $color9;
+  }
+}

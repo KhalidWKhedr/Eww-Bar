@@ -1,0 +1,28 @@
+/** Directories Menu ***********************************/
+
+.directory_menu {
+    border-radius: 10px;
+    box-shadow: $box-shadow-deep;
+    background-color: $color6;
+    padding-right: 2px;
+    padding-left: 2px;
+}
+
+.directory_folder_options {
+}
+
+.directory_folder {
+    color: $foreground;
+    background-color: transparent;
+    margin-right: 2px;
+    margin-left: 2px;
+    border-radius: 20px;
+    transition: box-shadow 0.3s ease;
+
+    &:hover {
+        color: $color4;
+        box-shadow: $box-shadow-inset;
+        background-color: $foreground;
+    }
+}
+

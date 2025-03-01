@@ -1,0 +1,22 @@
+(defwidget resource_brightness []
+    (box :class "resource_brightness"
+        (eventbox :class "brightness_event"
+                  :onscroll "bash scripts/resources/brightness_scroll.sh {}"
+            (box :class "resource_brightness_container"
+                (circular-progress :class "brightness_circle"
+                                   :tooltip "Brightness ${current-brightness}%"
+                                   :value current-brightness
+                                   :start-at current-brightness
+                                   :thickness 3
+                                   :clockwise true                                        
+                                   :width 40
+                                   :height 40
+                    (button :class "brightness_button"
+                            :style "font-size: 27px; 
+                                    padding-right: 0px; 
+                                    padding-top: 2px"
+                            :onclick "scripts/popup brightness"
+                                     "☀"))
+                (label :class "label_brightness"
+                       :text "${current-brightness}%"
+                       :style "font-size: 15px; padding-left: 0px")))))

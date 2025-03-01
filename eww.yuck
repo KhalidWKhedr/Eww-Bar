@@ -1,0 +1,43 @@
+;** Includes ***********************************;
+
+;; Include Variables
+(include "yuck/variables/_deflisten.yuck")
+(include "yuck/variables/_defpoll.yuck")
+(include "yuck/variables/_defvar.yuck")
+
+;; Include Windows
+(include "yuck/windows/_window_bar0.yuck")
+(include "yuck/windows/_window_bar1.yuck")
+(include "yuck/windows/_window_bluetooth.yuck")
+(include "yuck/windows/_window_calendar.yuck")
+(include "yuck/windows/_window_media.yuck")
+
+;; Include Widgets
+(include "yuck/widgets/_active_media.yuck")
+(include "yuck/widgets/_active_window.yuck")
+(include "yuck/widgets/_bluetooth.yuck")
+(include "yuck/widgets/_date&time.yuck") 
+(include "yuck/widgets/_launcher.yuck")
+(include "yuck/widgets/_media-launcher.yuck")
+(include "yuck/widgets/_media.yuck")
+(include "yuck/widgets/_systemtray.yuck")
+(include "yuck/widgets/_workspaces.yuck")
+
+;; Include Menu Widgets
+(include "yuck/widgets/menus/directories/_directories-menu-launcher.yuck")
+(include "yuck/widgets/menus/directories/_directories-menu.yuck")
+(include "yuck/widgets/menus/power/_power-menu-launcher.yuck")
+(include "yuck/widgets/menus/power/_power-menu.yuck")
+(include "yuck/widgets/menus/tools/_tools-menu-launcher.yuck")
+(include "yuck/widgets/menus/tools/_tools-menu.yuck")
+
+;; Include Resource Widgets 
+(include "yuck/widgets/resources/_volume.yuck")
+(include "yuck/widgets/resources/_brightness.yuck")
+(include "yuck/widgets/resources/_battery.yuck")
+(include "yuck/widgets/resources/_bluetooth.yuck")
+(include "yuck/widgets/resources/_resources.yuck")
+
+;;Include Bar Setup Widgets
+(include "yuck/widgets/bars/_bar0.yuck")
+(include "yuck/widgets/bars/_bar1.yuck")

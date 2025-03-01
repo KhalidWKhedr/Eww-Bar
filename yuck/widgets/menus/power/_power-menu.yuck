@@ -1,0 +1,71 @@
+;; Power Menu Widgets
+(defwidget power_menu []
+  (box :orientation "h"
+       :class "power_menu"
+       :orientation "h"
+       :space-evenly true
+       :valign "center"
+       :halign "center"
+       :hexpand "true"
+
+       ;; Revealer for power menu
+       (revealer :class "power_revealer"
+                 :transition "slideleft"
+                 :reveal show_power
+                 :duration "350ms"
+
+                 ;; Power Options
+                 (box :class "power_options"
+                   
+                      ;; Shutdown Button
+                      (button :class "power_option"
+                              :tooltip "Shutdown"
+                              :onclick "shutdown now"
+                              :height 25
+                              :width 30
+                              :style "font-size: 20px;
+                                      padding-bottom: 0px; 
+                                      padding-right: 5px" 
+                                      "")
+
+                      ;; Reboot Button
+                      (button :class "power_option"
+                              :tooltip "Reboot"
+                              :onclick "reboot"
+                              :style "font-size: 20px;
+                                      padding-bottom: 0px; 
+                                      padding-right: 5px" 
+                                      "")
+
+                      ;; Lock Screen Button
+                      (button :class "power_option"
+                              :tooltip "Lock Screen"
+                              :onclick "hyprlock &"
+                              :style "font-size: 20px; 
+                                      padding-right: 4px" 
+                                      "")
+
+                      ;; Logout Button
+                      (button :class "power_option"
+                              :tooltip "Logout"
+                              :onclick "exec, hyprctl dispatch exit"
+                              :style "font-size: 20px; 
+                                      padding-right: 5px" 
+                                      "")
+
+                      ;; Hibernate Button
+                      (button :class "power_option"
+                              :tooltip "Hibernate"
+                              :onclick "systemctl hibernate"
+                              :style "font-size: 20px; 
+                                      padding-right: 4px"
+                                      "")
+
+                      ;; Suspend Button
+                      (button :class "power_option"
+                              :tooltip "Suspend"
+                              :onclick "systemctl suspend"
+                              :style "font-size: 20px; 
+                                      padding-right: 4px" 
+                                      "")))))
+

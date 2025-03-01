@@ -1,0 +1,15 @@
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;                           Bar 1                                       ;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+(defwindow bar1
+  :monitor 1
+  :geometry (geometry :x "1.3%"
+                      :y "0%"
+                      :height "1%"
+                      :width "98.7%"
+                      :anchor "top center")
+  :stacking "bg"
+  :exclusive true
+  :focusable false
+  (bar1))

@@ -1,0 +1,31 @@
+/** Volume ***********************************/
+
+.resource_volume {
+    margin-bottom: 3px;
+    margin-top: 3px;
+}
+
+.resource_volume_container {
+    background-color: $color9;
+    box-shadow: $box-shadow-inset;
+    border-radius: 20px 15px 15px 20px;
+}
+
+.volume_circle {
+    color: $foreground;
+}
+
+.volume_button {
+    color: $foreground;
+    background-color: $color5;
+    box-shadow: $box-shadow-inset;
+
+    &:hover {
+        color: $color2;
+        background-color: $color4;
+    }
+}
+
+.label_volume {
+    color: $foreground;
+}

@@ -1,0 +1,8 @@
+;; WorkSpace Widgets
+(defwidget workspaces []
+  (box :class "box_workspaces"
+       :orientation "h"
+       :halign "center"
+       :valign "center"      
+    ;; Display workspace content
+    (literal :content workspace)))

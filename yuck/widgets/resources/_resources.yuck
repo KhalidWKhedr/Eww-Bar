@@ -1,0 +1,10 @@
+;; Resources 
+(defwidget resources []
+     (box :class "resources"
+          :orientation "h"
+          :halign "start"
+          :space-evenly true
+          (resource_volume)
+          (resource_brightness)
+          (resource_battery)
+          (resource_bluetooth)))

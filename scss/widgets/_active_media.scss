@@ -1,0 +1,20 @@
+/** Active Media ***********************************/
+
+.currently_playing {
+    margin-left: 5px;
+    border-radius: 10px;
+    padding: 5px;
+}
+
+.label_artist {
+    color: $foreground;
+    font-weight: bold;
+    font-size: 1.2em;
+    margin-bottom: 2px;
+}
+
+.label_song {
+    color: $foreground;
+    font-size: 0.9em;
+    opacity: 0.8;
+}

@@ -1,0 +1,18 @@
+/** Launcher ***********************************/
+
+.launcher_box {
+    margin-right: 10px;
+    border-radius: 20px;
+}
+
+.launcher_button {
+    color: $color9;
+    background-color: $color7;
+    border-radius: 40px;
+    box-shadow: $box-shadow-deep;
+
+    &:hover {
+        color: $color13;
+        box-shadow: $box-shadow-inset;
+    }
+}

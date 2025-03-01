@@ -1,0 +1,20 @@
+/** Active Window ***********************************/
+
+.active_window {
+    margin-left: 5px;
+    border-radius: 10px;
+    padding: 5px;
+}
+
+.current_workspace{
+    color: $foreground;
+    font-weight: bold;
+    font-size: 1.2em;
+    margin-bottom: 2px;
+}
+
+.workspace_sublabel {
+    color: $foreground;
+    font-size: 0.9em;
+    opacity: 0.8;
+}

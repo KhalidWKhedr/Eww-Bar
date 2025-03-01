@@ -1,0 +1,33 @@
+;; ====================================
+;; Listener Definitions
+;; ====================================
+
+;; Volume control listener
+(deflisten current-volume
+  :initial "initial-value"
+  `tail -F extra_stuff/logs/current_volume`)
+
+;; Brightness control listener
+(deflisten current-brightness
+  :initial "initial-value"
+  `tail -F extra_stuff/logs/current_brightness`)
+
+;; Bluetooth devices listener
+(deflisten bluetooth-devices :initial "on"
+  "scripts/bluetooth/bluetooth_devices.sh")
+
+;; Media player metadata listener
+(deflisten media-player 
+  :initial ""
+  "playerctl metadata --format '{\"playerName\": \"{{playerName}}\", \"artist\": \"{{artist}}\", \"title\": \"{{title}}\", \"position\": \"{{duration(position)}}\", \"duration\": \"{{duration(mpris:length)}}\", \"image\": \"{{mpris:artUrl}}\"}' --follow")
+
+(deflisten media-status
+  :initial "Stopped"
+  "playerctl --player=spotify status --follow")
+
+;; Workspace listener
+(deflisten workspace
+  "scripts/workspaces/workspace.sh")
+
+(deflisten current-workspace :initial ""
+  "scripts/workspaces/current_workspace.sh")
