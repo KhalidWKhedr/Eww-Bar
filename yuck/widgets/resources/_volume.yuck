@@ -1,5 +1,6 @@
 (defwidget resource_volume []
     (box :class "resource_volume"
+         :space-evenly false
         (eventbox :class "volume_event"
                   :onscroll "bash scripts/resources/volume_scroll.sh {}"
             (box :class "resource_volume_container"
@@ -13,10 +14,10 @@
                                    :height 40
                     (button :class "volume_button"
                             :style "font-size: 16px; 
-                                    padding-right: 8px; 
-                                    padding-top: 2px"
+                                    padding-right: 12px; 
+                                    padding-top: 4px"
                             :onclick "scripts/popup audio"
                                      ""))
                 (label :class "label_volume"
-                       :text "${current-volume}%"
+                       :text "${current-volume}"
                        :style "font-size: 15px; padding-left: 0px")))))

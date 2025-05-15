@@ -1,26 +1,29 @@
 /** Systray ***********************************/
 
 .systray {
-    margin-left: 5px;
-    margin-right: 10px;
-    font-size: 15px;
-    color: $color6;
-    padding: 5px;
-    background-color: $color1;
-    border-radius: 10px;
-    box-shadow: $box-shadow-inset;
-    margin-bottom: 1px;
-    margin-bottom: 2px;
+    margin-left: 10px; /* Increased for better spacing, aligns with date&time container */
+    margin-right: 15px; /* Slightly more breathing room on the right */
     margin-top: 3px;
+    margin-bottom: 2px;
+    font-size: 16px; /* Slightly larger for better readability */
+    color: $foreground;
+    padding: 6px; /* A bit more padding for balance */
+    background-color: $color1;
+    border-radius: 12px; /* Slightly larger radius for a softer look */
+    box-shadow: $box-shadow-inset;
+    transition: all 0.2s ease; /* Smooth transition for hover effects */
 
-    menuitem {;
-        border-radius: 0px;
-        padding: 8px 12px;
+    menuitem {
+        border-radius: 8px; /* Rounded corners for a more modern look */
+        padding: 8px 14px; /* Slightly more padding for comfort */
         background-color: $color2;
         transition: all 0.2s ease;
+        font-size: 14px; /* Ensure menu items are readable */
+        color: $foreground; /* Consistent text color */
 
         &:backdrop {
             background-color: $color2;
+            opacity: 0.9; /* Subtle dimming for backdrop state */
         }
     }
 
@@ -30,12 +33,14 @@
 
         &:dir(ltr) {
             -gtk-icon-source: -gtk-icontheme('pan-end-symbolic');
-            margin-left: 10px;
+            margin-left: 12px; /* More spacing for better alignment */
             margin-right: 0;
         }
     }
 
     menuitem:hover {
         background-color: $color3;
+        color: $foreground; /* Ensure text remains readable on hover */
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); /* Subtle shadow on hover for depth */
     }
 }

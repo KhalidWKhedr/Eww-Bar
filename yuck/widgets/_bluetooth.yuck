@@ -1,81 +1,63 @@
 ;; Bluetooth Widget
 (defwidget bluetooth []
-    (box :class "box_widget_bluetooth"
-         :orientation "v"
-         :space-evenly "false"
-         :halign "center"
-         :width 250
-
-        ;; Bluetooth Buttons Section
-        (box :class "box_heading"
-            
-            ;; Scan Section
-            (box :class "box_scan"
-                 :halign "center"
-                 :valign "center"
-                 :space-evenly false
-                
-                 ;; Scan Section
-                (button :class "button_scan"
-                        :width 30
-                        :height 30
-                        :style "font-size: 23px; 
-                                margin-left: 0px"
-                        :onclick "toggle_bluetooth" "󰂱")
-
-                  ;; Scan Section
-                (label :class "label_scan"
-                       :width 60
-                       :wrap true
-                       :style "font-size: 15px; 
-                              margin-left: 0px;"
-                       :text "Scan"))
-
-            ;; Toggle Section
-            (box :class "box_toggle"
-                 :space-evenly false
-                 :halign "center"
-                 :valign "center"
-
-                    ;; Toggle Section
-                (button :class "bluetooth_toggle"
-                        :width 30
-                        :height 30
-                        :style "font-size: 24px;"
-                        :onclick "scripts/bluetooth/bluetooth_toggle.sh"
-                        {bluetooth-enabled ? "󰂱" : "󰂲"})
-
-                ;; Toggle Section
-                (label :class "label_toggle"
-                       :width 60
-                       :wrap true
-                       :style "font-size: 15px; 
-                               margin-left: 0px;"
-                       :text "Toggle")))
-
-        ;; Labels Section
-        (box :class "box_labels"
-             :orientation "h"
-        
-            ;; Devices Label
-            (label :class "label_devices"
-                   :width 85
-                   :wrap true
-                   :valign "center"
-                   :style "font-size: 15px; 
-                           margin-left: 0px" ;;horrible code
-                   :text "Devices")
-
-            ;; Options Label
-            (label :class "label_options"
-                   :width 85
-                   :wrap true
-                   :valign "center"
-                   :style "font-size: 15px; 
-                           margin-left: 0px;" ;; horrible code
-                   :text "Controls"))
-        
-        ;; Literal Content
-        (box :class "Container"
-            (literal :content bluetooth-devices))))
+  (box :class "box_widget_bluetooth"
+       :orientation "v"
+       :space-evenly "false"
+       :halign "center"
+       :width 250
+    ;; Heading Section (Scan and Toggle)
+    (box :class "box_heading"
+         :orientation "h"
+         :space-evenly "true"
+      ;; Scan Section
+      (box :class "box_scan"
+           :halign "center"
+           :valign "center"
+           :space-evenly "false"
+        (button :class "button_scan"
+                :width 30
+                :height 30
+                :style "font-size: 23px; margin-left: 0px"
+                :onclick "toggle_bluetooth"
+                "󰂱")
+        (label :class "label_scan"
+               :width 60
+               :wrap true
+               :style "font-size: 15px; margin-left: 0px"
+               :text "Scan"))
+      ;; Toggle Section
+      (box :class "box_toggle"
+           :space-evenly "false"
+           :halign "center"
+           :valign "center"
+        (button :class "bluetooth_toggle"
+                :width 30
+                :height 30
+                :style "font-size: 24px"
+                :onclick "scripts/bluetooth/bluetooth_toggle.sh"
+                {bluetooth-enabled ? "󰂱" : "󰂲"})
+        (label :class "label_toggle"
+               :width 60
+               :wrap true
+               :style "font-size: 15px; margin-left: 0px"
+               :text "Toggle")))
+    ;; Labels Section
+    (box :class "box_labels"
+         :orientation "h"
+         :space-evenly "true"
+      (label :class "label_devices"
+             :width 85
+             :wrap true
+             :valign "center"
+             :style "font-size: 15px; margin-left: 0px"
+             :text "Devices")
+      (label :class "label_options"
+             :width 85
+             :wrap true
+             :valign "center"
+             :style "font-size: 15px; margin-left: 0px"
+             :text "Controls"))
+    ;; Device List
+    (box :class "Container"
+         (literal :content bluetooth-devices))))
 

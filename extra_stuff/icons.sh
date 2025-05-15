@@ -41,3 +41,5 @@ notifications=("󱏧" "󱏨" "󱏩" "󱏪" "󱏫" "󱏬" "")
 
 # Bluetooth Icons
 bluetooth=("" "󰂱" "" "󰂲" "" "󰂯" "󱄙")
+
+splitters = (", , , , , , , , ")

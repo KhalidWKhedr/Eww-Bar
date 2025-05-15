@@ -1,34 +1,45 @@
 /** EWW Bar ***********************************/
 
 .bar1_eww {
-    background-color: $color1;
+    background-color: transparent;
     border-radius: 12px;
     font-family: Hack;
 }
 
 .bar1_left{
-    padding-left: 5px;
-    margin-left: 10px;
+    padding-left: 3px;
+    padding-right: 3px;
     background-color: $color1;
-    border-radius: 10px;
+    border-radius: 20px;
 }
 
 .bar1_left_center{
-
-}
+    background-color: $color2;
+    border-radius: 20px;
+    padding-right: 3px;
+    padding-left: 0px;
+}   
 
 
 .bar1_center {
-    
+    background-color: $color3;
+    border-radius: 20px;
+    padding-right: 7px;
+    padding-left: 7px;
 }  
 
 
 .bar1_right_container {
+    background-color: $color4;
+    border-radius: 20px;
+    padding-right: 5px;
+    padding-left: 5px;
    
 }
 
-.date_time_box{
-    border-radius: 10px;
-    padding-left: 10px;
-    padding-right: 10px;
+.bar1_right{
+    background-color: $color5;
+    border-radius: 20px;
+    padding-right: 3px;
+    padding-left: 2px;
 }

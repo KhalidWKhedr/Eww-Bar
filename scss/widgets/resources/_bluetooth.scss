@@ -1,32 +1,41 @@
 /** Bluetooth ***********************************/
 
 .resource_bluetooth {
-    margin-left: 2px;
-    margin-bottom: 3px;
-    margin-top: 3px;
-}
-
-.resource_bluetooth_container {
-    background-color: $color9; 
+    margin-left: 0px;
+    margin-bottom: 2px; // Reduced from 3px for tighter vertical spacing
+    margin-top: 2px; // Reduced from 3px
+    padding: 1px 3px; // Reduced from 2px 5px for a more compact container
+    background-color: $color9;
     box-shadow: $box-shadow-inset;
     border-radius: 20px 15px 15px 20px;
+    transition: all 0.3s ease;
 }
 
 .bluetooth_circle {
-    color: $foreground; 
+    color: $foreground;
+    font-size: 14px;
+    margin-right: 3px; // Reduced from 5px to minimize internal space
 }
 
 .bluetooth_button {
     color: $foreground;
     background-color: $color5;
     box-shadow: $box-shadow-inset;
+    border-radius: 50%;
+    padding: 3px; // Reduced from 4px for a smaller button
+    transition: all 0.3s ease;
 
     &:hover {
         color: $color2;
         background-color: $color4;
+        box-shadow: 0 0 5px $color2;
     }
 }
 
 .label_bluetooth {
+ margin-right: 3px; // Reduced from 5px to minimize space after label
     color: $foreground;
+    font-size: 12px;
+    font-weight: 500;
+    text-shadow: 0 0 2px $color2; // Optional: Adds neon effect for readability
 }

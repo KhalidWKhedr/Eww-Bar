@@ -4,14 +4,17 @@
     border-radius: 20px;
     background-color: $color3;
     box-shadow: $box-shadow-inset;
+    padding: 1px 2px; // Added to control container size, matching resource padding
 }
 
-/* # General margin for all workspace items */
 .w0, .w01, .w02, .w03, .w04, .w05, .w06, .w07, .w08, .w09,
 .w011, .w022, .w033, .w044, .w055, .w066, .w077, .w088, .w099 {
-    border-radius: 20px;
+    border-radius: 20px; // Keep rectangular or change to 50% for circular
     margin-left: 2px;
     margin-right: 2px;
+    padding: 3px; // Match resource button padding
+    font-size: 14px; // Match resource circle font size
+    transition: all 0.3s ease; // Add smooth transition
 }
 
 /* Unoccupied */
@@ -19,19 +22,19 @@
     color: $color6;
 
     &:hover {
-        color: $color3; 
+        color: $color3;
     }
 }
 
 /* Occupied */
 .w01, .w02, .w03, .w04, .w05, .w06, .w07, .w08, .w09 {
-    color: $foreground; 
-    box-shadow: $box-shadow-deep; 
+    color: $foreground;
+    box-shadow: $box-shadow-deep;
     background-color: $color5;
 
     &:hover {
-        color: $color3; // Hover effect for occupied workspaces
-        background-color: $color6; // Hover effect for occupied workspaces
+        color: $color3;
+        background-color: $color6;
     }
 }
 
@@ -40,14 +43,6 @@
     color: $color3;
 
     &:hover {
-        color: $color6; // Hover effect for focused workspaces
+        color: $color6;
     }
-}
-
-/* Hover state for all workspaces */
-.w0:hover, .w01:hover, .w02:hover, .w03:hover, .w04:hover, .w05:hover,
-.w06:hover, .w07:hover, .w08:hover, .w09:hover,
-.w011:hover, .w022:hover, .w033:hover, .w044:hover, .w055:hover,
-.w066:hover, .w077:hover, .w088:hover, .w099:hover {
-    color: $color3;
 }

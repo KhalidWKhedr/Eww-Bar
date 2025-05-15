@@ -1,48 +1,49 @@
-/** Date/Time ***********************************/
-
 .datetime_container {
-    border-radius: 20px;
-    background-color: $color3;
-    box-shadow: $box-shadow-inset;
+    padding: 1px 3px;
+    margin: 0 5px;
 }
-
-.time_hour, 
-.time_minute, 
-.time_second, 
-.time_date {
-    margin-right: 2px;
-    margin-left: 2px;
+.container_hours_minutes {
+    border-radius: 20px;
+    //background-color: $color3;
+    transition: all 0.2s ease;
+}
+.time_hour,
+.time_minute,
+.time_second {
+    margin: 0 2px;
     border-radius: 20px;
     color: $foreground;
-    background-color: $color5;
+    padding: 3px;
+    font-size: 14px;
+    letter-spacing: -0.5px;
+    text-shadow: 0 0 2px $color2;
     box-shadow: $box-shadow-deep;
-
+    background-color: transparent;
     &:hover {
         color: $color9;
         background-color: $color6;
+        box-shadow: 0 0 5px $color6;
     }
 }
-
-.time_date, .time_second {
-    box-shadow: none;
-}
-
-.date_hoverbox {
-
-}
-
 .date_container {
+    border-radius: 20px;
+    margin-right: 5px;
+    padding: 1px 3px;
+    background-color: transparent;
 }
-
-.date_revealer {
+.time_date {
+    color: $foreground;
+    font-size: 12px;
+    padding: 1px 3px;
+    text-shadow: 0 0 2px $color2;
+    border-radius: 20px;
+    background-color: transparent;
+    &:hover {
+        color: $color9;
+        background-color: $color6;
+        box-shadow: 0 0 5px $color6;
+    }
 }
-
-.date_buttons {
-    border-radius: 10px;
-    box-shadow: $box-shadow-inset;
-
-}
-
 .hover_revealer {
     color: $color3;
     border-radius: 20px;

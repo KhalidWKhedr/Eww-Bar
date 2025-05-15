@@ -1,5 +1,9 @@
 /** Active Media ***********************************/
-
+.music_icon{
+    margin-left: 5px;
+    font-size: 1.2em;
+    color: $foreground;
+}
 .currently_playing {
     margin-left: 5px;
     border-radius: 10px;
@@ -9,12 +13,12 @@
 .label_artist {
     color: $foreground;
     font-weight: bold;
-    font-size: 1.2em;
+    font-size: 1.0em;
     margin-bottom: 2px;
 }
 
 .label_song {
     color: $foreground;
-    font-size: 0.9em;
+    font-size: 0.8em;
     opacity: 0.8;
 }

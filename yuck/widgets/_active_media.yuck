@@ -1,12 +1,18 @@
 ;; Active Media Widget
 (defwidget active_media []
-     (box :class "currently_playing"
-          :orientation "v"
+     (box :class "music_icon"
+          :orientation "h"
           :vexpand false
           :space-evenly false
-          (label :class "label_artist"
-                 :halign "start"
-                 :text "${media-player.artist}")
-          (label :class "label_song"
-                 :halign "start"
-                 :text "${media-player.title}")))
+          (label :class "music_icon"
+                 :text "󰝚")
+      (box :class "currently_playing"
+           :orientation "v"
+           :vexpand false
+           :space-evenly false
+           (label :class "label_artist"
+                  :halign "start"
+                  :text "${media-player.artist}")
+           (label :class "label_song"
+                  :halign "start"
+                  :text "${media-player.title}"))))

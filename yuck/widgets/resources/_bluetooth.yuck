@@ -13,10 +13,10 @@
                                    :height 40
                     (button :class "bluetooth_button"
                             :style "font-size: 22px; 
-                                    padding-right: 1px;"
+                                    padding-right: 4px;"
                             :onclick "${eww} update show_bluetooth=$(eww get show_bluetooth | grep -q true && echo false || echo true); \
                                        [ $(eww get show_bluetooth) = true ] && ${eww} open window_bluetooth || ${eww} close window_bluetooth"
                                      ""))
                 (label :class "label_bluetooth"
-                       :text "${bluetooth-battery}%"
+                       :text "${bluetooth-battery}"
                        :style "font-size: 15px; padding-left: 1px")))))

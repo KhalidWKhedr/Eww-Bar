@@ -11,3 +11,6 @@
 (defpoll min  :interval "1s" "date '+%M'")  ;; Minute
 (defpoll sec  :interval "1s" "date '+%S'")  ;; Second
 (defpoll date :interval "1s" "date '+%a, %d %b %Y'")  ;; Weekday, DD MMM YYYY
+
+;; Define the bluetooth-devices variable
+(defpoll bluetooth-devices :interval "30s" "scripts/bluetooth/bluetooth_devices.sh")
