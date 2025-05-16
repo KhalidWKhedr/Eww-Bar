@@ -1,5 +1,3 @@
 ;; Main EWW Configuration File
 
 (include "yuck/_includes.yuck")
-
-;; Add any additional top-level definitions or widgets here if needed
