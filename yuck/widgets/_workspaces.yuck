@@ -1,8 +1,8 @@
-;; WorkSpace Widgets
+;; Define the workspaces widget
 (defwidget workspaces []
   (box :class "box_workspaces"
        :orientation "h"
        :halign "center"
-       :valign "center"      
-    ;; Display workspace content
-    (literal :content workspace)))
+       :valign "center"
+       :space-evenly true
+       (literal :content workspace)))

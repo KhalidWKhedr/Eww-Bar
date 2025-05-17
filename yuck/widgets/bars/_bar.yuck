@@ -1,0 +1,52 @@
+(defwidget bar1 [gui_size]
+  (box
+   :orientation "h"
+   :class (str "bar1_eww " gui_size)
+   :space-evenly true
+
+   ;; Left Section
+   (box :class "bar1_left"
+        :halign "start"
+        :hexpand true
+        :space-evenly false
+        (power_menu_launcher)
+        (power_menu)
+        (active_window))
+
+   ;; Center-Left Section
+   (box :class "bar1_left_center"
+        :halign "start"
+        :hexpand false
+        :space-evenly false
+        (directory_menu_launcher)
+        (directory_menu)
+        (tools_menu_launcher)
+        (tools_menu)
+        (active_media))
+
+   ;; Center Section
+   (box :class "bar1_center"
+        :halign "center"
+        :hexpand false
+        :space-evenly false
+        (launcher)
+        (workspaces)
+        (media_player_launcher))
+
+   ;; Right Container
+   (box :class "bar1_right_container"
+        :halign "end"
+        :hexpand false
+        :space-evenly false
+        (resource_volume)
+        (resource_brightness)
+        (resource_battery)
+        (resource_bluetooth))
+
+   ;; Right Section
+   (box :class "bar1_right"
+        :halign "end"
+        :hexpand false
+        :space-evenly false
+        (date&time)
+        (systemtray))))

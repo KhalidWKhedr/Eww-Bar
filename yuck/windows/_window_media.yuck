@@ -4,7 +4,7 @@
 
 (defwindow window_media
   :monitor 1
-  :geometry (geometry :x "51.5%"
+  :geometry (geometry :x "52.5%"
                       :y "0%"
                       :height "100px"
                       :width "13%")

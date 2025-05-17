@@ -1,0 +1,60 @@
+/** EWW Bar ***********************************/
+
+.bar1_eww {
+    background-color: transparent;
+    border-radius: 12px;
+    font-family: Hack;
+
+    &.small {
+        font-size: 11px;
+
+        .bar1_left,
+        .bar1_left_center,
+        .bar1_center,
+        .bar1_right_container,
+        .bar1_right {
+            padding: 2px 4px;
+            border-radius: 14px;
+        }
+    }
+
+    &.large {
+        font-size: 14px;
+
+        .bar1_left,
+        .bar1_left_center,
+        .bar1_center,
+        .bar1_right_container,
+        .bar1_right {
+            padding: 3px 3px;
+            border-radius: 20px;
+        }
+    }
+}
+
+.bar1_left {
+    background: linear-gradient(135deg, $color1 0%, $accent1 100%);
+    border-radius: 20px;
+    opacity: 0.95;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+.bar1_left_center {
+    background: linear-gradient(135deg, $color2 0%, $accent2 100%);
+    border-radius: 20px;
+}
+
+.bar1_center {
+    background: linear-gradient(135deg, $color3 0%, $accent3 100%);
+    border-radius: 20px;
+}
+
+.bar1_right_container {
+    background: linear-gradient(135deg, $color4 0%, $accent4 100%);
+    border-radius: 20px;
+}
+
+.bar1_right {
+    background: linear-gradient(135deg, $color5 0%, $accent5 100%);
+    border-radius: 20px;
+}

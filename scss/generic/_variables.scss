@@ -1,8 +1,9 @@
 /** Variables ***********************************/
 
 $box-shadow-light: 0 6px 10px rgba(0, 0, 0, 0.5);
-$box-shadow-deep: 0 6px 8px rgba(0, 0, 0, 0.5);
+$box-shadow-deep: 0 3px 5px rgba(0, 0, 0, 0.5);
 $box-shadow-hover: 0 4px 8px rgba(0, 0, 0, 0.3);
 $box-shadow-inset: inset 0 3px 10px rgba(0, 0, 0, 0.2), inset 0 1px 5px rgba(0, 0, 0, 0.15), inset 0 0 15px rgba(0, 0, 0, 0.1);
 $circle-shadow: 0 8px 12px rgba(0, 0, 0, 0.5);
 $bar-shadow: 0 6px 8px 0 rgba(0, 0, 0, 0.5); /* Offset & blur only */
+$shadow: rgba(0, 0, 0, 0.4); // Subtle shadow for depth
