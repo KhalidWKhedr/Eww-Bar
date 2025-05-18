@@ -1,0 +1,39 @@
+// ───────────────────────────────────────────────
+// MIXIN: mixin-launcher
+// Description: Styles for launcher-style buttons
+// Used in: directory_menu_button, launcher widgets
+// ───────────────────────────────────────────────
+// Generic launcher button
+@mixin launcher-button(
+  $text-color: $color1,
+  $bg-color: $color7,
+  $hover-color: $color3,
+  $border-radius: 20px,
+) {
+  color: $text-color;
+  background-color: $bg-color;
+  border-radius: $border-radius;
+  box-shadow: $box-shadow-deep;
+  margin: $margin-y $margin-x;
+
+  &:hover {
+    color: $hover-color;
+    box-shadow: $box-shadow-inset;
+  }
+}
+
+// ───────────────────────────────────────────────
+// Directory-specific
+@mixin directory-menu-item {
+  @include menu-item($hover-color: $color4);
+}
+
+// Tools-specific
+@mixin tools-menu-item {
+  @include menu-item($hover-color: $color6);
+}
+
+// Power-specific
+@mixin power-menu-item {
+  @include menu-item($hover-color: $color8);
+}

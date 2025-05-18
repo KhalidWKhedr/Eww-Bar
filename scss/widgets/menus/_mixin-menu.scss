@@ -1,0 +1,45 @@
+// ───────────────────────────────────────────────
+// MIXIN: mixin-menu
+// Description: Shared menu styles for directory, tools, power
+// ───────────────────────────────────────────────
+
+// Generic menu container
+@mixin menu-container {
+  border-radius: 10px;
+  box-shadow: $box-shadow-deep;
+  background-color: $color5;
+  padding-right: 2px;
+  padding-left: 2px;
+}
+
+// Generic menu item with customizable hover color
+@mixin menu-item($hover-color: $color3) {
+  color: $foreground;
+  background-color: transparent;
+  border-radius: 20px;
+  transition: box-shadow 0.3s ease;
+  margin-right: 2px;
+  margin-left: 2px;
+
+  &:hover {
+    color: $hover-color;
+    background-color: $foreground;
+    box-shadow: $box-shadow-inset;
+  }
+}
+
+// ───────────────────────────────────────────────
+// PRECONFIGURED MIXINS FOR EACH MENU
+// ───────────────────────────────────────────────
+
+@mixin directory-item {
+  @include menu-item($hover-color: $color4);
+}
+
+@mixin tools-item {
+  @include menu-item($hover-color: $color6);
+}
+
+@mixin power-item {
+  @include menu-item($hover-color: $color8);
+}
