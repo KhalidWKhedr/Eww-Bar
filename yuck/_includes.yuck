@@ -39,3 +39,4 @@
 
 ;; Include Bar Setup Widgets
 (include "yuck/widgets/bars/_bar.yuck")
+

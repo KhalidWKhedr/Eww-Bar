@@ -23,6 +23,7 @@
 @import "widgets/_workspaces.scss";
 
 /** Menu Widgets **/
+@import "widgets/menus/_mixin-launcher.scss"
 @import "widgets/menus/_mixin-menu.scss"
 @import "widgets/menus/directories/_directories-menu-launcher.scss";
 @import "widgets/menus/directories/_directories-menu.scss";

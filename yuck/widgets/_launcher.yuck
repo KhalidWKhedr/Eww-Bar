@@ -13,3 +13,4 @@
                 :style "font-size: 30px; padding-right: 8px; padding-bottom: 1px"
                 :onclick "bash -c 'fuzzel &'"
                          "󰣇")))
+    
