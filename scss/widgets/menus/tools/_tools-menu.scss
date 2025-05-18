@@ -1,28 +1,20 @@
 /** Tools Menu ***********************************/
 
 .tools_menu {
-    border-radius: 10px;
-    box-shadow: $box-shadow-deep;
-    background-color: $color5;
-    padding-right: 2px;
-    padding-left: 2px;
-}
-
-.tools_options {
-    
+  border-radius: 20px;
+  background-color: $color1;
+  box-shadow: $box-shadow-deep;
 }
 
 .tool_option {
-    color: $foreground;
-    background-color: transparent;
-    margin-right: 2px;
-    margin-left: 2px;
-    border-radius: 20px;
-    transition: box-shadow 0.3s ease;
+  color: $foreground;
+  background-color: transparent;
+  border-radius: 20px;
+  transition: box-shadow 0.3s ease;
 
-    &:hover {
-        color: $color3;
-        box-shadow: $box-shadow-inset;
-        background-color: $foreground;
-    }
+  &:hover {
+    color: $color3;
+    background-color: $foreground;
+    box-shadow: $box-shadow-inset;
+  }
 }

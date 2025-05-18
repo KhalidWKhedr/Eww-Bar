@@ -1,18 +1,21 @@
-/** Tools-Menu Launcher ***********************************/
-
-.tools_menu_launcher {
-    margin-left: 5px;
-    margin-right: 5px;
+/** Tools Menu ***********************************/
+.tools_menu {
+  border-radius: 10px;
+  background-color: $color5;
+  box-shadow: $box-shadow-deep;
 }
 
-.tools_menu_button {
-    color: $color1;
-    border-radius: 20px;
-    box-shadow: $box-shadow-deep;
-    background-color: $foreground;
+.tool_option {
+  color: $foreground;
+  background-color: transparent;
+  border-radius: 20px;
+  transition: box-shadow 0.3s ease;
+  margin-right: 2px;
+  margin-left: 2px;
 
-    &:hover {
-        box-shadow: $box-shadow-inset;
-        color: $color8;
-    }
+  &:hover {
+    color: $color3;
+    background-color: $foreground;
+    box-shadow: $box-shadow-inset;
+  }
 }

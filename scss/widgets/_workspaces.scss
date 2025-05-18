@@ -4,7 +4,6 @@
     border-radius: 20px;
     background-color: $color3;
     box-shadow: $box-shadow-inset;
-    padding: 1px 2px; // Added to control container size, matching resource padding
 }
 
 .w0, .w01, .w02, .w03, .w04, .w05, .w06, .w07, .w08, .w09,
@@ -12,7 +11,6 @@
     border-radius: 20px; // Keep rectangular or change to 50% for circular
     margin-left: 2px;
     margin-right: 2px;
-    padding: 3px; // Match resource button padding
     font-size: 14px; // Match resource circle font size
     transition: all 0.3s ease; // Add smooth transition
 }
