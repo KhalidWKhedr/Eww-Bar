@@ -13,5 +13,4 @@
   :stacking "bg"
   :exclusive true
   :focusable false
-  (bar :gui_size gui_size)
-)
+  (bar :gui_size gui_size))

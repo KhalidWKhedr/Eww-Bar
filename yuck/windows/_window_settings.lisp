@@ -1,0 +1,14 @@
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;                        window_settings (window definition)           ;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+(defwindow window_settings
+  :monitor 1
+  :geometry (geometry :x "0.65%"
+                      :y "0"
+                      :height "1%"
+                      :width "12%"
+                      :anchor "top right")
+  :stacking "fg"
+  :namespace "window_calendar"
+  (calendar))

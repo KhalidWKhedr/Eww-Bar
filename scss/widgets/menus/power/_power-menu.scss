@@ -1,11 +1,9 @@
 /** Power Menu ***********************************/
 
 .power_menu {
-    border-radius: 20px;
+    border-radius: 10px;
     box-shadow: $box-shadow-deep;
-    background-color: $color5; // Using color3 for background
-    padding-top: 2px;
-    padding-bottom: 2px;
+    background-color: $color5;
     padding-right: 2px;
     padding-left: 2px;
 }
@@ -26,21 +24,5 @@
         color: $color3; 
         box-shadow: $box-shadow-inset;
         background-color: $foreground;
-    }
-}
-
-.power_menu_launcher {
-    margin-right: 5px;
-}
-
-.power_menu_button {
-    color: $color7;
-    border-radius: 20px;
-    box-shadow: $box-shadow-deep;
-    background-color: $color3; 
-    
-    &:hover {
-        box-shadow: $box-shadow-inset;
-        color: $color8;
     }
 }

@@ -12,13 +12,13 @@
 .time_second {
     margin: 0 2px;
     border-radius: 20px;
-    color: $foreground;
+    color: $color1;
     padding: 0px;
     font-size: 14px;
     letter-spacing: -0.5px;
     text-shadow: 0 0 2px $color2;
     box-shadow: $box-shadow-deep;
-    background-color: transparent;
+    background-color: $foreground;
     &:hover {
         color: $color9;
         background-color: $color6;
