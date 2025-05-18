@@ -7,35 +7,32 @@
     margin-top: 2px;
     padding-right: 3px;
     padding-left: 3px;
-    background-color: $color9;
+    background-color: $foreground;
     box-shadow: $box-shadow-inset;
     border-radius: 20px 15px 15px 20px;
     transition: all 0.3s ease;
 }
 
 @mixin circle-style {
-    color: $foreground;
-    font-size: 14px;
-    margin-right: 3px;
+    color: $color1;
 }
 
 @mixin button-style {
-    color: $foreground;
-    background-color: $color5;
-    box-shadow: $box-shadow-inset;
-    border-radius: 50%;
+    color: $color1;
+    box-shadow: $box-shadow-deep;
+    background-color: $foreground;
     transition: all 0.3s ease;
 
     &:hover {
-        color: $color2;
-        background-color: $color4;
-        box-shadow: 0 0 5px $color2;
+        color: $color13;
+        box-shadow: $box-shadow-inset;
     }
 }
 
+
 @mixin label-style {
     margin-right: 3px;
-    color: $foreground;
+    color: $color1;
     font-size: 12px;
     font-weight: 500;
     text-shadow: 0 0 2px $color2;

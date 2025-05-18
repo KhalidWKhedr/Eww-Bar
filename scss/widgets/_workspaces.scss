@@ -19,12 +19,14 @@
 
 /* Unoccupied */
 .w0 {
-    color: $color6;
+    color: $color4;
 
     &:hover {
-        color: $color3;
+        color: $color13;
+        box-shadow: $box-shadow-inset;
     }
 }
+
 
 /* Occupied */
 .w01, .w02, .w03, .w04, .w05, .w06, .w07, .w08, .w09 {
@@ -33,16 +35,19 @@
     background-color: $foreground;
 
     &:hover {
-        color: $color3;
-        background-color: $color6;
+        color: $color13;
+        box-shadow: $box-shadow-inset;
     }
 }
 
+
 /* Focused */
 .w011, .w022, .w033, .w044, .w055, .w066, .w077, .w088, .w099 {
-    color: $color3;
-
+    color: $color1;
+    box-shadow: $box-shadow-deep;
+    background-color: $foreground;
     &:hover {
-        color: $color6;
+        color: $color13;
+        box-shadow: $box-shadow-inset;
     }
 }
