@@ -10,8 +10,8 @@
 
     ;; Revealer for sliding in folder options
     (revealer :transition "slideright"
-      :reveal show_folder
-
+        :reveal show_folder
+        
               ;; Container for the directory folder buttons
               (box :class "directory_folder_options"
 
@@ -31,7 +31,7 @@
                    (button :class "directory_folder"
                            :tooltip "Documents"
                            :onclick "sh -c 'xdg-open $HOME/Documents'"
-                           :style "font-size: 25px; 
+                           :style "font-size: 25px;      
                            padding-right: 5px;
                            padding-bottom: 2px" 
                            "󱧶")

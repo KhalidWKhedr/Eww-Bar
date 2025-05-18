@@ -23,14 +23,14 @@
 @import "widgets/_workspaces.scss";
 
 /** Menu Widgets **/
-@import "widgets/menus/_mixin-launcher.scss"
-@import "widgets/menus/_mixin-menu.scss"
-@import "widgets/menus/directories/_directories-menu-launcher.scss";
-@import "widgets/menus/directories/_directories-menu.scss";
-@import "widgets/menus/power/_power-menu-launcher.scss";
-@import "widgets/menus/power/_power-menu.scss";
-@import "widgets/menus/tools/_tools-menu-launcher.scss";
-@import "widgets/menus/tools/_tools-menu.scss";
+@import "widgets/menus/mixin-menu";
+@import "widgets/menus/mixin-launcher";
+// @import "widgets/menus/directories/_directories-menu-launcher.scss";
+// @import "widgets/menus/directories/_directories-menu.scss";
+// @import "widgets/menus/power/_power-menu-launcher.scss";
+// @import "widgets/menus/power/_power-menu.scss";
+// @import "widgets/menus/tools/_tools-menu-launcher.scss";
+// @import "widgets/menus/tools/_tools-menu.scss";
 
 /** Resource Widgets **/
 @import "widgets/resources/_resources.scss";

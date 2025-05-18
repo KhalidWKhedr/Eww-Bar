@@ -8,7 +8,7 @@
   margin-right: 5px;
 }
 
-@mixin directory-launcher-button {
+@mixin launcher-button {
   color: $color1;
   background-color: $foreground;
   border-radius: 20px;
@@ -20,3 +20,30 @@
   }
 }
 
+// ───────────────────────────────────────────────
+// Launcher Styles using Mixins
+// ───────────────────────────────────────────────
+
+.directory_menu_launcher {
+  @include launcher-container;
+}
+
+.directory_menu_button {
+  @include launcher-button;
+}
+
+.power_menu_launcher {
+  @include launcher-container;
+}
+
+.power_menu_button {
+  @include launcher-button;
+}
+
+.tools_menu_launcher {
+  @include launcher-container;
+}
+
+.tools_menu_button {
+  @include launcher-button;
+}

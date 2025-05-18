@@ -3,7 +3,6 @@
 // Description: Shared menu styles for directory, tools, power
 // ───────────────────────────────────────────────
 
-// Generic menu container
 @mixin menu-container {
   border-radius: 10px;
   box-shadow: $box-shadow-deep;
@@ -12,7 +11,6 @@
   padding-left: 2px;
 }
 
-// Generic menu item with customizable hover color
 @mixin menu-item($hover-color: $color3) {
   color: $foreground;
   background-color: transparent;
@@ -26,4 +24,32 @@
     background-color: $foreground;
     box-shadow: $box-shadow-inset;
   }
+}
+
+// ───────────────────────────────────────────────
+// Menu Styles using Mixins
+// ───────────────────────────────────────────────
+
+.directory_menu {
+  @include menu-container;
+}
+
+.directory_folder {
+  @include menu-item($color4); // distinct hover color
+}
+
+.power_menu {
+  @include menu-container;
+}
+
+.power_option {
+  @include menu-item($color3);
+}
+
+.tools_menu {
+  @include menu-container;
+}
+
+.tool_option {
+  @include menu-item($color3);
 }

@@ -27,7 +27,7 @@
 
 ;; Workspace listener
 (deflisten workspace
-  "scripts/workspaces/workspace.sh" )
+  "scripts/workspaces/workspace.sh")
 
 (deflisten current-workspace :initial ""
   "scripts/workspaces/current_workspace.sh")
