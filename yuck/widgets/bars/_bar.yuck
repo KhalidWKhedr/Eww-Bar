@@ -1,11 +1,11 @@
-(defwidget bar1 [gui_size]
+(defwidget bar [gui_size]
   (box
    :orientation "h"
-   :class (str "bar1_eww " gui_size)
+   :class (str "bar_eww " gui_size)
    :space-evenly true
 
    ;; Left Section
-   (box :class "bar1_left"
+   (box :class "bar_left"
         :halign "start"
         :hexpand true
         :space-evenly false
@@ -14,7 +14,7 @@
         (active_window))
 
    ;; Center-Left Section
-   (box :class "bar1_left_center"
+   (box :class "bar_left_center"
         :halign "start"
         :hexpand false
         :space-evenly false
@@ -25,7 +25,7 @@
         (active_media))
 
    ;; Center Section
-   (box :class "bar1_center"
+   (box :class "bar_center"
         :halign "center"
         :hexpand false
         :space-evenly false
@@ -34,17 +34,14 @@
         (media_player_launcher))
 
    ;; Right Container
-   (box :class "bar1_right_container"
+   (box :class "bar_right_container"
         :halign "end"
         :hexpand false
         :space-evenly false
-        (resource_volume)
-        (resource_brightness)
-        (resource_battery)
-        (resource_bluetooth))
+        (resources))
 
    ;; Right Section
-   (box :class "bar1_right"
+   (box :class "bar_right"
         :halign "end"
         :hexpand false
         :space-evenly false

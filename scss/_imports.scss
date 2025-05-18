@@ -7,8 +7,7 @@
 @import "generic/_variables.scss";
 
 /** Windows **/
-@import "windows/_bar0.scss";
-@import "scss/windows/bar";
+@import "scss/windows/_bar";
 @import "windows/_bluetooth.scss";
 @import "windows/_calendar.scss";
 @import "windows/_media-player.scss";
@@ -32,7 +31,7 @@
 @import "widgets/menus/tools/_tools-menu.scss";
 
 /** Resource Widgets **/
-@import "widgets/resources/_all.scss";
+@import "widgets/resources/_resources.scss";
 @import "widgets/resources/_battery.scss";
 @import "widgets/resources/_bluetooth.scss";
 @import "widgets/resources/_brightness.scss";
