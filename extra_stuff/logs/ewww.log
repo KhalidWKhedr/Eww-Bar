@@ -1,0 +1,40 @@
+[01:57:57] Existing daemon found, stopping it first
+error: unrecognized subcommand 'stop'
+
+Usage: eww [OPTIONS] <COMMAND>
+
+For more information, try '--help'.
+[01:57:58] Starting Eww daemon (attempt 1/5)
+[01:57:58] Waiting 2.5 seconds for daemon to initialize
+Eww server already running.
+[01:58:01] Daemon started successfully (PID 369546)
+[01:58:01] Activating 0xD1ED as monitor_0xd1ed (small)
+[01:58:01] Activating HP X27q as monitor_hpx27q (large)
+[01:58:16] Existing daemon found, stopping it first
+error: unrecognized subcommand 'stop'
+
+Usage: eww [OPTIONS] <COMMAND>
+
+For more information, try '--help'.
+[01:58:17] Starting Eww daemon (attempt 1/5)
+[01:58:17] Waiting 2.5 seconds for daemon to initialize
+Eww server already running.
+[01:58:19] Daemon started successfully (PID 369860)
+[01:58:19] Activating 0xD1ED as monitor_0xd1ed (small)
+[01:58:19] Activating HP X27q as monitor_hpx27q (large)
+[01:58:35] Existing daemon found, stopping it first
+error: unrecognized subcommand 'stop'
+
+Usage: eww [OPTIONS] <COMMAND>
+
+For more information, try '--help'.
+[01:58:36] Starting Eww daemon (attempt 1/5)
+[01:58:36] Waiting 2.5 seconds for daemon to initialize
+Eww server already running.
+[01:58:38] Daemon started successfully (PID 370215)
+[01:58:38] Activating 0xD1ED as monitor_0xd1ed (small)
+[01:58:38] Activating HP X27q as monitor_hpx27q (large)
+[01:58:40] Initiating shutdown sequence...
+[01:58:40] Cleanup complete
+[01:58:40] Initiating shutdown sequence...
+[01:58:40] Cleanup complete

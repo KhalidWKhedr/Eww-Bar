@@ -1,14 +1,14 @@
 /** Power-Menu Launcher ***********************************/
 
 .power_menu_launcher {
-    margin-right: 10px;
+    margin-right: 50px;
 }
 
 .power_menu_button {
-    color: $color7;
+    color: white;
     border-radius: 20px;
     box-shadow: $box-shadow-deep;
-    background-color: $color3; 
+    background-color: black; 
     
     &:hover {
         box-shadow: $box-shadow-inset;
