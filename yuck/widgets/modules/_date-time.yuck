@@ -1,5 +1,5 @@
 ;; Date and Time Widget
-(defwidget date&time []
+(defwidget date_time []
 
     ;; Container for date and time components
     (box :class "datetime_container"

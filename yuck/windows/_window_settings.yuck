@@ -6,8 +6,8 @@
   :monitor 1
   :geometry (geometry :x "0.65%"
                       :y "0"
-                      :height "1%"
-                      :width "12%"
+                      :height "50%"
+                      :width "50%"
                       :anchor "top right")
   :stacking "fg"
   :namespace "window_calendar"

@@ -1,40 +1,31 @@
 /** Imports ***********************************/
 
 /** Globals **/
-@import "generic/_global.scss";
-@import "generic/_colors.scss";
-@import "generic/_accents.scss";
-@import "generic/_variables.scss";
+@import "base/_global.scss";
+@import "base/_colors.scss";
+@import "base/_accents.scss";
+@import "base/_variables.scss";
 
 /** Windows **/
-@import "scss/windows/_bar";
+@import "windows/_bar";
 @import "windows/_bluetooth.scss";
 @import "windows/_calendar.scss";
 @import "windows/_media-player.scss";
 
 /** Widgets **/
-@import "widgets/_active_media.scss";
-@import "widgets/_active_window.scss";
-@import "widgets/_date&time.scss";
-@import "widgets/_launcher.scss";
-@import "widgets/_media-launcher.scss";
-@import "widgets/_systray.scss";
-@import "widgets/_tooltip.scss";
-@import "widgets/_workspaces.scss";
+@import "widgets/modules/_active_media.scss";
+@import "widgets/modules/_active_window.scss";
+@import "widgets/modules/_date-time.scss";
+@import "widgets/modules/_launcher.scss";
+@import "widgets/modules/_media-launcher.scss";
+@import "widgets/modules/_systray.scss";
+@import "widgets/modules/_tooltip.scss";
+@import "widgets/modules/_workspaces.scss";
 
 /** Menu Widgets **/
 @import "widgets/menus/mixin-menu";
 @import "widgets/menus/mixin-launcher";
-// @import "widgets/menus/directories/_directories-menu-launcher.scss";
-// @import "widgets/menus/directories/_directories-menu.scss";
-// @import "widgets/menus/power/_power-menu-launcher.scss";
-// @import "widgets/menus/power/_power-menu.scss";
-// @import "widgets/menus/tools/_tools-menu-launcher.scss";
-// @import "widgets/menus/tools/_tools-menu.scss";
 
 /** Resource Widgets **/
 @import "widgets/resources/_resources.scss";
-// @import "widgets/resources/_battery.scss";
-// @import "widgets/resources/_bluetooth.scss";
-// @import "widgets/resources/_brightness.scss";
-// @import "widgets/resources/_volume.scss";
+

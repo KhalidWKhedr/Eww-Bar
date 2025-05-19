@@ -40,6 +40,8 @@
 
 .power_menu {
   @include menu-container;
+  padding-bottom: 1px;
+  padding-top: 1px;
 }
 
 .power_option {

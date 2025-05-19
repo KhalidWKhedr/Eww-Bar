@@ -45,5 +45,5 @@
         :halign "end"
         :hexpand false
         :space-evenly false
-        (date&time)
+        (date_time)
         (systemtray))))

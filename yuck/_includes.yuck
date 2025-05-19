@@ -12,15 +12,15 @@
 (include "yuck/windows/_window_media.yuck")
 
 ;; Include Widgets
-(include "yuck/widgets/_active_media.yuck")
-(include "yuck/widgets/_active_window.yuck")
-(include "yuck/widgets/_bluetooth.yuck")
-(include "yuck/widgets/_date&time.yuck")
-(include "yuck/widgets/_launcher.yuck")
-(include "yuck/widgets/_media-launcher.yuck")
-(include "yuck/widgets/_media.yuck")
-(include "yuck/widgets/_systemtray.yuck")
-(include "yuck/widgets/_workspaces.yuck")
+(include "yuck/widgets/modules/_active_media.yuck")
+(include "yuck/widgets/modules/_active_window.yuck")
+(include "yuck/widgets/modules/_bluetooth.yuck")
+(include "yuck/widgets/modules/_date-time.yuck")
+(include "yuck/widgets/modules/_launcher.yuck")
+(include "yuck/widgets/modules/_media-launcher.yuck")
+(include "yuck/widgets/modules/_media.yuck")
+(include "yuck/widgets/modules/_systemtray.yuck")
+(include "yuck/widgets/modules/_workspaces.yuck")
 
 ;; Include Menu Widgets
 (include "yuck/widgets/menus/directories/_directories-menu-launcher.yuck")
