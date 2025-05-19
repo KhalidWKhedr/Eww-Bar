@@ -23,7 +23,7 @@ export f"$num"="$num"
 
 echo "(eventbox :onscroll \"echo {} | sed -e 's/up/-1/g' -e 's/down/+1/g' | xargs hyprctl dispatch workspace\" \
       (box :class \"workspace\" :orientation \"h\" :space-evenly \"true\" :halign \"center\" :valign \"center\" \
-        (button :onclick \"scripts/workspaces/dispatch.sh 1\" :class \"w0$o1$f1\" :tooltip \"Workspace\" :width 40 :height 36 :hexpand true :vexpand false :style \"font-size: 20px; padding-left: 6px\" \"${chess[0]}₁ \") \
+        (button :onclick \"scripts/workspaces/dispatch.sh 1\" :class \"w0$o1$f1\" :tooltip \"Workspace\" :width 35 :height 35 :hexpand true :vexpand false :style \"font-size: 20px; padding-left: 6px\" \"${chess[0]}₁ \") \
         (button :onclick \"scripts/workspaces/dispatch.sh 2\" :class \"w0$o2$f2\" :tooltip \"Workspace\" :style \"font-size: 20px; padding-left: 6px\" \"${chess[1]}₂ \") \
         (button :onclick \"scripts/workspaces/dispatch.sh 3\" :class \"w0$o3$f3\" :tooltip \"Workspace\" :style \"font-size: 20px; padding-left: 6px\" \"${chess[2]}₃ \") \
         (button :onclick \"scripts/workspaces/dispatch.sh 4\" :class \"w0$o4$f4\" :tooltip \"Workspace\" :style \"font-size: 20px; padding-left: 6px\" \"${chess[3]}₄ \") \

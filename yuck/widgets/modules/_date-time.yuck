@@ -8,28 +8,24 @@
          :halign "center"
          :valign "center"
 
-         (box :class "container_hours_minutes"
-        
+        (box :class "container_hours_minutes"    
                 ;; Hour Button with Nerd Font
-                (button :class "time_hour"
-                        :tooltip "Hours"
-                        :width 45
-                        :height 40
-                        :style "font-size: 25px; padding-left: 1px; font-family: 'Hack Nerd Font', monospace;" 
-                        :onclick "${eww} update show_calendar=$(eww get show_calendar | grep -q true && echo false || echo true); \
-                                [ $(eww get show_calendar) = true ] && ${eww} open window_calendar || ${eww} close window_calendar"
-                                hour)
-                (button :class "time_minute"
-                                :tooltip "Minutes"
-                                :width 45
-                                :height 40
-                                :style "font-size: 25px; 
-                                        padding-left: 1px; 
-                                        font-family: 'Hack Nerd Font', monospace;" 
-                                :onclick "${eww} update show_calendar=$(eww get show_calendar | grep -q true && echo false || echo true); \
-                                        [ $(eww get show_calendar) = true ] && ${eww} open window_calendar || ${eww} close window_calendar"
-                                        min))
-
+            (button :class "time_hour"
+                    :width 43
+                    :height 40
+                    :tooltip "Hours"
+                    :style "font-size: 25px; padding-left: 1px; font-family: 'Hack Nerd Font', monospace;" 
+                    :onclick "${eww} update show_calendar=$(eww get show_calendar | grep -q true && echo false || echo true); \
+                            [ $(eww get show_calendar) = true ] && ${eww} open window_calendar || ${eww} close window_calendar"
+                            hour)
+            (button :class "time_minute"
+                    :tooltip "Minutes"                                
+                    :style "font-size: 25px; 
+                            padding-left: 1px; 
+                            font-family: 'Hack Nerd Font', monospace;" 
+                    :onclick "${eww} update show_calendar=$(eww get show_calendar | grep -q true && echo false || echo true); \
+                            [ $(eww get show_calendar) = true ] && ${eww} open window_calendar || ${eww} close window_calendar"
+                            min))
 
         ;; Eventbox for hovering to show date
         (eventbox :class "date_hoverbox"
@@ -43,21 +39,19 @@
                  :halign "center"
                  :valign "center"
 
-           ;; Seconds Button with Nerd Font
-                        (button :class "time_second"
-                                :tooltip "Seconds"
-                                :width 45
-                                :height 40
-                                :style "font-size: 25px;
-                                        padding-top: 0px; 
-                                        font-family: 'Hack Nerd Font', monospace;" 
-                                :onclick "${eww} update show_calendar=$(eww get show_calendar | grep -q true && echo false || echo true); \
-                                        [ $(eww get show_calendar) = true ] && ${eww} open window_calendar || ${eww} close window_calendar"
-                                        sec)
-                                    
-                
+                ;; Seconds Button with Nerd Font
+                (button :class "time_second"
+                        :tooltip "Seconds"
+                        :width 42
+                        :height 40
+                        :style "font-size: 25px;
+                                padding-top: 0px; 
+                                font-family: 'Hack Nerd Font', monospace;" 
+                        :onclick "${eww} update show_calendar=$(eww get show_calendar | grep -q true && echo false || echo true); \
+                                [ $(eww get show_calendar) = true ] && ${eww} open window_calendar || ${eww} close window_calendar"
+                                sec)   
                          
-                    ;; Revealer for the date section
+                ;; Revealer for the date section
                 (revealer :class "date_revealer"
                           :transition "slideleft"
                           :reveal expand_date
@@ -65,16 +59,12 @@
 
                     ;; Container for date buttons
                     (box :class "date_buttons"
-                         :orientation "h"
-                         :space-evenly false
-                                     
-                     
-
+                                    
                                 ;; Date Display Button with Nerd Font
                         (button :class "time_date"
                                 :tooltip "Date Today"
                                 :width 225
                                 :style "font-size: 1.4em; padding-top: 0px; font-family: 'Hack Nerd Font', monospace;" 
                                 :onclick "${eww} update show_calendar=$(eww get show_calendar | grep -q true && echo false || echo true); \
-                                              [ $(eww get show_calendar) = true ] && ${eww} open window_calendar || ${eww} close window_calendar"
-                                          date)))))))
+                                        [ $(eww get show_calendar) = true ] && ${eww} open window_calendar || ${eww} close window_calendar"
+                                        date)))))))
