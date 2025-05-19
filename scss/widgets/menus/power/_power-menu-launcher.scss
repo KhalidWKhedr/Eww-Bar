@@ -1,18 +1,34 @@
+/** Mixins ***************************************/
+
+@mixin launcher-margin {
+  margin-right: 5px;
+  margin-left: 5px;
+}
+
+@mixin launcher-button-base {
+  color: $color1;
+  border-radius: 20px;
+  box-shadow: $box-shadow-deep;
+  background-color: $foreground;
+  padding-bottom: 1px;
+  padding-top: 1px;
+}
+
+@mixin launcher-button-hover {
+  &:hover {
+    box-shadow: $box-shadow-inset;
+    color: $color8;
+  }
+}
+
+
 /** Power-Menu Launcher ***********************************/
 
 .power_menu_launcher {
-    margin-right: 5px;
-    margin-left: 5px;
+  @include launcher-margin;
 }
 
 .power_menu_button {
-    color: $color1;
-    border-radius: 20px;
-    box-shadow: $box-shadow-deep;
-    background-color: $foreground; 
-    
-    &:hover {
-        box-shadow: $box-shadow-inset;
-        color: $color8; 
-    }
+  @include launcher-button-base;
+  @include launcher-button-hover;
 }

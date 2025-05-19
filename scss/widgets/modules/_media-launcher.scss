@@ -1,18 +1,32 @@
-/** Media-Player ***********************************/
+/** Mixins ***************************************/
 
-.media_player_launcher{
-    border-radius: 20px;
-    margin-left: 0px;
+@mixin media-player-launcher-style {
+  margin-left: 0px;
+  border-radius: 20px;
+}
+
+@mixin media-player-button-style {
+  color: $color1;
+  background-color: $foreground;
+  border-radius: 40px;
+  box-shadow: $box-shadow-deep;
+}
+
+@mixin media-player-button-hover-style {
+  color: $color13;
+  box-shadow: $box-shadow-inset;
+}
+
+/** Media-Player *********************************/
+
+.media_player_launcher {
+  @include media-player-launcher-style;
 }
 
 .media_player_button {
-    color: $color1;
-    background-color: $foreground;
-    border-radius: 40px;
-    box-shadow: $box-shadow-deep;
+  @include media-player-button-style;
 
-    &:hover {
-        color: $color13;
-        box-shadow: $box-shadow-inset;
-    }
+  &:hover {
+    @include media-player-button-hover-style;
+  }
 }

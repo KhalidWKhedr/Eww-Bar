@@ -1,7 +1,4 @@
-// ───────────────────────────────────────────────
-// MIXIN: mixin-menu
-// Description: Shared menu styles for directory, tools, power
-// ───────────────────────────────────────────────
+/** Mixins ***************************************/
 
 @mixin menu-container {
   border-radius: 10px;
@@ -26,22 +23,19 @@
   }
 }
 
-// ───────────────────────────────────────────────
-// Menu Styles using Mixins
-// ───────────────────────────────────────────────
+
+/** Directory Menu  ***************************************/
 
 .directory_menu {
   @include menu-container;
 }
 
 .directory_folder {
-  @include menu-item($color4); // distinct hover color
+  @include menu-item($color4);
 }
 
 .power_menu {
   @include menu-container;
-  padding-bottom: 1px;
-  padding-top: 1px;
 }
 
 .power_option {

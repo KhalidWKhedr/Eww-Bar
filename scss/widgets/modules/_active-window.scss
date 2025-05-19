@@ -1,0 +1,32 @@
+/** Mixins ***********************************/
+@mixin active-window-style {
+  margin-left: 5px;
+  border-radius: 10px;
+  padding: 5px;
+}
+
+@mixin current-workspace-style {
+  color: $foreground;
+  font-weight: bold;
+  font-size: 1.2em;
+  margin-bottom: 2px;
+}
+
+@mixin workspace-sublabel-style {
+  color: $foreground;
+  font-size: 0.9em;
+  opacity: 0.8;
+}
+
+/** Active Window ***********************************/
+.active_window {
+  @include active-window-style;
+}
+
+.current_workspace {
+  @include current-workspace-style;
+}
+
+.workspace_sublabel {
+  @include workspace-sublabel-style;
+}

@@ -11,4 +11,4 @@
                       :anchor "top right")
   :stacking "fg"
   :namespace "window_calendar"
-  (calendar))
+  (control_settings))

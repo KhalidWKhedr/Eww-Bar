@@ -53,10 +53,7 @@
 /** Styles ****************************************/
 
 .datetime_container {
-  box-shadow: $box-shadow-inset;
-  border-radius: 20px;
-  background-color: $color3;;
-  margin-right: 5px;
+  @include container-style;
 }
 
 .container_hours_minutes {
@@ -80,4 +77,3 @@
 .hover_revealer {
   @include hover-revealer-style;
 }
-

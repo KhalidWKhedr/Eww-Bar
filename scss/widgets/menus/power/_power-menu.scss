@@ -1,24 +1,38 @@
+/** Mixins ***************************************/
+
+@mixin menu-container {
+  border-radius: 10px;
+  box-shadow: $box-shadow-deep;
+  background-color: $color5;
+  padding-right: 2px;
+  padding-left: 2px;
+}
+
+@mixin menu-option-base {
+  color: $foreground;
+  background-color: transparent;
+  margin-right: 2px;
+  margin-left: 2px;
+  border-radius: 20px;
+  transition: box-shadow 0.3s ease;
+}
+
+@mixin menu-option-hover($hover-color) {
+  &:hover {
+    color: $hover-color;
+    box-shadow: $box-shadow-inset;
+    background-color: $foreground;
+  }
+}
+
+
 /** Power Menu ***********************************/
 
 .power_menu {
-    border-radius: 10px;
-    box-shadow: $box-shadow-deep;
-    background-color: $color5;
-    padding-right: 2px;
-    padding-left: 2px;
+  @include menu-container;
 }
 
 .power_option {
-    color: $foreground; 
-    background-color: transparent; 
-    margin-right: 2px;
-    margin-left: 2px;
-    border-radius: 20px;
-    transition: box-shadow 0.3s ease;
-
-    &:hover {
-        color: $color3; 
-        box-shadow: $box-shadow-inset;
-        background-color: $foreground;
-    }
+  @include menu-option-base;
+  @include menu-option-hover($color3);
 }

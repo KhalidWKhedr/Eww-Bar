@@ -1,0 +1,10 @@
+;; Settings
+(defwidget control_settings []
+  (box :class "Test"
+    (overlay
+      
+      (box :orientation "vertical"
+          (label :text "Wi-Fi")
+          (button :label "Toggle Wi-Fi")
+          (label :text "Bluetooth")
+          (button :label "Toggle Bluetooth")))))

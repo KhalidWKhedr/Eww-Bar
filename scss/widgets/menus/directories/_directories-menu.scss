@@ -1,25 +1,38 @@
+/** Mixins ***************************************/
+
+@mixin directory-menu-style {
+  border-radius: 10px;
+  box-shadow: $box-shadow-deep;
+  background-color: $color5;
+  padding-right: 2px;
+  padding-left: 2px;
+}
+
+@mixin directory-folder-style {
+  color: $foreground;
+  background-color: transparent;
+  margin-right: 2px;
+  margin-left: 2px;
+  border-radius: 20px;
+  transition: box-shadow 0.3s ease;
+}
+
+@mixin directory-folder-hover {
+  &:hover {
+    color: $color4;
+    box-shadow: $box-shadow-inset;
+    background-color: $foreground;
+  }
+}
+
+
 /** Directories Menu ***********************************/
 
 .directory_menu {
-    border-radius: 10px;
-    box-shadow: $box-shadow-deep;
-    background-color: $color5;
-    padding-right: 2px;
-    padding-left: 2px;
+  @include directory-menu-style;
 }
 
 .directory_folder {
-    color: $foreground;
-    background-color: transparent;
-    margin-right: 2px;
-    margin-left: 2px;
-    border-radius: 20px;
-    transition: box-shadow 0.3s ease;
-
-    &:hover {
-        color: $color4;
-        box-shadow: $box-shadow-inset;
-        background-color: $foreground;
-    }
+  @include directory-folder-style;
+  @include directory-folder-hover;
 }
-

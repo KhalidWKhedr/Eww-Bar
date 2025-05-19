@@ -1,20 +1,21 @@
-/** Imports ***********************************/
+/** Imports ***************************************/
 
-/** Globals **/
+/** Base */
 @import "base/_global.scss";
 @import "base/_colors.scss";
 @import "base/_accents.scss";
 @import "base/_variables.scss";
 
-/** Windows **/
+/** Windows */
 @import "windows/_bar";
 @import "windows/_bluetooth.scss";
 @import "windows/_calendar.scss";
+@import "windows/_control-settings.scss";
 @import "windows/_media-player.scss";
 
-/** Widgets **/
-@import "widgets/modules/_active_media.scss";
-@import "widgets/modules/_active_window.scss";
+/** Widgets: Core */
+@import "widgets/modules/_active-media.scss";
+@import "widgets/modules/_active-window.scss";
 @import "widgets/modules/_date-time.scss";
 @import "widgets/modules/_launcher.scss";
 @import "widgets/modules/_media-launcher.scss";
@@ -22,10 +23,9 @@
 @import "widgets/modules/_tooltip.scss";
 @import "widgets/modules/_workspaces.scss";
 
-/** Menu Widgets **/
+/** Widgets: Menus */
 @import "widgets/menus/mixin-menu";
 @import "widgets/menus/mixin-launcher";
 
-/** Resource Widgets **/
+/** Widgets: Resources */
 @import "widgets/resources/_resources.scss";
-

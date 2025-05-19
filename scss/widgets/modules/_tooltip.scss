@@ -1,24 +1,30 @@
-/** Tooltip ***********************************/
+/** Mixins ***************************************/
+
+@mixin tooltip-background-style {
+  background: linear-gradient(135deg, $color2 0%, darken($color0, 5%) 100%);
+  font-size: 15px;
+  border-radius: 12px;
+  color: $foreground;
+  padding: 8px 12px;
+  box-shadow: $box-shadow-deep;
+  border: 1px solid rgba($color2, 0.2);
+  opacity: 0.95;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+@mixin tooltip-label-style {
+  margin: 4px;
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+/** Tooltip ***************************************/
 
 tooltip.background {
-    background: linear-gradient(
-        135deg,
-        $color2 0%,
-        darken($color0, 5%) 100%
-    ); // Subtle gradient
-    font-size: 15px; // Standard font size
-    border-radius: 12px; // Softer, modern rounded corners
-    color: $foreground; // Text color
-    padding: 8px 12px; // More spacious padding
-    box-shadow: $box-shadow-deep; // Depth with shadow
-    border: 1px solid rgba($color2, 0.2); // Subtle border for polish
-    opacity: 0.95; // Slightly translucent for a sleek look
-    animation: fadeIn 0.3s ease-in-out; // Fade-in animation
+  @include tooltip-background-style;
 }
 
 tooltip label {
-    margin: 4px; // Slightly more margin for breathing room
-    font-family: "Inter", sans-serif; // Modern, clean font (ensure it's available)
-    font-weight: 500; // Medium weight for readability
-    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3); // Subtle text shadow for contrast
+  @include tooltip-label-style;
 }

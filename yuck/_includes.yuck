@@ -13,9 +13,10 @@
 (include "yuck/windows/_window_settings.yuck")
 
 ;; Include Widgets
-(include "yuck/widgets/modules/_active_media.yuck")
-(include "yuck/widgets/modules/_active_window.yuck")
+(include "yuck/widgets/modules/_active-media.yuck")
+(include "yuck/widgets/modules/_active-window.yuck")
 (include "yuck/widgets/modules/_bluetooth.yuck")
+(include "yuck/widgets/modules/_control-settings.yuck")
 (include "yuck/widgets/modules/_date-time.yuck")
 (include "yuck/widgets/modules/_launcher.yuck")
 (include "yuck/widgets/modules/_media-launcher.yuck")

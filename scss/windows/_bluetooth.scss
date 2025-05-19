@@ -1,80 +1,96 @@
+/** Mixins ****************************************/
+
+@mixin rounded-box($bg, $radius: 20px) {
+  background-color: $bg;
+  border-radius: $radius;
+}
+
+@mixin label-style($color, $bg) {
+  color: $color;
+  background-color: $bg;
+  border-radius: 20px;
+}
+
+@mixin button-style($color, $bg, $shadow, $border) {
+  color: $color;
+  background-color: $bg;
+  box-shadow: $shadow;
+  border-radius: 20px;
+  border: 1px solid $border;
+}
+
+@mixin button-hover($bg, $shadow) {
+  background-color: $bg;
+  box-shadow: $shadow;
+}
+
+
 /** Bluetooth Widget Styles ***********************************/
 
 /* Main Container */
 .box_widget_bluetooth {
-  	background-color: $color0;
-    border-top-right-radius: 10px;
-    border-top-left-radius: 10px;
+  @include rounded-box($color0, 10px);
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
 }
 
 /* Scan Box */
 .box_heading {
-		background-color: $color2;
-    border-top: 1px solid $color4;
-    border-top-right-radius: 10px;
-    border-top-left-radius: 10px;
+  background-color: $color2;
+  border-top: 1px solid $color4;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
 }
 
-.box_scan{
-		background-color: $color6;
-		border-radius: 20px;
+.box_scan {
+  @include rounded-box($color6);
 }
 
 /* Labels */
 .label_scan,
 .label_toggle {
-		color: $color2;
-		background-color: $color6;
-		border-radius: 20px;
+  @include label-style($color2, $color6);
 }
 
-.box_power{
-		background-color: $color6;
-		border-radius: 20px;
+.box_power {
+  @include rounded-box($color6);
 }
-	
+
+/* Buttons */
 .button_scan,
 .bluetooth_toggle {
-		color: $color2;
-  	background-color: $color5;
-  	box-shadow: $box-shadow-deep;
-  	border-radius: 20px;
-  	border: 1px solid $color6;
+  @include button-style($color2, $color5, $box-shadow-deep, $color6);
 }
 
 .button_scan:hover,
 .bluetooth_toggle:hover {
-  	background-color: $color3;
-  	box-shadow: $box-shadow-inset;
+  @include button-hover($color3, $box-shadow-inset);
 }
 
 /******************************/
 
+/* Labels Container */
 .box_labels {
-		background-color: $color5;
+  background-color: $color5;
 }
 
 .label_devices,
 .label_options {
-		color: $color2;
- 		background-color: $color6;
- 		border-radius: 20px;
- 		//box-shadow: $box-shadow-inset;
+  @include label-style($color2, $color6);
+  // box-shadow: $box-shadow-inset;
 }
 
 .label_devices:hover,
 .label_options:hover {
-  // Hover effect for labels
-  // box-shadow: $box-shadow-inset;
+  // Uncomment and customize hover if needed
   // background-color: $color2;
   // color: $color6;
+  // box-shadow: $box-shadow-inset;
 }
 
 /* Devices Section */
 .container_devices {
-  // background-color: $color2;
-  // border-radius: 20px;
-  // margin-top: 0px;
+  // Optional device container styling
 }
 
 .device_name {
@@ -91,9 +107,7 @@
 
 /* Options Section */
 .container_options {
-  // Styles for options container if needed
+  // Optional options container styling
 }
 
-
-/* Additional Utility Classes (if needed) */
-// Add utility styles for padding, margins, alignments, etc.
+/* Utility classes can be added as needed */

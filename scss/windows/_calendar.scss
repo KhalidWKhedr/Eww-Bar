@@ -1,33 +1,51 @@
-/** Calendar  ***********************************/
+/** Mixins ***************************************/
+
+@mixin box-bg($bg, $radius: 10px) {
+  background-color: $bg;
+  border-radius: $radius;
+}
+
+@mixin circle-button($bg, $color, $hover-color: null, $disabled-color: null) {
+  background: $bg;
+  border-radius: 50%;
+  color: $color;
+
+  &:hover {
+    @if $hover-color {
+      color: $hover-color;
+    }
+  }
+
+  &:disabled {
+    @if $disabled-color {
+      color: $disabled-color;
+    }
+  }
+}
+
+@mixin border-top-rounded($bg, $border-color, $radius: 10px) {
+  background-color: $bg;
+  border-top: 1px solid $border-color;
+  border-top-right-radius: $radius;
+  border-top-left-radius: $radius;
+}
+
+
+/** Calendar *************************************/
 
 calendar {
   background: $color0;
 
   &.view {
-    background-color: $color0;
-    border-radius: 10px;
+    @include box-bg($color0);
   }
 
   &.button {
-    background: $color2;
-    border-radius: 50%; 
-    color: $color4;
-
-
-    &:hover {
-      color: $color3;
-    }
-
-    &:disabled {
-      color: $color3;
-    }
+    @include circle-button($color2, $color4, $color3, $color3);
   }
 
   &.header {
-    background-color: $color2;
-    border-top: 1px solid $color4;
-    border-top-right-radius: 10px;
-    border-top-left-radius: 10px;
+    @include border-top-rounded($color2, $color4);
   }
 
   &.highlight {
@@ -38,7 +56,6 @@ calendar {
     color: $color3;
     background: $color6;
     border-radius: 0.2em;
-
   }
 
   &:indeterminate {

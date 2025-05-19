@@ -1,7 +1,4 @@
-// ───────────────────────────────────────────────
-// MIXIN: mixin-launcher
-// Description: Exact replica of directory_menu_button
-// ───────────────────────────────────────────────
+/** Mixins ***************************************/
 
 @mixin launcher-container {
   margin-left: 5px;
@@ -20,9 +17,8 @@
   }
 }
 
-// ───────────────────────────────────────────────
-// Launcher Styles using Mixins
-// ───────────────────────────────────────────────
+/** Directory Menu ***************************************/
+
 
 .directory_menu_launcher {
   @include launcher-container;

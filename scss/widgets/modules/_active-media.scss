@@ -1,0 +1,42 @@
+/** Mixins ***********************************/
+@mixin music-icon-style {
+  margin-left: 5px;
+  font-size: 1.2em;
+  color: $foreground;
+}
+
+@mixin currently-playing-style {
+  margin-left: 5px;
+  border-radius: 10px;
+  padding: 5px;
+}
+
+@mixin label-artist-style {
+  color: $foreground;
+  font-weight: bold;
+  font-size: 1.0em;
+  margin-bottom: 2px;
+}
+
+@mixin label-song-style {
+  color: $foreground;
+  font-size: 0.8em;
+  opacity: 0.8;
+}
+
+/** Active Media ***********************************/
+.music_icon {
+  @include music-icon-style;
+}
+
+.currently_playing {
+  @include currently-playing-style;
+}
+
+.label_artist {
+  @include label-artist-style;
+}
+
+.label_song {
+  @include label-song-style;
+}

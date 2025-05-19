@@ -1,67 +1,67 @@
-/** EWW Bar ***********************************/
+/** Mixins ***************************************/
+
+// Base styles for bar sections
+@mixin bar-section($bg, $accent) {
+  background: linear-gradient(135deg, $bg 0%, $accent 100%);
+  border-radius: 20px;
+}
+
+// Size variations
+@mixin bar-size($font-size, $padding-y, $padding-x, $radius) {
+  font-size: $font-size;
+
+  .bar_left,
+  .bar_left_center,
+  .bar_center,
+  .bar_right_container,
+  .bar_right {
+    padding: $padding-y $padding-x;
+    border-radius: $radius;
+  }
+}
+
+
+/** EWW Bar ***************************************/
 
 .bar_eww {
-    background-color: transparent;
-    border-radius: 12px;
-    font-family: Hack;
+  background-color: transparent;
+  border-radius: 12px;
+  font-family: Hack;
 
-    &.small {
-        font-size: 11px;
+  &.small {
+    @include bar-size(11px, 2px, 4px, 14px);
+  }
 
-        .bar_left,
-        .bar_left_center,
-        .bar_center,
-        .bar_right_container,
-        .bar_right {
-            padding: 2px 4px;
-            border-radius: 14px;
-        }
-    }
-
-    &.large {
-        font-size: 14px;
-
-        .bar_left,
-        .bar_left_center,
-        .bar_center,
-        .bar_right_container,
-        .bar_right {
-            padding: 3px 3px;
-            border-radius: 20px;
-        }
-    }
+  &.large {
+    @include bar-size(14px, 3px, 3px, 20px);
+  }
 }
 
 .bar_left {
-    background: linear-gradient(135deg, $color1 0%, $accent1 100%);
-    border-radius: 20px;
-    opacity: 0.95;
-    padding-right: 3px;
+  @include bar-section($color1, $accent1);
+  opacity: 0.95;
+  padding-right: 3px;
 }
 
 .bar_left_center {
-    background: linear-gradient(135deg, $color2 0%, $accent2 100%);
-    border-radius: 20px;
-    padding-left: 3px;
-    padding-right:3px;
+  @include bar-section($color2, $accent2);
+  padding-left: 3px;
+  padding-right: 3px;
 }
 
 .bar_center {
-    background: linear-gradient(135deg, $color3 0%, $accent3 100%);
-    border-radius: 20px;
-    padding-left: 3px;
-    padding-right:3px;
+  @include bar-section($color3, $accent3);
+  padding-left: 3px;
+  padding-right: 3px;
 }
 
 .bar_right_container {
-    background: linear-gradient(135deg, $color4 0%, $accent4 100%);
-    border-radius: 20px;
-    padding-left: 3px;
-    padding-right:3px;
+  @include bar-section($color4, $accent4);
+  padding-left: 3px;
+  padding-right: 3px;
 }
 
 .bar_right {
-    background: linear-gradient(135deg, $color5 0%, $accent5 100%);
-    border-radius: 20px;
-    padding-left: 5px;
+  @include bar-section($color5, $accent5);
+  padding-left: 5px;
 }

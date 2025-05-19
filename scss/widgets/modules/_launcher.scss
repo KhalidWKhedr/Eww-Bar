@@ -1,18 +1,32 @@
-/** Launcher ***********************************/
+/** Mixins ***************************************/
+
+@mixin launcher-box-style {
+  margin-right: 10px;
+  border-radius: 20px;
+}
+
+@mixin launcher-button-style {
+  color: $color9;
+  background-color: $foreground;
+  border-radius: 40px;
+  box-shadow: $box-shadow-deep;
+}
+
+@mixin launcher-button-hover-style {
+  color: $color13;
+  box-shadow: $box-shadow-inset;
+}
+
+/** Launcher *************************************/
 
 .launcher_box {
-    margin-right: 10px;
-    border-radius: 20px;
+  @include launcher-box-style;
 }
 
 .launcher_button {
-    color: $color9;
-    background-color: $foreground;
-    border-radius: 40px;
-    box-shadow: $box-shadow-deep;
+  @include launcher-button-style;
 
-    &:hover {
-        color: $color13;
-        box-shadow: $box-shadow-inset;
-    }
+  &:hover {
+    @include launcher-button-hover-style;
+  }
 }

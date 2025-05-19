@@ -1,14 +1,17 @@
-.media_player {
-  background-color: $color2 ;
+/** Mixins ***********************************/
+
+/* Mixins */
+@mixin media-player {
+  background-color: $color2;
   border-radius: 10px;
   padding: 10px;
   border-top: 1px solid $color3;
 }
 
-.label_player {
+@mixin media-label {
   color: $foreground;
-  box-shadow: $box-shadow-deep;
   background-color: $color3;
+  box-shadow: $box-shadow-deep;
   border-top: 1px solid $color3;
   padding: 3px;
   font-weight: bold;
@@ -16,11 +19,47 @@
   margin-bottom: 10px;
 }
 
-.box_image_container {
+@mixin image-container {
+  background-color: $color4;
   box-shadow: $box-shadow-deep;
   border-radius: 8px;
   padding: 3px;
-  background-color: $color4;
+}
+
+@mixin song-info-box {
+  background-color: $color0;
+  color: $foreground;
+  border-radius: 10px 10px 0px 0px;
+  font-size: 1.1em;
+  margin-top: 10px;
+  padding-bottom: 5px;
+}
+
+@mixin progress-wrapper {
+  background-color: $color0;
+  color: $foreground;
+  padding-bottom: 5px;
+}
+
+@mixin media-controls {
+  background-color: $color0;
+  color: $foreground;
+  border-radius: 0px 0px 10px 10px;
+  padding-bottom: 10px;
+}
+
+/** Media Player ***********************************/
+
+.media_player {
+  @include media-player;
+}
+
+.label_player {
+  @include media-label;
+}
+
+.box_image_container {
+  @include image-container;
 }
 
 .box_image {
@@ -28,22 +67,15 @@
 }
 
 .box_song_information {
-  color: $foreground;
-  background-color: $color0;
-  margin-top: 10px;
-  padding-bottom: 5px;
-  border-radius: 10px 10px 0px 0px;
-  font-size: 1.1em;
+  @include song-info-box;
 }
 
 .label_artist_song {
   margin-left: 5px;
 }
 
-.box_progression{
-  color: $foreground;
-  background-color: $color0;
-  padding-bottom: 5px;
+.box_progression {
+  @include progress-wrapper;
 }
 
 .media_progress {
@@ -55,9 +87,6 @@
   min-width: 5px;
 }
 
-.box_controls{
-    color: $foreground;
-    background-color: $color0;
-    border-radius: 0px 0px 10px 10px;
-    padding-bottom: 10px;
+.box_controls {
+  @include media-controls;
 }

@@ -1,74 +1,69 @@
-/** Resources ***********************************/
+/** Mixins ***************************************/
 
-// Mixins
 @mixin resource-style {
-    margin-left: 0px;
-    margin-bottom: 2px;
-    margin-top: 2px;
-    margin-right: 2px;
-    margin-left: 2px;
-    background-color: $foreground;
-    box-shadow: $box-shadow-inset;
-    border-radius: 20px 15px 15px 20px;
-    transition: all 0.3s ease;
+  margin: 2px 2px 2px 2px;
+  background-color: $foreground;
+  box-shadow: $box-shadow-inset;
+  border-radius: 20px 15px 15px 20px;
+  transition: all 0.3s ease;
 }
 
 @mixin circle-style {
-    color: $color1;
+  color: $color1;
 }
 
 @mixin button-style {
-    color: $color1;
-    box-shadow: $box-shadow-deep;
-    background-color: $foreground;
-    transition: all 0.3s ease;
+  color: $color1;
+  box-shadow: $box-shadow-deep;
+  background-color: $foreground;
+  transition: all 0.3s ease;
 
-    &:hover {
-        color: $color13;
-        box-shadow: $box-shadow-inset;
-    }
+  &:hover {
+    color: $color13;
+    box-shadow: $box-shadow-inset;
+  }
 }
-
 
 @mixin label-style {
-    margin-right: 3px;
-    color: $color1;
-    font-size: 12px;
-    font-weight: 500;
-    text-shadow: 0 0 2px $color2;
+  margin-right: 3px;
+  color: $color1;
+  font-size: 12px;
+  font-weight: 500;
+  text-shadow: 0 0 2px $color2;
 }
 
-// Utility Class
+
+/** Resources ***********************************/
+
 .resources {
-    padding-right: 3px;
-    padding-left: 3px;
+  padding-right: 3px;
+  padding-left: 3px;
 }
 
-// Apply mixins to each resource type
 .resource_bluetooth,
 .resource_battery,
 .resource_brightness,
 .resource_volume {
-    @include resource-style;
+  @include resource-style;
 }
 
 .bluetooth_circle,
 .battery_circle,
 .brightness_circle,
 .volume_circle {
-    @include circle-style;
+  @include circle-style;
 }
 
 .bluetooth_button,
 .battery_button,
 .brightness_button,
 .volume_button {
-    @include button-style;
+  @include button-style;
 }
 
 .label_bluetooth,
 .label_battery,
 .label_brightness,
 .label_volume {
-    @include label-style;
+  @include label-style;
 }

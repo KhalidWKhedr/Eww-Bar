@@ -1,46 +1,60 @@
-/** Systray ***********************************/
+/** Mixins ***************************************/
+
+@mixin systray-container-style {
+  margin-left: 7px;
+  margin-right: 15px;
+  margin-top: 3px;
+  margin-bottom: 2px;
+  font-size: 16px;
+  color: $foreground;
+  padding: 6px;
+  background-color: $color1;
+  border-radius: 12px;
+  box-shadow: $box-shadow-inset;
+  transition: all 0.2s ease;
+}
+
+@mixin systray-menuitem-style {
+  border-radius: 8px;
+  padding: 8px 14px;
+  background-color: $color2;
+  transition: all 0.2s ease;
+  font-size: 14px;
+  color: $foreground;
+}
+
+@mixin systray-menuitem-hover-style {
+  background-color: $color3;
+  color: $foreground;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+/** Systray ***************************************/
 
 .systray {
-    margin-left: 0px; /* Increased for better spacing, aligns with date&time container */
-    margin-right: 15px; /* Slightly more breathing room on the right */
-    margin-top: 3px;
-    margin-bottom: 2px;
-    font-size: 16px; /* Slightly larger for better readability */
-    color: $foreground;
-    padding: 6px; /* A bit more padding for balance */
-    background-color: $color1;
-    border-radius: 12px; /* Slightly larger radius for a softer look */
-    box-shadow: $box-shadow-inset;
-    transition: all 0.2s ease; /* Smooth transition for hover effects */
+  @include systray-container-style;
 
-    menuitem {
-        border-radius: 8px; /* Rounded corners for a more modern look */
-        padding: 8px 14px; /* Slightly more padding for comfort */
-        background-color: $color2;
-        transition: all 0.2s ease;
-        font-size: 14px; /* Ensure menu items are readable */
-        color: $foreground; /* Consistent text color */
+  menuitem {
+    @include systray-menuitem-style;
 
-        &:backdrop {
-            background-color: $color2;
-            opacity: 0.9; /* Subtle dimming for backdrop state */
-        }
+    &:backdrop {
+      background-color: $color2;
+      opacity: 0.9;
     }
+  }
 
-    menuitem arrow {
-        min-width: 16px;
-        min-height: 16px;
+  menuitem arrow {
+    min-width: 16px;
+    min-height: 16px;
 
-        &:dir(ltr) {
-            -gtk-icon-source: -gtk-icontheme('pan-end-symbolic');
-            margin-left: 12px; /* More spacing for better alignment */
-            margin-right: 0;
-        }
+    &:dir(ltr) {
+      -gtk-icon-source: -gtk-icontheme('pan-end-symbolic');
+      margin-left: 12px;
+      margin-right: 0;
     }
+  }
 
-    menuitem:hover {
-        background-color: $color3;
-        color: $foreground; /* Ensure text remains readable on hover */
-        box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); /* Subtle shadow on hover for depth */
-    }
+  menuitem:hover {
+    @include systray-menuitem-hover-style;
+  }
 }
