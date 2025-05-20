@@ -44,24 +44,24 @@
 }
 
 .bar_left_center {
-  @include bar-section($color2, $accent2);
+  @include bar-section($color1, $accent1);
   padding-left: 3px;
   padding-right: 3px;
 }
 
 .bar_center {
-  @include bar-section($color3, $accent3);
+  @include bar-section($color1, $accent1);
   padding-left: 3px;
   padding-right: 3px;
 }
 
 .bar_right_container {
-  @include bar-section($color4, $accent4);
+  @include bar-section($color1, $accent1);
   padding-left: 3px;
   padding-right: 3px;
 }
 
 .bar_right {
-  @include bar-section($color5, $accent5);
+  @include bar-section($color1, $accent1);
   padding-left: 5px;
 }

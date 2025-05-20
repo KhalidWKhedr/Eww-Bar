@@ -4,10 +4,10 @@
 
 (defwindow window_settings
   :monitor 1
-  :geometry (geometry :x "0.65%"
+  :geometry (geometry :x "12.5%"
                       :y "0"
-                      :height "50%"
-                      :width "50%"
+                      :width "30%"
+                      :height "45%"
                       :anchor "top right")
   :stacking "fg"
   :namespace "window_calendar"
