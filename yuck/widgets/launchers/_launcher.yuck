@@ -1,16 +1,16 @@
 ;; Launcher Widget
 (defwidget launcher []
-    (box :class "launcher_box" 
-         :orientation "h" 
-         :space-evenly true
-         :halign "center"
-         :valign "center"
-         :active true
-         :tooltip "Launcher"
-         :height 40
-         :width 50
-        (button :class "launcher_button"
-                :style "font-size: 30px; padding-right: 8px; padding-bottom: 1px"
-                :onclick "bash -c 'fuzzel &'"
-                         "󰣇")))
-    
+  (box :class "launcher_app" 
+       :orientation "h" 
+       :space-evenly true
+       :halign "center"
+       :valign "center"
+       :active true
+       :tooltip "Application Launcher"
+       :height 40
+       :width 50
+       (button :class "button_app_launcher"
+               :onclick "bash -c 'fuzzel &'"
+               :style "font-size: 30px;
+                       padding-right: 10px"
+               "󰣇")))

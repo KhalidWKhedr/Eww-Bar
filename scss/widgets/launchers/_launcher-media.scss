@@ -19,11 +19,11 @@
 
 /** Media-Player *********************************/
 
-.media_player_launcher {
+.launcher_media_player {
   @include media-player-launcher-style;
 }
 
-.media_player_button {
+.button_media_player {
   @include media-player-button-style;
 
   &:hover {

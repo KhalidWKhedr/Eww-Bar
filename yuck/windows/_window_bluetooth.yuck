@@ -4,7 +4,7 @@
 
 (defwindow window_bluetooth
   :monitor 1
-  :geometry (geometry :x "72.5%"
+  :geometry (geometry :x "66.9%"
                       :y "0px"
                       :width "10%"
                       :height "10%")

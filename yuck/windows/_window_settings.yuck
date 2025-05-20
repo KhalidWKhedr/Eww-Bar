@@ -4,13 +4,13 @@
 
 (defwindow window_settings
   :monitor 1
-  :geometry (geometry :x "12.5%"
+  :geometry (geometry :x "11.2%"
                       :y "0"
                       :height "45%"
                       :width "30%"
                       :anchor "top right")
-  :stacking "bg"
+  :stacking "fg"
   :namespace "window_settings"
   :exclusive true
   :focusable false
-  (control_settings))
+  (settings))

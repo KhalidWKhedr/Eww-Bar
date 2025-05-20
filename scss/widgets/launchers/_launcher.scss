@@ -19,11 +19,11 @@
 
 /** Launcher *************************************/
 
-.launcher_box {
+.launcher_app {
   @include launcher-box-style;
 }
 
-.launcher_button {
+.button_app_launcher {
   @include launcher-button-style;
 
   &:hover {

@@ -15,9 +15,6 @@
 ;; Turn Bluetooth off or on
 (defvar toggle_bluetooth "")
 
-;; End notifications
-(defvar end-notifications "")
-
 ;; ** Expanders **********************************
 
 ;; Toggles visibility of menus
@@ -34,9 +31,9 @@
 
 ;; Window toggles
 (defvar show_media false)
-(defvar show_notifications false)
-(defvar show_calendar "")
-(defvar show_bluetooth "")
+(defvar show_calendar false)
+(defvar show_bluetooth false)
+(defvar show_settings false)
 
 ;; Bluetooth status
 (defvar bluetooth-enabled false)

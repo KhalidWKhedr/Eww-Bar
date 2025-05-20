@@ -1,0 +1,12 @@
+;; Settings
+(defwidget settings []
+  (box :class "Test"
+       :orientation "h"
+       :space-evenly true
+    (overlay
+      (box :orientation "vertical"
+          (label :text "Wi-Fi")
+          (button :label "Toggle Wi-Fi"))
+      (box :orientation "vertical"
+          (label :text "Bluetooth")
+          (button :label "Toggle Bluetooth")))))

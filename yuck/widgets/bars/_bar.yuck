@@ -38,7 +38,8 @@
         :halign "end"
         :hexpand false
         :space-evenly false
-        (resources))
+        (resources)
+        (launcher_settings))
 
    ;; Right Section
    (box :class "bar_right"
