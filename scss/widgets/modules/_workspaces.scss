@@ -20,6 +20,7 @@
 
 @mixin workspace-unoccupied {
   color: $color4;
+  border-radius: 20px;
   // No box-shadow override here; inherits inset
 }
 

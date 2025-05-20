@@ -6,9 +6,11 @@
   :monitor 1
   :geometry (geometry :x "72.5%"
                       :y "0px"
-                      :height "10%"
-                      :width "10%")
+                      :width "10%"
+                      :height "10%")
   :stacking "fg"
   :namespace "window_bluetooth"
+  :exclusive true
+  :focusable false
   (bluetooth))
  

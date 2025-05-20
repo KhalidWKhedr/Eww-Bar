@@ -6,9 +6,11 @@
   :monitor 1
   :geometry (geometry :x "12.5%"
                       :y "0"
-                      :width "30%"
                       :height "45%"
+                      :width "30%"
                       :anchor "top right")
-  :stacking "fg"
-  :namespace "window_calendar"
+  :stacking "bg"
+  :namespace "window_settings"
+  :exclusive true
+  :focusable false
   (control_settings))

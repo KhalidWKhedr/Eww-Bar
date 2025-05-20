@@ -10,18 +10,21 @@
 @import "windows/_bar.scss";
 @import "windows/_bluetooth.scss";
 @import "windows/_calendar.scss";
-@import "windows/_control-settings.scss";
+@import "windows/_settings.scss";
 @import "windows/_media-player.scss";
 
 /** Widgets: Core */
 @import "widgets/modules/_active-media.scss";
 @import "widgets/modules/_active-window.scss";
 @import "widgets/modules/_date-time.scss";
-@import "widgets/modules/_launcher.scss";
-@import "widgets/modules/_media-launcher.scss";
 @import "widgets/modules/_systray.scss";
 @import "widgets/modules/_tooltip.scss";
 @import "widgets/modules/_workspaces.scss";
+
+/** Widgets: Launchers */
+@import "widgets/launchers/_launcher-media.scss";
+@import "widgets/launchers/_launcher-settings.scss";
+@import "widgets/launchers/_launcher.scss";
 
 /** Widgets: Menus */
 @import "widgets/menus/mixin-menu";
