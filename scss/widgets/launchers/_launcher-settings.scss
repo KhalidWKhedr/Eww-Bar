@@ -1,6 +1,5 @@
 /** Mixins ***************************************/
 @mixin settings-launcher-style {
-  margin-left: 0px;
   border-radius: 20px;
 }
 
@@ -19,6 +18,7 @@
 /** Media-Player *********************************/
 
 .launcher_settings {
+  margin-left: 10px;
   @include media-player-launcher-style;
 }
 

@@ -1,7 +1,7 @@
 /** Mixins ***************************************/
 
 @mixin resource-style {
-  margin: 2px 2px 2px 2px;
+  margin-right: 6px;
   background-color: $foreground;
   box-shadow: $box-shadow-inset;
   border-radius: 20px 15px 15px 20px;
@@ -36,8 +36,6 @@
 /** Resources ***********************************/
 
 .resources {
-  padding-right: 3px;
-  padding-left: 3px;
 }
 
 .resource_bluetooth,
