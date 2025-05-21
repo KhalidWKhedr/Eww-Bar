@@ -1,0 +1,5 @@
+;; Auto-generated includes for yuck/variables
+
+(include "_defvar.yuck")
+(include "_deflisten.yuck")
+(include "_defpoll.yuck")

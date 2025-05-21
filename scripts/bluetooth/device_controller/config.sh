@@ -1,0 +1,5 @@
+#!/bin/bash
+# config.sh
+BLUETOOTH_ADAPTER="hci0"
+DEFAULT_TIMEOUT=1
+SCAN_DURATION=10

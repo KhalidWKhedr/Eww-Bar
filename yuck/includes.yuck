@@ -1,0 +1,61 @@
+;;** Includes ***********************************;
+
+;; Variables
+(include "yuck/variables/_defvar.yuck")
+(include "yuck/variables/_deflisten.yuck")
+(include "yuck/variables/_defpoll.yuck")
+
+;; Windows
+(include "yuck/windows/_window_bar.yuck")
+(include "yuck/windows/_window_settings.yuck")
+(include "yuck/windows/_window_media.yuck")
+(include "yuck/windows/_window_calendar.yuck")
+(include "yuck/windows/_window_bluetooth.yuck")
+
+;; Widgets - Modules
+(include "yuck/widgets/modules/_workspaces.yuck")
+(include "yuck/widgets/modules/_settings.yuck")
+(include "yuck/widgets/modules/_media.yuck")
+(include "yuck/widgets/modules/_systemtray.yuck")
+(include "yuck/widgets/modules/_date-time.yuck")
+(include "yuck/widgets/modules/_active-media.yuck")
+(include "yuck/widgets/modules/_active-window.yuck")
+(include "yuck/widgets/modules/_bluetooth.yuck")
+
+;; Widgets - Launchers
+(include "yuck/widgets/launchers/_launcher-app.yuck")
+(include "yuck/widgets/launchers/_base-launcher.yuck")
+(include "yuck/widgets/launchers/_launcher-directories.yuck")
+(include "yuck/widgets/launchers/_launcher-settings.yuck")
+(include "yuck/widgets/launchers/_launcher-power.yuck")
+(include "yuck/widgets/launchers/_launcher-tools.yuck")
+(include "yuck/widgets/launchers/_launcher-media.yuck")
+
+;; Widgets - Magic
+(include "yuck/widgets/magic/_temp-nvme1-s1.yuck")
+(include "yuck/widgets/magic/_temp-cpu.yuck")
+(include "yuck/widgets/magic/_temps-overview.yuck")
+(include "yuck/widgets/magic/_temp-nvme2.yuck")
+(include "yuck/widgets/magic/_temp-amdgpu.yuck")
+(include "yuck/widgets/magic/_base-resource-circular.yuck")
+(include "yuck/widgets/magic/_wifi.yuck")
+(include "yuck/widgets/magic/_temp-nvme2-s1.yuck")
+(include "yuck/widgets/magic/_temp-nvme2-s2.yuck")
+(include "yuck/widgets/magic/_temp-nvme1.yuck")
+(include "yuck/widgets/magic/_temp-nvme1-s2.yuck")
+
+;; Widgets - Bars
+(include "yuck/widgets/bars/_bar.yuck")
+
+;; Widgets - Resources
+(include "yuck/widgets/resources/_resources.yuck")
+(include "yuck/widgets/resources/_volume.yuck")
+(include "yuck/widgets/resources/_brightness.yuck")
+(include "yuck/widgets/resources/_bluetooth.yuck")
+(include "yuck/widgets/resources/_battery.yuck")
+
+;; Widgets - Menus
+(include "yuck/widgets/menus/_menu-directories.yuck")
+(include "yuck/widgets/menus/_menu-power.yuck")
+(include "yuck/widgets/menus/_menu-tools.yuck")
+(include "yuck/widgets/menus/_base-menu.yuck") 

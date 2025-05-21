@@ -1,5 +1,6 @@
 (defwidget resource_brightness []
     (box :class "resource_brightness"
+         :space-evenly false
         (eventbox :class "brightness_event"
                   :onscroll "bash scripts/resources/brightness_scroll.sh {}"
             (box :class "resource_brightness_container"
@@ -10,7 +11,7 @@
                                    :thickness 3
                                    :clockwise true                                        
                                    :width 40
-                                   :height 40
+                                   :height 33
                     (button :class "brightness_button"
                             :style "font-size: 27px; 
                                     padding-right: 3px; 

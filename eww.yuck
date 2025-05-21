@@ -1,3 +1,1 @@
-;; Main EWW Configuration File
-
-(include "yuck/_includes.yuck")
+(include "yuck/includes.yuck")

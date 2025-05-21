@@ -29,7 +29,7 @@
         :halign "center"
         :hexpand false
         :space-evenly false
-        (launcher)
+        (application_launcher)
         (workspaces)
         (media_player_launcher))
 
@@ -39,7 +39,7 @@
         :hexpand false
         :space-evenly false
         (resources)
-        (launcher_settings))
+        (temperatures_launcher))
 
    ;; Right Section
    (box :class "bar_right"

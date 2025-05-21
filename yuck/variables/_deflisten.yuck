@@ -12,10 +12,6 @@
   :initial "initial-value"
   `tail -F extra_stuff/logs/current_brightness`)
 
-;; Bluetooth devices listener
-; (deflisten bluetooth-devices :initial "on"
-;   "scripts/bluetooth/bluetooth_devices.sh")
-
 ;; Media player metadata listener
 (deflisten media-player 
   :initial ""

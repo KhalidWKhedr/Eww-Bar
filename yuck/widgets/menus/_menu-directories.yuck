@@ -1,0 +1,38 @@
+(defwidget directory_menu []
+  (button_group 
+    :class "directory_menu"
+    :reveal_var show_folder
+    :transition "slideright"
+    :duration "350ms"
+    :orientation "h"
+    :style ""
+    
+    (button :class "directory_folder" :tooltip "Home"
+            :onclick "sh -c 'xdg-open $HOME'" :height 30 :width 35
+            :style "font-size: 25px; padding-right: 6px; padding-bottom: 2px"
+            "󱂵")
+
+    (button :class "directory_folder" :tooltip "Documents"
+            :onclick "sh -c 'xdg-open $HOME/Documents'"
+            :style "font-size: 25px; padding-right: 5px; padding-bottom: 2px"
+            "󱧶")
+
+    (button :class "directory_folder" :tooltip "Downloads"
+            :onclick "sh -c 'xdg-open $HOME/Downloads'"
+            :style "font-size: 25px; padding-right: 5px; padding-bottom: 2px"
+            "󰉍")
+
+    (button :class "directory_folder" :tooltip "Images"
+            :onclick "sh -c 'xdg-open $HOME/Pictures'"
+            :style "font-size: 25px; padding-right: 5px; padding-bottom: 2px"
+            "󰉏")
+
+    (button :class "directory_folder" :tooltip "Music"
+            :onclick "sh -c 'xdg-open $HOME/Music'"
+            :style "font-size: 25px; padding-right: 5px; padding-bottom: 2px"
+            "󱍙")
+
+    (button :class "directory_folder" :tooltip "Videos"
+            :onclick "sh -c 'xdg-open $HOME/Videos'"
+            :style "font-size: 25px; padding-right: 5px"
+            "󱧺")))

@@ -1,18 +1,10 @@
-;; Media Player Launcher Widget
+;; Media Player Launcher
 (defwidget media_player_launcher []
-    (box :orientation "h"
-         :class "launcher_media_player"
-         :valign "center"
-         :halign "center"
-         
-        ;; Button to toggle the visibility of the directory menu
-        (button :class "button_media_player"
-                :tooltip "Media Player"
-                :height 40
-                :width 40
-                :onclick "${eww} update show_media=$(eww get show_media | grep -q true && echo false || echo true); \
-                        [ $(eww get show_media) = true ] && ${eww} open window_media || ${eww} close window_media"
-                :style "font-size: 30px;
-                        padding-right: 10px" 
-                        "󰝚")))
-    
+  (base_launcher
+    :icon "󰝚"
+    :tooltip "Media Player"
+    :class "media_player"
+    :height 40
+    :width 40
+    :style "font-size: 30px; padding: 0 8px 1px 0"
+    :onclick toggle_media_cmd))

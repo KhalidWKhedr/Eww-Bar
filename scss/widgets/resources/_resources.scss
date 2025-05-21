@@ -41,27 +41,36 @@
 .resource_bluetooth,
 .resource_battery,
 .resource_brightness,
-.resource_volume {
+.resource_volume,
+.resource_cpu,
+.resource_ram, 
+.resource_temp_cpu {
   @include resource-style;
 }
 
 .bluetooth_circle,
 .battery_circle,
 .brightness_circle,
-.volume_circle {
+.volume_circle,
+.cpu_circle,
+.resource_circle,
+.temp_cpu_circle {
   @include circle-style;
 }
 
 .bluetooth_button,
 .battery_button,
 .brightness_button,
-.volume_button {
+.volume_button, 
+.cpu_button, 
+.resource_button,
+.temp_cpu_button, {
   @include button-style;
 }
 
 .label_bluetooth,
 .label_battery,
 .label_brightness,
-.label_volume {
+.label_volume, {
   @include label-style;
 }

@@ -1,0 +1,17 @@
+(defwidget button_group [class reveal_var transition duration orientation style]
+  (box :orientation orientation
+       :class class
+       :space-evenly true
+       :valign "center"
+       :halign "center"
+       :hexpand true
+       :style style
+
+       (revealer :transition transition
+                 :reveal reveal_var
+                 :duration duration
+
+                 (box :class (str class "_options")
+                      :orientation orientation
+                      ;; ⬇️ Use variadic children from parent widget here
+                      (children)))))

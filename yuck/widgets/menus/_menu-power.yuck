@@ -1,0 +1,39 @@
+(defwidget power_menu []
+  (button_group
+    :class "power_menu"
+    :reveal_var show_power
+    :transition "slideright"
+    :duration "350ms"
+    :orientation "h"
+    :style ""
+
+    ;; ⬇️ Direct buttons (no `:buttons`)
+    (button :class "power_option" :tooltip "Shutdown"
+            :onclick "shutdown now" :height 25 :width 30
+            :style "font-size: 20px; padding-right: 5px; padding-bottom: 0px"
+            "")
+
+    (button :class "power_option" :tooltip "Reboot"
+            :onclick "reboot"
+            :style "font-size: 20px; padding-right: 5px; padding-bottom: 0px"
+            "")
+
+    (button :class "power_option" :tooltip "Lock Screen"
+            :onclick "hyprlock &"
+            :style "font-size: 20px; padding-right: 4px"
+            "")
+
+    (button :class "power_option" :tooltip "Logout"
+            :onclick "exec, hyprctl dispatch exit"
+            :style "font-size: 20px; padding-right: 5px"
+            "")
+
+    (button :class "power_option" :tooltip "Hibernate"
+            :onclick "systemctl hibernate"
+            :style "font-size: 20px; padding-right: 4px"
+            "")
+
+    (button :class "power_option" :tooltip "Suspend"
+            :onclick "systemctl suspend"
+            :style "font-size: 20px; padding-right: 4px"
+            "")))

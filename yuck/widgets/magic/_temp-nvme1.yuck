@@ -1,0 +1,7 @@
+(defwidget temp_nvme1 []
+  (base_resource_circular
+    :icon "󰈸"
+    :tooltip "NVMe (SK Hynix) Composite Temp: ${EWW_TEMPS.NVME_COMPOSITE_SKHYNIX_HFM512GDHTNI-87A0B_TEMP1}°C"
+    :value {EWW_TEMPS.NVME_COMPOSITE_SKHYNIX_HFM512GDHTNI-87A0B_TEMP1}
+    :label "${EWW_TEMPS.NVME_COMPOSITE_SKHYNIX_HFM512GDHTNI-87A0B_TEMP1}°C"
+    :class "temp_nvme1"))

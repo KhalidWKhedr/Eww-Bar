@@ -1,0 +1,16 @@
+(defwidget base_resource_circular [icon tooltip value label class]
+  (box :class class
+    (circular-progress
+      :tooltip tooltip
+      :value value
+      :start-at 0
+      :thickness 3
+      :clockwise true
+      :width 40
+      :height 40
+      (button
+        :style "font-size: 19px; padding-bottom: 2px;"
+        icon))
+    (label
+      :text label
+      :style "font-size: 15px; padding-left: 0px")))

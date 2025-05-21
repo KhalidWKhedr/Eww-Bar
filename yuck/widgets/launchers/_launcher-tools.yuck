@@ -1,0 +1,10 @@
+;; Tools Launcher
+(defwidget tools_menu_launcher []
+  (base_launcher
+    :icon ""
+    :tooltip "Tools"
+    :class "tools"
+    :height 40
+    :width 40
+    :style "font-size: 30px; padding: 0 8px 1px 0"
+    :onclick toggle_tools_cmd))

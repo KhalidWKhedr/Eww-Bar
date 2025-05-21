@@ -1,5 +1,6 @@
 (defwidget resource_battery []
   (box :class "resource_battery"
+       :space-evenly false
        (circular-progress :class "battery_circle"
                           :tooltip "Battery ${EWW_BATTERY.BAT0.capacity}% - ${EWW_BATTERY.BAT0.status}"
                           :value {EWW_BATTERY.BAT0.capacity}

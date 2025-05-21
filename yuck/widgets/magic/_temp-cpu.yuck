@@ -1,0 +1,7 @@
+(defwidget temp_cpu []
+  (base_resource_circular
+    :icon "󰈸"
+    :tooltip "CPU Temp: ${EWW_TEMPS.K10TEMP_TCTL}°C"
+    :value {EWW_TEMPS.K10TEMP_TCTL}
+    :label "${EWW_TEMPS.K10TEMP_TCTL}°C"
+    :class "temp_cpu"))

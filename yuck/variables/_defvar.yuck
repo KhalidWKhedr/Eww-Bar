@@ -2,38 +2,63 @@
 ;; Variables
 ;; ====================================
 
-;; ** Paths **************************************
-
-;; Path to aesthetic bar config files
+;; ------------- Paths ----------------
 (defvar eww "eww -c $HOME/.config/eww/")
 
-;; ** Utilities **********************************
-
-;; Defines screenshot mode (e.g., "area", "fullscreen")
+;; ------------- Utilities ------------
 (defvar screenshot_mode "area")
+(defvar toggle_bluetooth "") ;; Define this if used later
+(defvar fuzzel_cmd "fuzzel &")
 
-;; Turn Bluetooth off or on
-(defvar toggle_bluetooth "")
-
-;; ** Expanders **********************************
-
-;; Toggles visibility of menus
+;; ------------- State: Expanders -----
 (defvar show_power false)
 (defvar show_folder false)
 (defvar show_tools false)
 (defvar show_resources false)
 
-;; Toggles visibility of expanders
 (defvar expand_power false)
 (defvar expand_date false)
 
-;; ** Windows ************************************
-
-;; Window toggles
+;; ------------- State: Windows -------
 (defvar show_media false)
 (defvar show_calendar false)
 (defvar show_bluetooth false)
 (defvar show_settings false)
 
-;; Bluetooth status
 (defvar bluetooth-enabled false)
+
+;; ------------- Toggle Commands -------
+(defvar toggle_settings_cmd 
+  "if eww get show_settings | grep -q true; then \
+     eww update show_settings=false && eww close window_settings; \
+   else \
+     eww update show_settings=true && eww open window_settings; \
+   fi")
+
+(defvar toggle_media_cmd 
+  "if eww get show_media | grep -q true; then \
+     eww update show_media=false && eww close window_media; \
+   else \
+     eww update show_media=true && eww open window_media; \
+   fi")
+
+(defvar toggle_folder_cmd 
+  "if eww get show_folder | grep -q true; then \
+     eww update show_folder=false && eww close window_folder; \
+   else \
+     eww update show_folder=true && eww open window_folder; \
+   fi")
+
+(defvar toggle_power_cmd 
+  "if eww get show_power | grep -q true; then \
+     eww update show_power=false && eww close window_power; \
+   else \
+     eww update show_power=true && eww open window_power; \
+   fi")
+
+(defvar toggle_tools_cmd 
+  "if eww get show_tools | grep -q true; then \
+     eww update show_tools=false && eww close window_tools; \
+   else \
+     eww update show_tools=true && eww open window_tools; \
+   fi")

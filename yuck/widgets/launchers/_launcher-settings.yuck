@@ -1,18 +1,10 @@
-;; Launcher Widget
-(defwidget launcher_settings []
-  (box :class "launcher_settings" 
-       :orientation "h" 
-       :space-evenly true
-       :halign "center"
-       :valign "center"
-       :active true
-       :tooltip "Launcher"
-       :height 40
-       :width 40
-       (button :class "button_settings"
-               :onclick "${eww} update show_settings=$(eww get show_settings | grep -q true && echo false || echo true); \
-                        [ $(eww get show_settings) = true ] && ${eww} open window_settings || ${eww} close window_settings"
-               :style "font-size: 30px; 
-                       padding-right: 8px; 
-                       padding-bottom: 1px"
-                       "󰒓")))
+;; Settings Launcher
+(defwidget temperatures_launcher []
+  (base_launcher
+    :icon "󰒓"
+    :tooltip "Settings"
+    :class "settings"
+    :height 40
+    :width 40
+    :style "font-size: 30px; padding: 0 8px 1px 0"
+    :onclick toggle_settings_cmd))

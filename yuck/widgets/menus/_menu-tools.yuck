@@ -1,0 +1,34 @@
+(defwidget tools_menu []
+  (button_group
+    :class "tools_menu"
+    :reveal_var show_tools
+    :transition "slideright"
+    :duration "350ms"
+    :orientation "h"
+    :style ""
+    
+    (button :class "tool_option"
+            :tooltip "Take Screenshot"
+            :onclick "bash scripts/tools/snapshots.sh"
+            :height 32
+            :width 35
+            :style "font-size: 25px; padding-top: 2px; padding-right: 2px"
+            "󰩭")
+
+    (button :class "tool_option"
+            :tooltip "Color Picker"
+            :onclick "hyprpicker -a &"
+            :style "font-size: 25px; padding-right: 5px"
+            "")
+
+    (button :class "tool_option"
+            :tooltip "Email"
+            :onclick ""
+            :style "font-size: 25px; padding-right: 5px"
+            "󰇮")
+
+    (button :class "tool_option"
+            :tooltip "GitHub"
+            :onclick ""
+            :style "font-size: 25px; padding-right: 5px"
+            "")))

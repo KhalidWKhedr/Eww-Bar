@@ -1,0 +1,15 @@
+;; Base Launcher (All Launchers Inherit this)
+(defwidget base_launcher [icon tooltip class onclick height width style]
+  (box :class (str "launcher_" class)
+       :orientation "h"
+       :space-evenly true
+       :halign "center"
+       :valign "center"
+       :active true
+       :tooltip tooltip
+       :height height
+       :width width
+       (button :class (str "button_" class)
+               :onclick onclick
+               :style style
+               icon)))

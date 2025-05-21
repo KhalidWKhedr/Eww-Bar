@@ -1,0 +1,10 @@
+;; Power Launcher
+(defwidget power_menu_launcher []
+  (base_launcher
+    :icon "󱐌"
+    :tooltip "Power"
+    :class "power"
+    :height 30
+    :width 30
+    :style "font-size: 20px; padding: 0 3px 1px 0"
+    :onclick toggle_power_cmd))

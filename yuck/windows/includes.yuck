@@ -1,0 +1,7 @@
+;; Auto-generated includes for yuck/windows
+
+(include "_window_bar.yuck")
+(include "_window_settings.yuck")
+(include "_window_media.yuck")
+(include "_window_calendar.yuck")
+(include "_window_bluetooth.yuck")

@@ -1,0 +1,6 @@
+(defwidget wifi []
+  (box :class "network_widget" :orientation "h" :spacing 10
+    (icon :name "" :size 20)
+    (box :orientation "v"
+      (label :text "Up: ${EWW_NET.wlan0.up}" :style "font-size: 13px;")
+      (label :text "Down: ${EWW_NET.wlan0.down}" :style "font-size: 13px;"))))
