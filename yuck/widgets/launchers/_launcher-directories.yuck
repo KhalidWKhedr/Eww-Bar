@@ -1,9 +1,9 @@
-;; Directory Menu Launcher
 (defwidget directory_menu_launcher []
   (base_launcher
     :icon ""
     :tooltip "Directories"
-    :class "directory"
+    :box_class "directory_box_launcher"
+    :button_class "directory_button_launcher"
     :height 40
     :width 40
     :style "font-size: 30px; padding: 0 8px 1px 0"

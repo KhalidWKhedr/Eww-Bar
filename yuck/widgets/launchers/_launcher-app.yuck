@@ -1,9 +1,9 @@
-;; Application Launcher (Whatever you use)
 (defwidget application_launcher []
   (base_launcher
     :icon "󰣇"
     :tooltip "Application Launcher"
-    :class "app"
+    :box_class "application_launcher_box"
+    :button_class "application_launcher_button"
     :height 40
     :width 40
     :style "font-size: 30px; padding: 0 8px 1px 0"

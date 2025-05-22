@@ -1,6 +1,6 @@
 (defwidget power_menu []
   (button_group
-    :class "power_menu"
+    :box_class_a "power_menu"
     :reveal_var show_power
     :transition "slideright"
     :duration "350ms"

@@ -1,0 +1,81 @@
+/** Mixins ***************************************/
+
+@mixin launcher-style {
+  margin-left: 0px;
+  border-radius: 20px;
+}
+
+@mixin button-style {
+  color: $color1;
+  background-color: $foreground;
+  border-radius: 40px;
+  box-shadow: $box-shadow-deep;
+}
+
+@mixin button-hover-style {
+  color: $color13;
+  box-shadow: $box-shadow-inset;
+}
+
+.launcher_base {
+  @apply launcher-style;
+}
+
+.button_base {
+  @apply button-style;
+  @apply button-hover-style;
+}
+
+.launcher_app {
+  @apply launcher-style;
+}
+
+.button_app {
+  @apply button-style;
+  @apply button-hover-style;
+}
+
+.launcher_directories {
+  @apply launcher-style;
+}
+
+.button_directories {
+  @apply button-style;
+  @apply button-hover-style;
+}
+
+.launcher_media {
+  @apply launcher-style;
+}
+
+.button_media {
+  @apply button-style;
+  @apply button-hover-style;
+}
+
+.launcher_power {
+  @apply launcher-style;
+}
+
+.button_power {
+  @apply button-style;
+  @apply button-hover-style;
+}
+
+.launcher_settings {
+  @apply launcher-style;
+}
+
+.button_settings {
+  @apply button-style;
+  @apply button-hover-style;
+}
+
+.launcher_tools {
+  @apply launcher-style;
+}
+
+.button_tools {
+  @apply button-style;
+  @apply button-hover-style;
+}

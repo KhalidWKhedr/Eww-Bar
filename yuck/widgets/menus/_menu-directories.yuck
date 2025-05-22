@@ -1,6 +1,6 @@
 (defwidget directory_menu []
   (button_group 
-    :class "directory_menu"
+    :box_class_a "directory_menu"
     :reveal_var show_folder
     :transition "slideright"
     :duration "350ms"

@@ -1,0 +1,34 @@
+/** Launcher Styles ***************************************/
+
+@mixin launcher-style {
+  margin-left: 0px;
+  border-radius: 20px;
+}
+
+.launcher_base {
+  @include launcher-style;
+}
+
+.launcher_app {
+  @include launcher-style;
+}
+
+.launcher_directory {
+  @include launcher-style;
+}
+
+.launcher_media_player {
+  @include launcher-style;
+}
+
+.launcher_power {
+  @include launcher-style;
+}
+
+.launcher_settings {
+  @include launcher-style;
+}
+
+.launcher_tools {
+  @include launcher-style;
+}

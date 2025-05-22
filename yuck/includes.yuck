@@ -35,6 +35,8 @@
 (include "yuck/widgets/launchers/_launcher-tools.yuck")
 (include "yuck/widgets/launchers/_launcher-media.yuck")
 
+
+
 ;; Widgets - Magic - EWW_TEMPS
 (include "yuck/widgets/magic/_base-magic.yuck")
 (include "yuck/widgets/magic/EWW_TEMPS/_temp-amdgpu.yuck")

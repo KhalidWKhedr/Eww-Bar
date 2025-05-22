@@ -1,0 +1,45 @@
+/** Launcher Button Styles ***************************************/
+
+@mixin button-style {
+  color: $color1;
+  background-color: $foreground;
+  border-radius: 40px;
+  box-shadow: $box-shadow-deep;
+}
+
+@mixin button-hover-style {
+  color: $color13;
+  box-shadow: $box-shadow-inset;
+}
+
+// Helper Mixin to Apply Both Styles Including Hover
+@mixin full-button-style {
+  @include button-style;
+  &:hover {
+    @include button-hover-style;
+  }
+}
+
+.application_launcher_button {
+ @include full-button-style;
+}
+
+.directory_button_launcher {
+  @include full-button-style;
+}
+
+.media_button_launcher {
+  @include full-button-style;
+}
+
+.power_button_launcher {
+  @include full-button-style;
+}
+
+.settings_button_launcher {
+  @include full-button-style;
+}
+
+.tools_button_launcher {
+  @include full-button-style;
+}
