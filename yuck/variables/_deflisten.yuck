@@ -14,12 +14,7 @@
 
 ;; Media player metadata listener
 (deflisten media-player 
-  :initial ""
-  "playerctl metadata --format '{\"playerName\": \"{{playerName}}\", \"artist\": \"{{artist}}\", \"title\": \"{{title}}\", \"position\": \"{{duration(position)}}\", \"duration\": \"{{duration(mpris:length)}}\", \"image\": \"{{mpris:artUrl}}\"}' --follow")
-
-(deflisten media-status
-  :initial "Stopped"
-  "playerctl --player=spotify status --follow")
+  "/home/khalidwaleedkhedr/.config/eww/scripts/music/media_listen.sh")
 
 ;; Workspace listener
 (deflisten workspace
@@ -27,3 +22,4 @@
 
 (deflisten current-workspace :initial ""
   "scripts/workspaces/current_workspace.sh")
+

@@ -20,10 +20,8 @@ PAUSED_ART_URL=""
 
 # Loop through all players
 for PLAYER in $PLAYERS; do
-    # Get playback status
     STATUS=$(playerctl -p "$PLAYER" status 2>/dev/null || echo "stopped")
 
-    # Check if the player is playing or paused
     if [[ "$STATUS" == "Playing" ]]; then
         CURRENT_PLAYER="$PLAYER"
         CURRENT_STATUS="$STATUS"
@@ -43,13 +41,11 @@ for PLAYER in $PLAYERS; do
     fi
 done
 
-# Default if no player is found
 if [[ -z "$CURRENT_PLAYER" && -z "$PAUSED_PLAYER" ]]; then
-    echo '{"status":"none","title":"","artist":"","position":"0:00","duration":"0:00","art_url":""}'
+    echo '{"status":"none","title":"","artist":"","position":"00:00","duration":"00:00","art_url":"","icon-play":"󰐍"}'
     exit 0
 fi
 
-# If no current player, fallback to paused player if any
 if [[ -z "$CURRENT_PLAYER" ]]; then
     CURRENT_PLAYER="$PAUSED_PLAYER"
     CURRENT_STATUS="$PAUSED_STATUS"
@@ -60,10 +56,14 @@ if [[ -z "$CURRENT_PLAYER" ]]; then
     CURRENT_ART_URL="$PAUSED_ART_URL"
 fi
 
-# Provide fallback for missing artwork
 CURRENT_ART_URL=${CURRENT_ART_URL:-"/path/to/default/image.png"}
 
-# Output data in JSON format for Eww
+if [[ "$CURRENT_STATUS" == "Playing" ]]; then
+    PLAY_ICON="󰏦"
+else
+    PLAY_ICON="󰐍"
+fi
+
 cat <<EOF
 {
   "status": "$CURRENT_STATUS",
@@ -72,11 +72,7 @@ cat <<EOF
   "position": "$CURRENT_POSITION",
   "duration": "$CURRENT_DURATION",
   "art_url": "$CURRENT_ART_URL",
-  "paused_status": "$PAUSED_STATUS",
-  "paused_title": "$PAUSED_TITLE",
-  "paused_artist": "$PAUSED_ARTIST",
-  "paused_position": "$PAUSED_POSITION",
-  "paused_duration": "$PAUSED_DURATION",
-  "paused_art_url": "$PAUSED_ART_URL"
+  "icon-play": "$PLAY_ICON"
 }
 EOF
+e

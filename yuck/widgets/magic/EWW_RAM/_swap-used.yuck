@@ -1,0 +1,7 @@
+(defwidget swap_used []
+  (base_resource_circular
+    :icon "󰁯"
+    :tooltip "Swap Used: ${round(((EWW_RAM.total_swap - EWW_RAM.free_swap) / EWW_RAM.total_swap) * 100, 0)}%"
+    :value {(((EWW_RAM.total_swap - EWW_RAM.free_swap) / EWW_RAM.total_swap) * 100)}
+    :label "${round(((EWW_RAM.total_swap - EWW_RAM.free_swap) / EWW_RAM.total_swap) * 100, 0)}%"
+    :class "swap_used"))

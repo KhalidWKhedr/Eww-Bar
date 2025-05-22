@@ -22,27 +22,37 @@
 (include "yuck/widgets/modules/_active-window.yuck")
 (include "yuck/widgets/modules/_bluetooth.yuck")
 
+;; Widgets - controls
+(include "yuck/widgets/controls/_base-control.yuck")
+(include "yuck/widgets/controls/_controls.yuck")
+
 ;; Widgets - Launchers
-(include "yuck/widgets/launchers/_launcher-app.yuck")
 (include "yuck/widgets/launchers/_base-launcher.yuck")
+(include "yuck/widgets/launchers/_launcher-app.yuck")
 (include "yuck/widgets/launchers/_launcher-directories.yuck")
 (include "yuck/widgets/launchers/_launcher-settings.yuck")
 (include "yuck/widgets/launchers/_launcher-power.yuck")
 (include "yuck/widgets/launchers/_launcher-tools.yuck")
 (include "yuck/widgets/launchers/_launcher-media.yuck")
 
-;; Widgets - Magic
-(include "yuck/widgets/magic/_temp-nvme1-s1.yuck")
-(include "yuck/widgets/magic/_temp-cpu.yuck")
-(include "yuck/widgets/magic/_temps-overview.yuck")
-(include "yuck/widgets/magic/_temp-nvme2.yuck")
-(include "yuck/widgets/magic/_temp-amdgpu.yuck")
-(include "yuck/widgets/magic/_base-resource-circular.yuck")
-(include "yuck/widgets/magic/_wifi.yuck")
-(include "yuck/widgets/magic/_temp-nvme2-s1.yuck")
-(include "yuck/widgets/magic/_temp-nvme2-s2.yuck")
-(include "yuck/widgets/magic/_temp-nvme1.yuck")
-(include "yuck/widgets/magic/_temp-nvme1-s2.yuck")
+;; Widgets - Magic - EWW_TEMPS
+(include "yuck/widgets/magic/_base-magic.yuck")
+(include "yuck/widgets/magic/EWW_TEMPS/_temp-amdgpu.yuck")
+(include "yuck/widgets/magic/EWW_TEMPS/_temp-cpu.yuck")
+(include "yuck/widgets/magic/EWW_TEMPS/_temp-nvme1.yuck")
+(include "yuck/widgets/magic/EWW_TEMPS/_temp-nvme1-s1.yuck")
+(include "yuck/widgets/magic/EWW_TEMPS/_temp-nvme1-s2.yuck")
+(include "yuck/widgets/magic/EWW_TEMPS/_temp-nvme2.yuck")
+(include "yuck/widgets/magic/EWW_TEMPS/_temp-nvme2-s1.yuck")
+(include "yuck/widgets/magic/EWW_TEMPS/_temp-nvme2-s2.yuck")
+(include "yuck/widgets/magic/EWW_TEMPS/_temps-overview.yuck")
+
+;; Widgets - Magic - EWW_RAM
+(include "yuck/widgets/magic/EWW_RAM/_ram-overview.yuck")
+(include "yuck/widgets/magic/EWW_RAM/_ram-used.yuck")
+(include "yuck/widgets/magic/EWW_RAM/_ram-free.yuck")
+(include "yuck/widgets/magic/EWW_RAM/_swap-used.yuck")
+(include "yuck/widgets/magic/EWW_RAM/_swap-free.yuck")
 
 ;; Widgets - Bars
 (include "yuck/widgets/bars/_bar.yuck")

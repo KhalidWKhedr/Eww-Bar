@@ -1,0 +1,7 @@
+(defwidget base_control [icon onclick tooltip class style]
+  (button
+    :class (str "button_" class)
+    :style style
+    :title tooltip
+    :onclick onclick
+    icon))

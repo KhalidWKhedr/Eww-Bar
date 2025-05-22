@@ -13,4 +13,4 @@
   :namespace "window_settings"
   :exclusive true
   :focusable false
-  (temps_overview))
+  (ram_overview))

@@ -15,7 +15,6 @@
 (defvar show_folder false)
 (defvar show_tools false)
 (defvar show_resources false)
-
 (defvar expand_power false)
 (defvar expand_date false)
 
@@ -26,6 +25,16 @@
 (defvar show_settings false)
 
 (defvar bluetooth-enabled false)
+
+(defvar icon-shuffle "")
+(defvar icon-previous "󰙤")
+(defvar icon-next "󰙢")
+(defvar icon-loop "󰑖")
+(defvar action-shuffle "bash -c 'playerctl shuffle toggle &'")
+(defvar action-previous "bash -c 'playerctl previous &'")
+(defvar action-play "bash -c 'playerctl play-pause &'")
+(defvar action-next "bash -c 'playerctl next &'")
+(defvar action-loop "bash -c 'playerctl loop toggle &'")
 
 ;; ------------- Toggle Commands -------
 (defvar toggle_settings_cmd 

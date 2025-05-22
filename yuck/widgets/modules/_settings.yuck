@@ -22,4 +22,6 @@
 
       (box :orientation "vertical"
         (label :text "Bluetooth Settings")
-        (button :label "Toggle Bluetooth")))))
+        (button :label "Toggle Bluetooth")
+        (label :text "${media-player.play_icon}")))))
+

@@ -1,89 +1,52 @@
-;; Media Widget
 (defwidget media []
-    (box :class "media_player"
+  (box :class "media_player"
+       :orientation "v"
+       :space-evenly false
+
+    ;; Image Container
+    (box :class "box_image_container"
          :orientation "v"
          :space-evenly false
 
-        ;; Image Container
-        (box :class "box_image_container"
-             :orientation "v"
-             :space-evenly false
+      ;; Player Name Label
+      (label :class "label_player"
+             :text "${media-player.status}"
+             :style "font-size: 16px; padding-right: 0px")
 
-            ;; Player Name Label
-            (label :class "label_player"
-                   :text "${media-player.playerName}"
-                   :style "font-size: 16px; padding-right: 0px")
+      ;; Media Image
+      (image :class "box_image"
+             :height 300
+             :width 300
+             :preserve-aspect-ratio false
+             :style "background-image: url('${media-player.art_url}');
+                     background-size: 100% 100%;
+                     background-position: center;
+                     background-repeat: no-repeat;"))
 
-            ;; Media Image
-            (image :class "box_image"
-                   :height 300
-                   :width 300
-                   :preserve-aspect-ratio false
-                   :style "background-image: url('${media-player.image}');
-                           background-size: 100% 100%;
-                           background-position: center;
-                           background-repeat: no-repeat;"))
+    ;; Media Info and Progress Bar
+    (box :class "box_song_information"
+         :orientation "v"
+      (label :class "label_artist_song"
+             :text "${media-player.artist} - ${media-player.title}"))
 
-        ;; Media Info and Progress Bar
-        (box :class "box_song_information"
-             :orientation "v"
+    ;; Progress Bar and Time Info
+    (centerbox :class "box_progression"
+               :orientation "h"
+      (label :class "artist"
+             :text "${media-player.position}")
+      (progress :class "media_progress"
+                :orientation "h"
+                :width 230
+                :value "${100 * (((substring(media-player.position, 0, 1) * 60 + substring(media-player.position, 3, 2)) 
+                                 / (substring(media-player.duration, 0, 1) * 60 + substring(media-player.duration, 3, 2))))}")
+      (label :class "artist"
+             :text "${media-player.duration}"))
 
-            ;; Artist and Title Info
-            (label :class "label_artist_song"
-                   :text "${media-player.artist} - ${media-player.title}"))
-
-        ;; Progress Bar and Time Info
-        (centerbox :class "box_progression"
-                   :orientation "h"
-
-            ;; Position Label
-            (label :class "artist"
-                   :text "${media-player.position}")
-
-            ;; Progress Bar
-            (progress :class "media_progress"
-                      :orientation "h"
-                      :width 230
-                      :value "${100 * (((substring(media-player.position, 0, 1) * 60 + substring(media-player.position, 2, 2)) 
-                                       / (substring(media-player.duration, 0, 1) * 60 + substring(media-player.duration, 2, 2))))}")
-
-            ;; Duration Label
-            (label :class "artist"
-                   :text "${media-player.duration}"))
-
-        ;; Media Controls (Buttons)
-        (box :class "box_controls"
-             :orientation "h"
-            
-            ;; Shuffle Button
-            (button :class "button_control"
-                    :style "font-size: 20px;"
-                    :onclick "bash -c 'playerctl shuffle toggle &'"
-                    "")
-
-            ;; Previous Button
-            (button :class "button_control"
-                    :style "font-size: 24px;"
-                    :onclick "bash -c 'playerctl previous &'"
-                    "󰙤")
-
-            ;; Toggle Play/Pause Button
-            (button :class "button_control"
-                    :style "font-size: 24px;"
-                    :onclick "playerctl --player=spotify play-pause"
-                    {media-status == "Playing" ? "󰏦" : "󰐍"})
-
-            ;; Next Button
-            (button :class "button_control"
-                    :style "font-size: 24px; margin-left: 5px"
-                    :onclick "bash -c 'playerctl next &'"
-                    "󰙢")
-
-             ;; Loop Button
-            (button :class "button_control"
-                    :style "font-size: 23px;"
-                    :onclick "bash -c 'playerctl loop toggle &'"
-                    "󰑖"))))
-
-
-
+    ;; Controls
+    (box :class "box_controls"
+         :orientation "h"
+      (base_control :icon icon-shuffle :tooltip "Shuffle" :class "media" :onclick action-shuffle :style "font-size: 20px;")
+      (base_control :icon icon-previous :tooltip "Previous" :class "media" :onclick action-previous :style "font-size: 24px;")
+      (base_control :icon "${media-player.icon-play}" :tooltip "Play/Pause" :class "media" :onclick action-play :style "font-size: 24px;")
+      (base_control :icon icon-next :tooltip "Next" :class "media" :onclick action-next :style "font-size: 24px; margin-left: 5px;")
+      (base_control :icon icon-loop :tooltip "Loop" :class "media" :onclick action-loop :style "font-size: 23px;"))))

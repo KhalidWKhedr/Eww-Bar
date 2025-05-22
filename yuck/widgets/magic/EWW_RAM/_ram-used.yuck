@@ -1,0 +1,7 @@
+(defwidget ram_used []
+  (base_resource_circular
+    :icon "󰍛"
+    :tooltip "RAM Used: ${round(EWW_RAM.used_mem_perc, 0)}%"
+    :value {EWW_RAM.used_mem_perc}
+    :label "${round(EWW_RAM.used_mem_perc, 0)}%"
+    :class "mem_used"))

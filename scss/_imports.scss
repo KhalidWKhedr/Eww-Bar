@@ -1,20 +1,20 @@
 /** Imports ***************************************/
 
-/** Base */
+// /** Base */
 @import "base/_global.scss";
 @import "base/_colors.scss";
 @import "base/_accents.scss";
 @import "base/_variables.scss";
 
-/** Windows */
+// /** Windows */
 @import "windows/_bar.scss";
 @import "windows/_bluetooth.scss";
 @import "windows/_calendar.scss";
 @import "windows/_settings.scss";
 @import "windows/_media-player.scss";
 
-/** Widgets: Core */
-@import "widgets/modules/_active-media.scss";
+// /** Widgets: Core */
+// @import "widgets/modules/_active-media.scss";
 @import "widgets/modules/_active-window.scss";
 @import "widgets/modules/_date-time.scss";
 @import "widgets/modules/_systray.scss";

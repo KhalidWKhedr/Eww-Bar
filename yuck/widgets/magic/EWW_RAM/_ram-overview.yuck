@@ -1,0 +1,6 @@
+(defwidget ram_overview []
+  (box :orientation "v"
+	(ram_used)
+    (ram_free)
+    (swap_used)
+    (swap_free)))
