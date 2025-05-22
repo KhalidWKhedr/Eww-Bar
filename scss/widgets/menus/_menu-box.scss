@@ -1,0 +1,26 @@
+/** Mixins ***************************************/
+
+@mixin menu-box-style {
+  border-radius: 10px;
+  box-shadow: $box-shadow-deep;
+  background-color: $color5;
+  padding-right: 2px;
+  padding-left: 2px;
+}
+
+/** Menu Box ***************************************/
+
+.power_menu_box {
+  @include menu-box-style;
+  margin-left: 5px;
+}
+
+.directory_menu_box {
+  @include menu-box-style;
+  margin-left: 5px;
+}
+
+.tools_menu_box {
+  @include menu-box-style;
+  margin-left: 5px;
+}

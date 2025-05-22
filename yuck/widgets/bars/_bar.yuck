@@ -39,7 +39,7 @@
         :hexpand false
         :space-evenly false
         (resources)
-        (temperatures_launcher))
+        (settings_launcher))
 
    ;; Right Section
    (box :class "bar_right"

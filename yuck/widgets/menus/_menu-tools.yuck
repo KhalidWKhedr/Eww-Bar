@@ -1,6 +1,6 @@
 (defwidget tools_menu []
   (button_group
-    :box_class_a "tools_menu"
+    :box_class_a "tools_menu_box"
     :reveal_var show_tools
     :transition "slideright"
     :duration "350ms"

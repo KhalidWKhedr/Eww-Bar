@@ -2,9 +2,9 @@
   (base_launcher
     :icon "󰣇"
     :tooltip "Application Launcher"
-    :box_class "application_launcher_box"
-    :button_class "application_launcher_button"
+    :box_class "application_box_launcher"
+    :button_class "application_button_launcher"
     :height 40
-    :width 40
+    :width 45
     :style "font-size: 30px; padding: 0 8px 1px 0"
     :onclick fuzzel_cmd))

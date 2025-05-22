@@ -27,8 +27,9 @@
 @import "widgets/modules/_workspaces.scss";
 
 /** Widgets: Menus */
-@import "widgets/menus/mixin-menu";
-@import "widgets/menus/mixin-launcher";
+@import "widgets/menus/_menu-box.scss";
+@import "widgets/menus/_menu-option.scss";
+// 
 
 /** Widgets: Resources */
 @import "widgets/resources/_resources.scss";

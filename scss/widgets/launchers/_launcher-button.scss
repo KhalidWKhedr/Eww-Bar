@@ -3,7 +3,7 @@
 @mixin button-style {
   color: $color1;
   background-color: $foreground;
-  border-radius: 40px;
+  border-radius: 20px;
   box-shadow: $box-shadow-deep;
 }
 
@@ -20,26 +20,33 @@
   }
 }
 
-.application_launcher_button {
- @include full-button-style;
+/** Launcher Buttons ********************************************/
+
+.power_button_launcher {
+  @include full-button-style;
+  margin-left: 5px; // Width of button is 30(+5), height is 30
 }
 
 .directory_button_launcher {
   @include full-button-style;
+  margin-left: 2px; // Width of button is 40(+2), height is 40
+}
+
+.tools_button_launcher {
+  @include full-button-style;
+  margin-left: 5px; // Width of button is 40(+5), height is 40
+}
+
+.application_button_launcher {
+  @include full-button-style;
+  margin-right: 5px; // Width of button is 40(+5), height is 40
 }
 
 .media_button_launcher {
   @include full-button-style;
-}
-
-.power_button_launcher {
-  @include full-button-style;
+  margin-left: 5px;
 }
 
 .settings_button_launcher {
-  @include full-button-style;
-}
-
-.tools_button_launcher {
   @include full-button-style;
 }

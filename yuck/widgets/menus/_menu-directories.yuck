@@ -1,38 +1,38 @@
 (defwidget directory_menu []
   (button_group 
-    :box_class_a "directory_menu"
+    :box_class_a "directory_menu_box"
     :reveal_var show_folder
     :transition "slideright"
     :duration "350ms"
     :orientation "h"
     :style ""
     
-    (button :class "directory_folder" :tooltip "Home"
+    (button :class "directory_option" :tooltip "Home"
             :onclick "sh -c 'xdg-open $HOME'" :height 30 :width 35
             :style "font-size: 25px; padding-right: 6px; padding-bottom: 2px"
             "󱂵")
 
-    (button :class "directory_folder" :tooltip "Documents"
+    (button :class "directory_option" :tooltip "Documents"
             :onclick "sh -c 'xdg-open $HOME/Documents'"
             :style "font-size: 25px; padding-right: 5px; padding-bottom: 2px"
             "󱧶")
 
-    (button :class "directory_folder" :tooltip "Downloads"
+    (button :class "directory_option" :tooltip "Downloads"
             :onclick "sh -c 'xdg-open $HOME/Downloads'"
             :style "font-size: 25px; padding-right: 5px; padding-bottom: 2px"
             "󰉍")
 
-    (button :class "directory_folder" :tooltip "Images"
+    (button :class "directory_option" :tooltip "Images"
             :onclick "sh -c 'xdg-open $HOME/Pictures'"
             :style "font-size: 25px; padding-right: 5px; padding-bottom: 2px"
             "󰉏")
 
-    (button :class "directory_folder" :tooltip "Music"
+    (button :class "directory_option" :tooltip "Music"
             :onclick "sh -c 'xdg-open $HOME/Music'"
             :style "font-size: 25px; padding-right: 5px; padding-bottom: 2px"
             "󱍙")
 
-    (button :class "directory_folder" :tooltip "Videos"
+    (button :class "directory_option" :tooltip "Videos"
             :onclick "sh -c 'xdg-open $HOME/Videos'"
             :style "font-size: 25px; padding-right: 5px"
             "󱧺")))
