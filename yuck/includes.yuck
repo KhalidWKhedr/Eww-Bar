@@ -70,6 +70,8 @@
 (include "yuck/widgets/resources/magic/EWW_TEMPS/_gpu_amd.yuck")
 (include "yuck/widgets/resources/magic/EWW_TEMPS/_cpu.yuck")
 (include "yuck/widgets/resources/magic/EWW_TEMPS/_nvme2.yuck")
+(include "yuck/widgets/resources/magic/EWW_TEMPS/_nvme2.yuck")
+(include "yuck/widgets/resources/magic/EWW_TEMPS/_temps-overview.yuck")
 
 ;; Widgets - Resources - Magic - Network
 (include "yuck/widgets/resources/magic/EWW_NET/_wifi.yuck")

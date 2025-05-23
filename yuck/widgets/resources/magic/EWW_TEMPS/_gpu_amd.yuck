@@ -4,8 +4,11 @@
     :value {EWW_TEMPS.AMDGPU_EDGE}
     :box_class "magic_temp_amdgpu_box"
     :circular_progress_class "magic_temp_amdgpu_progress"
-    :button_class "magic_temp_amdgpu_button"
+    :button_class "magic_temp_amdgpu_button"       
+    :button_style "font-size: 20px; margin-left: 7px"
     :label_class "magic_temp_amdgpu_label"
     :label "${EWW_TEMPS.AMDGPU_EDGE}°C"
     :label_style ""
     :icon "󰈸"))
+
+

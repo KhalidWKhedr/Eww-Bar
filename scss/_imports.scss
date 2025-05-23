@@ -19,8 +19,8 @@
 // // @import "windows/_media-player.scss";
 
 // // /** Widgets: Core */
-// // @import "widgets/modules/_active-media.scss";
-// @import "widgets/modules/_active-window.scss";
+//@import "widgets/resources/manual/_active-media.scss";
+@import "widgets/resources/manual/_active-window.scss";
 @import "widgets/panels/_calendar.scss";
 @import "widgets/panels/_date-time.scss";
 @import "widgets/panels/_systray.scss";

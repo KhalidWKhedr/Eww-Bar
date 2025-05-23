@@ -5,7 +5,7 @@
     :value current-volume
     :label "${current-volume}"
     :button_style "font-size: 20px; padding-right: 13px"
-    :label_style "font-size: 16px; margin-right: 10px"
+    :label_style "font-size: 15px; margin-right: 10px"
     :box_class "indicator_volume_box"
     :circular_progress_class "indicator_volume_progress"
     :button_class "indicator_volume_button"

@@ -13,17 +13,6 @@
   :namespace "window_settings"
   :exclusive true
   :focusable false
-  (test))
+  (temps_overview))
 
 
-(defwidget test []
-  (box :class "hi" 
-       :halign "v"
-    (temp_nvme1)
-    (temp_nvme1_s1)
-    (temp_nvme1_s2)
-    (temp_nvme2)
-    (temp_nvme2_s1)
-    (temp_nvme2_s2)
-    (temp_cpu)
-    (temp_amdgpu)))
