@@ -1,15 +1,15 @@
 /** Mixins ***************************************/
 
 @mixin systray-container-style {
-  margin-left: 7px;
-  margin-right: 15px;
-  margin-top: 3px;
-  margin-bottom: 2px;
-  font-size: 16px;
+  margin-left: 3px;
+  margin-right: 10px;
+  margin-top: 5px;
+  margin-bottom: 3px;
+  font-size: 20px;
   color: $foreground;
   padding: 6px;
-  background-color: $color1;
-  border-radius: 12px;
+  background-color: $foreground;
+  border-radius: 15px;
   box-shadow: $shadow-inset-soft;
   transition: all 0.2s ease;
 }
@@ -17,10 +17,10 @@
 @mixin systray-menuitem-style {
   border-radius: 8px;
   padding: 8px 14px;
-  background-color: $color2;
+  color: $color1;
+  background-color: $foreground;
   transition: all 0.2s ease;
   font-size: 14px;
-  color: $foreground;
 }
 
 @mixin systray-menuitem-hover-style {

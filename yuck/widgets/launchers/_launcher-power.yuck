@@ -4,7 +4,7 @@
     :tooltip "Power"
     :box_class "power_box_launcher"
     :button_class "power_button_launcher"
-    :height 30
-    :width 35
-    :style "font-size: 20px; padding: 0 3px 1px 0"
+    :height 33
+    :width 43
+    :style "font-size: 28px; padding-right: 0px"
     :onclick toggle_power_cmd))

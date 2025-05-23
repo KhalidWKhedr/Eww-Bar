@@ -14,7 +14,7 @@
           :start-at value
           :thickness 3
           :clockwise true
-          :width 45
+          :width 42
           :height 40
           (button :class button_class
                   :style button_style
