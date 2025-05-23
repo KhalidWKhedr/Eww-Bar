@@ -1,0 +1,12 @@
+(defwidget launcher_bluetooth []
+  (base_resource_launcher
+    :icon ""
+    :tooltip "Bluetooth Battery ${bluetooth-battery}%"
+    :value bluetooth-battery
+    :label "${bluetooth-battery}"
+    :box_class "launcher_bluetooth_box"
+    :circular_progress_class "launcher_bluetooth_progress"
+    :button_class "launcher_bluetooth_button"
+    :label_class "launcher_bluetooth_label"
+    :onscroll ""
+    :onclick "scripts/popup bluetooth"))

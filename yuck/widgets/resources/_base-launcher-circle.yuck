@@ -1,0 +1,25 @@
+(defwidget base_resource_launcher
+  [icon tooltip value label
+   box_class
+   circular_progress_class button_class label_class
+   onscroll onclick]
+  (box :class box_class
+       :space-evenly false
+    (eventbox :onscroll onscroll
+      (box
+        (circular-progress
+          :class circular_progress_class
+          :tooltip tooltip
+          :value value
+          :start-at value
+          :thickness 3
+          :clockwise true
+          :width 40
+          :height 40
+          (button :class button_class
+                  :style "font-size: 19px; padding-bottom: 2px;"
+                  :onclick onclick
+                  icon))
+        (label :class label_class
+               :text label
+               :style "font-size: 15px; padding-left: 0px")))))

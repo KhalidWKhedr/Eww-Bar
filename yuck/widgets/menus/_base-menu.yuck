@@ -1,6 +1,6 @@
-(defwidget button_group [box_class_a reveal_var transition duration orientation style]
+(defwidget button_group [box_class reveal_var transition duration orientation style]
   (box :orientation orientation
-       :class box_class_a
+       :class box_class
        :space-evenly true
        :valign "center"
        :halign "center"

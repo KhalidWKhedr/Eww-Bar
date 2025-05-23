@@ -1,7 +1,0 @@
-(defwidget temp_nvme2 []
-  (base_resource_circular
-    :icon "󰈸"
-    :tooltip "NVMe (Team) Composite Temp: ${EWW_TEMPS.NVME_COMPOSITE_TEAM_TM8FPD512G_TEMP1}°C"
-    :value {EWW_TEMPS.NVME_COMPOSITE_TEAM_TM8FPD512G_TEMP1}
-    :label "${EWW_TEMPS.NVME_COMPOSITE_TEAM_TM8FPD512G_TEMP1}°C"
-    :class "temp_nvme2"))

@@ -1,0 +1,10 @@
+(defwidget temp_amdgpu []
+  (base_resource_circular
+    :tooltip "AMD GPU Temp: ${EWW_TEMPS.AMDGPU_EDGE}°C"
+    :value {EWW_TEMPS.AMDGPU_EDGE}
+    :box_class "magic_temp_amdgpu_box"
+    :circular_progress_class "magic_temp_amdgpu_progress"
+    :button_class "magic_temp_amdgpu_button"
+    :label_class "magic_temp_amdgpu_label"
+    :label "${EWW_TEMPS.AMDGPU_EDGE}°C"
+    :icon "󰈸"))

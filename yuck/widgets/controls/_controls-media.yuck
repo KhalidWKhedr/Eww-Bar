@@ -1,0 +1,44 @@
+;; Shuffle Button
+(defwidget shuffle [] 
+  (base_control
+    :icon icon-shuffle
+    :tooltip "Shuffle"
+    :class "media"
+    :onclick action-shuffle
+    :style "font-size: 20px;"))
+
+;; Previous Button
+(defwidget previous [] 
+  (base_control
+    :icon icon-previous
+    :tooltip "Previous"
+    :class "media"
+    :onclick action-previous
+    :style "font-size: 24px;"))
+
+;; Play/Pause Button
+(defwidget play-pause [] 
+  (base_control
+    :icon "${media-player.play_icon}"
+    :tooltip "Play/Pause"
+    :class "media"
+    :onclick action-play
+    :style "font-size: 24px;"))
+
+  ;; Next Button
+(defwidget next [] 
+  (base_control
+    :icon icon-next
+    :tooltip "Next"
+    :class "media"
+    :onclick action-next
+    :style "font-size: 24px; margin-left: 5px;"))
+
+;; Loop Button
+(defwidget loop [] 
+  (base_control
+    :icon icon-loop
+    :tooltip "Loop"
+    :class "media"
+    :onclick action-loop
+    :style "font-size: 23px;"))

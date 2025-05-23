@@ -1,0 +1,12 @@
+(defwidget launcher_volume []
+  (base_resource_launcher
+    :icon ""
+    :tooltip "Volume ${current-volume}%"
+    :value current-volume
+    :label "${current-volume}"
+    :box_class "launcher_volume_box"
+    :circular_progress_class "launcher_volume_progress"
+    :button_class "launcher_volume_button"
+    :label_class "launcher_volume_label"
+    :onscroll "bash scripts/resources/volume_scroll.sh {}"
+    :onclick "scripts/popup audio"))

@@ -1,8 +1,0 @@
-(defwidget magic_cpu []
-  (map temp_widgets (w)
-    (base_resource_circular
-      :icon "󰈸"
-      :tooltip (str (get w :label) ": " (get w :value) "°C")
-      :value (get w :value)
-      :label (str (get w :value) "°C")
-      :class (get w :class))))

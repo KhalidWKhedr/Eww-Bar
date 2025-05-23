@@ -1,7 +1,0 @@
-(defwidget temp_nvme1-s2 []
-  (base_resource_circular
-    :icon "󰈸"
-    :tooltip "NVMe (SK Hynix) Sensor 2: ${EWW_TEMPS.NVME_SENSOR_2_SKHYNIX_HFM512GDHTNI-87A0B_TEMP3}°C"
-    :value {EWW_TEMPS.NVME_SENSOR_2_SKHYNIX_HFM512GDHTNI-87A0B_TEMP3}
-    :label "${EWW_TEMPS.NVME_SENSOR_2_SKHYNIX_HFM512GDHTNI-87A0B_TEMP3}°C"
-    :class "temp_nvme1_s2"))

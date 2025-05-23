@@ -1,0 +1,12 @@
+(defwidget launcher_brightness []
+  (base_resource_launcher
+    :icon "☀"
+    :tooltip "Brightness ${current-brightness}%"
+    :value current-brightness
+    :label "${current-brightness}"
+    :box_class "launcher_brightness_box"
+    :circular_progress_class "launcher_brightness_progress"
+    :button_class "launcher_brightness_button"
+    :label_class "launcher_brightness_label"
+    :onscroll "bash scripts/resources/brightness_scroll.sh {}"
+    :onclick "scripts/popup brightness"))

@@ -1,7 +1,0 @@
-(defwidget temp_nvme2-s1 []
-  (base_resource_circular
-    :icon "󰈸"
-    :tooltip "NVMe (Team) Sensor 1: ${EWW_TEMPS.NVME_SENSOR_1_TEAM_TM8FPD512G_TEMP2}°C"
-    :value {EWW_TEMPS.NVME_SENSOR_1_TEAM_TM8FPD512G_TEMP2}
-    :label "${EWW_TEMPS.NVME_SENSOR_1_TEAM_TM8FPD512G_TEMP2}°C"
-    :class "temp_nvme2_s1"))

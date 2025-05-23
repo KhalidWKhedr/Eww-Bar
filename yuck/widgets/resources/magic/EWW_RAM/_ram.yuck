@@ -1,0 +1,21 @@
+(defwidget ram_free []
+  (base_resource_circular
+    :icon "󰘚"
+    :tooltip "RAM Free: ${round((EWW_RAM.available_mem / EWW_RAM.total_mem) * 100, 0)}%"
+    :value {(EWW_RAM.available_mem / EWW_RAM.total_mem) * 100}
+    :label "${round((EWW_RAM.available_mem / EWW_RAM.total_mem) * 100, 0)}%"
+    :box_class "magic_ram_free_box"
+    :circular_progress_class "magic_ram_free_progress"
+    :button_class "magic_ram_free_button"
+    :label_class "magic_ram_free_label"))
+
+(defwidget ram_used []
+  (base_resource_circular
+    :icon "󰍛"
+    :tooltip "RAM Used: ${round(EWW_RAM.used_mem_perc, 0)}%"
+    :value {EWW_RAM.used_mem_perc}
+    :label "${round(EWW_RAM.used_mem_perc, 0)}%"
+    :box_class "magic_ram_used_box"
+    :circular_progress_class "magic_ram_used_progress"
+    :button_class "magic_ram_used_button"
+    :label_class "magic_ram_used_label"))

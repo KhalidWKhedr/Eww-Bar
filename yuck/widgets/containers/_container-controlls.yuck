@@ -4,8 +4,8 @@
           :orientation "h"
           :halign "start"
           :space-evenly true
-          (resource_volume)
-          (resource_brightness)
+          (launcher_volume)
+          (launcher_brightness)
           (resource_battery)
-          (resource_bluetooth)))
+          (launcher_bluetooth)))
   
