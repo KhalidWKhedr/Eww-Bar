@@ -7,6 +7,7 @@
     :button_class "magic_temp_nvme2_button"
     :label_class "magic_temp_nvme2_label"
     :label "${EWW_TEMPS.NVME_COMPOSITE_TEAM_TM8FPD512G_TEMP1}°C"
+    :label_style ""
     :icon "󰈸"))
 
 (defwidget temp_nvme2_s1 []
@@ -18,6 +19,7 @@
     :button_class "magic_temp_nvme2_s1_button"
     :label_class "magic_temp_nvme2_s1_label"
     :label "${EWW_TEMPS.NVME_SENSOR_1_TEAM_TM8FPD512G_TEMP2}°C"
+    :label_style ""
     :icon "󰈸"))
 
 (defwidget temp_nvme2_s2 []
@@ -29,4 +31,5 @@
     :button_class "magic_temp_nvme2_s2_button"
     :label_class "magic_temp_nvme2_s2_label"
     :label "${EWW_TEMPS.NVME_SENSOR_2_TEAM_TM8FPD512G_TEMP3}°C"
+    :label_style ""
     :icon "󰈸"))

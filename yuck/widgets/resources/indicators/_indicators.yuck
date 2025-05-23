@@ -1,0 +1,10 @@
+;; Resources 
+(defwidget indicators []
+  (box :class "indicator_box"
+       :orientation "h"
+       :halign "start"
+       :space-evenly true
+       (indicator_volume)
+       (indicator_brightness)
+       (resource_battery)
+       (indicator_bluetooth)))

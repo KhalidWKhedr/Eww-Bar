@@ -1,10 +1,11 @@
 (defwidget resource_battery []
   (base_resource_circular
     :box_class "magic_battery_box"
-    :circular_progress_class "magic_battery_circular_progress"
+    :circular_progress_class "magic_battery_progress"
     :button_class "magic_battery_button"
     :label_class "magic_battery_label"
     :label "${EWW_BATTERY.BAT0.capacity}"
+    :label_style "font-size: 16px; margin-left: 7px"
     :tooltip "Battery ${EWW_BATTERY.BAT0.capacity}% - ${EWW_BATTERY.BAT0.status}"
     :value {EWW_BATTERY.BAT0.capacity}
     :icon {

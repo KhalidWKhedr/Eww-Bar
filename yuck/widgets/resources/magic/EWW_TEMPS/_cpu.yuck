@@ -7,4 +7,5 @@
     :button_class "magic_temp_cpu_button"
     :label_class "magic_temp_cpu_label"
     :label "${EWW_TEMPS.K10TEMP_TCTL}°C"
+    :label_style ""
     :icon "󰈸"))

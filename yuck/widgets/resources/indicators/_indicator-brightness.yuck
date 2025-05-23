@@ -1,0 +1,14 @@
+(defwidget indicator_brightness []
+  (base_indicator_circle
+    :icon "☀"
+    :tooltip "Brightness ${current-brightness}%"
+    :value current-brightness
+    :label "${current-brightness}"
+    :button_style "font-size: 32px; margin-right: 1px; margin-top: 2px"
+    :label_style "font-size: 16px; margin-right: 12px"
+    :box_class "indicator_brightness_box"
+    :circular_progress_class "indicator_brightness_progress"
+    :button_class "indicator_brightness_button"
+    :label_class "indicator_brightness_label"
+    :onscroll "bash scripts/resources/brightness_scroll.sh {}"
+    :onclick "scripts/popup brightness"))

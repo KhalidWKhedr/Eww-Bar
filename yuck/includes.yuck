@@ -12,21 +12,15 @@
 (include "yuck/windows/_window_calendar.yuck")
 (include "yuck/windows/_window_bluetooth.yuck")
 
-;; Widgets - Base Components
-(include "yuck/widgets/controls/_base-control.yuck")
-(include "yuck/widgets/launchers/_base-launcher.yuck")
-(include "yuck/widgets/menus/_base-menu.yuck")
-(include "yuck/widgets/resources/_base-resource-circle.yuck")
-(include "yuck/widgets/resources/_base-launcher-circle.yuck")
-
 ;; Widgets - Controls
+(include "yuck/widgets/controls/_base-control.yuck")
 (include "yuck/widgets/controls/_controls-media.yuck")
 
-;; Widgets - Containers
-(include "yuck/widgets/containers/_container-bar.yuck")
-(include "yuck/widgets/containers/_container-controlls.yuck")
+;; Widgets - Bar
+(include "yuck/widgets/bar/_bar.yuck")
 
 ;; Widgets - Launchers
+(include "yuck/widgets/launchers/_base-launcher.yuck")
 (include "yuck/widgets/launchers/_launcher-app.yuck")
 (include "yuck/widgets/launchers/_launcher-directories.yuck")
 (include "yuck/widgets/launchers/_launcher-media.yuck")
@@ -34,15 +28,19 @@
 (include "yuck/widgets/launchers/_launcher-settings.yuck")
 (include "yuck/widgets/launchers/_launcher-tools.yuck")
 
-;; Widgets - Menus
-(include "yuck/widgets/menus/_menu-directories.yuck")
-(include "yuck/widgets/menus/_menu-power.yuck")
-(include "yuck/widgets/menus/_menu-tools.yuck")
+;; Widgets - Resources - Base Components
+(include "yuck/widgets/resources/magic/_base-magic-circle.yuck")
+(include "yuck/widgets/resources/indicators/_base-indicator-circle.yuck")
 
 ;; Widgets - Resources - Panels
-(include "yuck/widgets/resources/panels/_panel-bluetooth.yuck")
-(include "yuck/widgets/resources/panels/_panel-media.yuck")
-(include "yuck/widgets/resources/panels/_panel-settings.yuck")
+(include "yuck/widgets/panels/_panel-bluetooth.yuck")
+(include "yuck/widgets/panels/_panel-media.yuck")
+(include "yuck/widgets/panels/_panel-settings.yuck")
+(include "yuck/widgets/panels/menus/_base-menu.yuck")
+(include "yuck/widgets/panels/menus/_menu-directories.yuck")
+(include "yuck/widgets/panels/menus/_menu-power.yuck")
+(include "yuck/widgets/panels/menus/_menu-tools.yuck")
+
 
 ;; Widgets - Resources - Manual
 (include "yuck/widgets/resources/manual/_active-media.yuck")
@@ -50,16 +48,17 @@
 (include "yuck/widgets/resources/manual/_workspaces.yuck")
 (include "yuck/widgets/resources/manual/_systemtray.yuck")
 
-;; Widgets - Resources - Launchers
-(include "yuck/widgets/resources/launchers/_launcher-bluetooth.yuck")
-(include "yuck/widgets/resources/launchers/_launcher-brightness.yuck")
-(include "yuck/widgets/resources/launchers/_launcher-volume.yuck")
+;; Widgets - Resources - Indicators (Also Launchers for Settings)
+(include "yuck/widgets/resources/indicators/_indicator-bluetooth.yuck")
+(include "yuck/widgets/resources/indicators/_indicator-brightness.yuck")
+(include "yuck/widgets/resources/indicators/_indicator-volume.yuck")
+(include "yuck/widgets/resources/indicators/_indicators.yuck")
 
 ;; Widgets - Resources - Magic - Battery
 (include "yuck/widgets/resources/magic/EWW_BATTERY/_battery.yuck")
 
 ;; Widgets - Resources - Magic - Time
-(include "yuck/widgets/resources/magic/EWW_TIME/_date-time.yuck")
+(include "yuck/widgets/panels/_panel-datetime.yuck")
 
 ;; Widgets - Resources - Magic - RAM
 (include "yuck/widgets/resources/magic/EWW_RAM/_ram.yuck")

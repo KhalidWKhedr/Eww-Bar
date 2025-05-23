@@ -7,7 +7,8 @@
     :box_class "magic_ram_free_box"
     :circular_progress_class "magic_ram_free_progress"
     :button_class "magic_ram_free_button"
-    :label_class "magic_ram_free_label"))
+    :label_class "magic_ram_free_label"
+    :label_style ""))
 
 (defwidget ram_used []
   (base_resource_circular
@@ -18,4 +19,5 @@
     :box_class "magic_ram_used_box"
     :circular_progress_class "magic_ram_used_progress"
     :button_class "magic_ram_used_button"
-    :label_class "magic_ram_used_label"))
+    :label_class "magic_ram_used_label"
+    :label_style ""))

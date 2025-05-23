@@ -23,7 +23,6 @@
 (defvar show_calendar false)
 (defvar show_bluetooth false)
 (defvar show_settings false)
-
 (defvar bluetooth-enabled false)
 
 (defvar icon-shuffle "")
@@ -70,4 +69,11 @@
      eww update show_tools=false && eww close window_tools; \
    else \
      eww update show_tools=true && eww open window_tools; \
+   fi")
+
+(defvar toggle_bluetooth_cmd
+  "if eww get show_bluetooth | grep -q true; then \
+     eww update show_bluetooth=false && eww close window_bluetooth; \
+   else \
+     eww update show_bluetooth=true && eww open window_bluetooth; \
    fi")

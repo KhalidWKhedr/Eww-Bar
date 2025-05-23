@@ -1,0 +1,65 @@
+/** Mixins ***************************************/
+
+@mixin workspace-style {
+  border-radius: 20px;
+  background-color: $color3;
+  box-shadow: $shadow-inset-soft;
+}
+
+@mixin workspace-shared {
+  margin-left: 2px;
+  margin-right: 2px;
+}
+
+@mixin workspace-hover {
+  &:hover {
+    color: $color13;
+    box-shadow: $shadow-inset-soft;
+  }
+}
+
+@mixin workspace-unoccupied {
+  color: $color4;
+  border-radius: 20px;
+  // No box-shadow override here; inherits inset
+}
+
+@mixin workspace-occupied {
+  color: $color1;
+  background-color: $foreground;
+  box-shadow: $shadow-bottom-subtle;
+  border-radius: 20px;
+}
+
+
+/** Workspaces ***********************************/
+
+.workspace {
+  @include workspace-style;
+  //margin-right: 10px; // Explicit, as requested
+}
+
+// Apply margins to all
+.w0,
+.w01, .w02, .w03, .w04, .w05, .w06, .w07, .w08, .w09,
+.w011, .w022, .w033, .w044, .w055, .w066, .w077, .w088, .w099 {
+  @include workspace-shared;
+}
+
+// Unoccupied workspace
+.w0 {
+  @include workspace-unoccupied;
+  @include workspace-hover;
+}
+
+// Occupied workspaces
+.w01, .w02, .w03, .w04, .w05, .w06, .w07, .w08, .w09 {
+  @include workspace-occupied;
+  @include workspace-hover;
+}
+
+// Focused workspaces (same style as occupied)
+.w011, .w022, .w033, .w044, .w055, .w066, .w077, .w088, .w099 {
+  @include workspace-occupied;
+  @include workspace-hover;
+}

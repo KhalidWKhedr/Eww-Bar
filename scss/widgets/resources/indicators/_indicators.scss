@@ -1,0 +1,94 @@
+// ========================
+// GENERIC INDICATOR MIXINS
+// ========================
+
+@mixin indicator-box {
+  margin-bottom: 5px;
+  margin-top: 5px;
+  background-color: $color3;
+  box-shadow: $shadow-inset-soft;
+  border-radius: 20px;
+  transition: all 0.3s ease;
+}
+@mixin indiactor-box-individal {
+  border-radius: 20px;
+  border: 1px solid $color2;
+  box-shadow: $shadow-inset-soft;   
+}
+
+@mixin indicator-circle {
+  color: $foreground;
+  font-size: 14px;
+  margin-right: 3px;
+}
+
+@mixin indicator-button {
+  color: $color1;
+  background-color: $foreground;
+  box-shadow: $shadow-inset-soft;
+  border-radius: 10%;
+  padding: 1px;
+  transition: all 0.3s ease;
+
+  &:hover {
+    color: $color2;
+    background-color: $color4;
+    box-shadow: 0 0 5px $color2;
+  }
+}
+
+@mixin indicator-label {
+  margin-right: 3px;
+  color: $foreground;
+  background-color: transparent;
+  font-size: 12px;
+  font-weight: 500;
+  text-shadow: 0 0 2px $color5;
+}
+
+// ====================
+// Boxes
+// ====================
+
+.indicator_box {
+  @include indicator-box;
+}
+
+.indicator_volume_box,
+.indicator_brightness_box,
+.indicator_bluetooth_box,
+.magic_battery_box, {
+  @include indiactor-box-individal;
+}
+// ====================
+// Circular Progress
+// ====================
+
+.indicator_volume_progress,
+.indicator_brightness_progress,
+.indicator_bluetooth_progress,
+.magic_battery_progress, {
+  @include indicator-circle;
+}
+
+// ====================
+// Buttons
+// ====================
+
+.indicator_volume_button,
+.indicator_brightness_button,
+.indicator_bluetooth_button,
+.magic_battery_button, {
+  @include indicator-button;
+}
+
+// ====================
+// Labels
+// ====================
+
+.indicator_volume_label,
+.indicator_brightness_label,
+.indicator_bluetooth_label,
+.magic_battery_label {
+  @include indicator-label;
+}
