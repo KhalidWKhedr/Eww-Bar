@@ -1,14 +1,24 @@
-(defwidget base_launcher [box_class button_class icon tooltip onclick height width style]
+(defwidget base_launcher
+  [ box_class
+    button_class
+    icon
+    tooltip
+    onclick
+    height
+    width
+    style]
+    
   (box
     :class box_class
     :orientation "h"
-    :space-evenly true
     :halign "center"
     :valign "center"
-    :active true
-    :tooltip tooltip
     :height height
     :width width
+    :active true
+    :space-evenly true
+    :tooltip tooltip
+
     (button
       :class button_class
       :onclick onclick
