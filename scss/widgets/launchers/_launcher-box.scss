@@ -1,31 +1,30 @@
 /** Launcher Box Styles ***************************************/
 
+// Shared Box Style
 @mixin launcher_box_style {
   border-radius: 20px;
 }
 
 /** Launcher Boxes ********************************************/
 
-.power_box_launcher {
-  @include launcher_box_style;
-}
-
+// Base box — no margin applied; width is true to Yuck widget size
 .directory_box_launcher {
   @include launcher_box_style;
 }
 
-.tools_box_launcher {
-  @include launcher_box_style;
-}
-
-.application_box_launcher {
-  @include launcher_box_style;
-}
-
+// Left-margin boxes — width must be adjusted in Yuck by +5px
+// (Eww adds margin outside box, but Yuck sizing doesn't compensate)
+.power_box_launcher,
+.tools_box_launcher,
 .media_box_launcher {
+  margin-left: 5px;
   @include launcher_box_style;
 }
 
+// Right-margin boxes — width must be adjusted in Yuck by +5px
+// (Same eww/Yuck margin compensation issue applies)
+.application_box_launcher,
 .settings_box_launcher {
+  margin-right: 5px;
   @include launcher_box_style;
 }

@@ -1,20 +1,23 @@
 /** Launcher Button Styles ***************************************/
 
+// Base Button Styles
 @mixin button-style {
-  color: $color1;
-  background-color: $foreground;
+  color: $color7;
+  background-color: $color2;
   border-radius: 20px;
   box-shadow: $shadow-bottom-subtle;
 }
 
+// Hover State
 @mixin button-hover-style {
   color: $color13;
   box-shadow: $shadow-inset-soft;
 }
 
-// Helper Mixin to Apply Both Styles Including Hover
+// Combined Button with Hover Support
 @mixin full-button-style {
   @include button-style;
+
   &:hover {
     @include button-hover-style;
   }
@@ -22,32 +25,12 @@
 
 /** Launcher Buttons ********************************************/
 
-.power_button_launcher {
-  @include full-button-style;
-  margin-left: 10px; // Width of button is 30(+5), height is 30
-}
-
-.directory_button_launcher {
-  @include full-button-style;
-  margin-left: 2px; // Width of button is 40(+2), height is 40
-}
-
-.tools_button_launcher {
-  @include full-button-style;
-  margin-left: 5px; // Width of button is 40(+5), height is 40
-}
-
-.application_button_launcher {
-  @include full-button-style;
-  margin-right: 5px; // Width of button is 40(+5), height is 40
-}
-
-.media_button_launcher {
-  @include full-button-style;
-  margin-left: 5px;
-}
-
+// Apply to All Launcher Buttons
+.power_button_launcher,
+.directory_button_launcher,
+.tools_button_launcher,
+.application_button_launcher,
+.media_button_launcher,
 .settings_button_launcher {
   @include full-button-style;
-  margin-left: 5px;
 }
