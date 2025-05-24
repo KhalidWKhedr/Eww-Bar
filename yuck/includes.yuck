@@ -75,3 +75,6 @@
 
 ;; Widgets - Resources - Magic - Network
 (include "yuck/widgets/resources/magic/EWW_NET/_wifi.yuck")
+
+;; Some Bullshit
+(include "/home/khalidwaleedkhedr/.config/eww/yuck/widgets/resources/manual/_example.yuck")

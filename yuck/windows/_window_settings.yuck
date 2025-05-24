@@ -13,6 +13,4 @@
   :namespace "window_settings"
   :exclusive true
   :focusable false
-  (ram_overview))
-
-
+  (example))

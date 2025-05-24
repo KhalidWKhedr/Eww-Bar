@@ -1,20 +1,25 @@
 (defwidget resource_battery []
   (base_resource_circular
-    :icon {
-            EWW_BATTERY.BAT0.status == "Discharging" ?
-              (EWW_BATTERY.BAT0.capacity < 15 ? "󰁺" :
-               EWW_BATTERY.BAT0.capacity < 30 ? "󰁻" :
-               EWW_BATTERY.BAT0.capacity < 45 ? "󰁽" :
-               EWW_BATTERY.BAT0.capacity < 60 ? "󰁿" :
-               EWW_BATTERY.BAT0.capacity < 75 ? "󰂁" :
-               EWW_BATTERY.BAT0.capacity < 95 ? "󰂂" : "󰁹")
-            :
-              (EWW_BATTERY.BAT0.capacity < 15 ? "󰢟" :
-               EWW_BATTERY.BAT0.capacity < 30 ? "󰢜" :
-               EWW_BATTERY.BAT0.capacity < 45 ? "󰂆" :
-               EWW_BATTERY.BAT0.capacity < 60 ? "󰂇" :
-               EWW_BATTERY.BAT0.capacity < 75 ? "󰂈" :
-               EWW_BATTERY.BAT0.capacity < 95 ? "󰂋" : "󰂅")}
+    :icon {EWW_BATTERY.BAT0.status == "Discharging" 
+            ? (EWW_BATTERY.BAT0.capacity > 90 ? "󰂂"
+                : EWW_BATTERY.BAT0.capacity > 80 ? "󰂁"
+                : EWW_BATTERY.BAT0.capacity > 70 ? "󰂀"
+                : EWW_BATTERY.BAT0.capacity > 60 ? "󰁿"
+                : EWW_BATTERY.BAT0.capacity > 50 ? "󰁾"
+                : EWW_BATTERY.BAT0.capacity > 40 ? "󰁽"
+                : EWW_BATTERY.BAT0.capacity > 30 ? "󰁼"
+                : EWW_BATTERY.BAT0.capacity > 20 ? "󰁻"
+                : EWW_BATTERY.BAT0.capacity > 10 ? "󰁺"
+                : "󰂌")
+            : (EWW_BATTERY.BAT0.capacity > 90 ? "󰂅"
+                : EWW_BATTERY.BAT0.capacity > 80 ? "󰂋"
+                : EWW_BATTERY.BAT0.capacity > 70 ? "󰂊"
+                : EWW_BATTERY.BAT0.capacity > 60 ? "󰂉"
+                : EWW_BATTERY.BAT0.capacity > 50 ? "󰂈"
+                : EWW_BATTERY.BAT0.capacity > 40 ? "󰂇"
+                : EWW_BATTERY.BAT0.capacity > 30 ? "󰂆"
+                : EWW_BATTERY.BAT0.capacity > 20 ? "󰢜"
+                : "󰢟")}
     :box_class "magic_battery_box"
     :circular_progress_class "magic_battery_progress"
     :button_class "magic_battery_button"
