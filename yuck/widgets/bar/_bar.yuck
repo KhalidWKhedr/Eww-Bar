@@ -1,8 +1,8 @@
 (defwidget bar [gui_size]
-  (box
-   :orientation "h"
-   :class (str "bar_eww " gui_size)
-   :space-evenly true
+     
+  (box  :class "eww_bar"
+        :orientation "h"
+        :space-evenly true
 
    ;; Left Section
    (box :class "bar_left"

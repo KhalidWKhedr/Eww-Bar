@@ -1,7 +1,17 @@
-(defwidget base_control [icon onclick tooltip class style]
-  (button
-    :class (str "button_" class)
-    :style style
-    :title tooltip
-    :onclick onclick
-    icon))
+(defwidget base_control
+  [icon
+   onclick
+   tooltip
+   button_class
+   box_class
+   style]
+
+  (box
+    :class box_class
+
+    (button
+      :class button_class
+      :style style
+      :title tooltip
+      :onclick onclick
+      icon)))

@@ -1,12 +1,12 @@
 (defwidget base_launcher
-  [ box_class
-    button_class
-    icon
-    tooltip
-    onclick
-    height
-    width
-    style]
+  [box_class
+   button_class
+   icon
+   tooltip
+   onclick
+   height
+   width
+   style]
     
   (box
     :class box_class

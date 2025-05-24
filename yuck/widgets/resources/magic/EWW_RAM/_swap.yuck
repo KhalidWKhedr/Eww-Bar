@@ -3,23 +3,23 @@
     :icon "󰍛"
     :tooltip "Swap Free: ${round((EWW_RAM.free_swap / EWW_RAM.total_swap) * 100, 0)}%"
     :value {(EWW_RAM.free_swap / EWW_RAM.total_swap) * 100}
-    :label "${round((EWW_RAM.free_swap / EWW_RAM.total_swap) * 100, 0)}%"
+    :label_text "${round((EWW_RAM.free_swap / EWW_RAM.total_swap) * 100, 0)}%"
+    :label_style ""
     :box_class "magic_swap_free_box"
     :circular_progress_class "magic_swap_free_progress"
     :button_class "magic_swap_free_button"
     :button_style "font-size: 20px; margin-left: 7px"
-    :label_class "magic_swap_free_label"
-    :label_style ""))
+    :label_class "magic_swap_free_label"))
 
 (defwidget swap_used []
   (base_resource_circular
     :icon "󰁯"
     :tooltip "Swap Used: ${round(((EWW_RAM.total_swap - EWW_RAM.free_swap) / EWW_RAM.total_swap) * 100, 0)}%"
     :value {((EWW_RAM.total_swap - EWW_RAM.free_swap) / EWW_RAM.total_swap) * 100}
-    :label "${round(((EWW_RAM.total_swap - EWW_RAM.free_swap) / EWW_RAM.total_swap) * 100, 0)}%"
+    :label_text "${round(((EWW_RAM.total_swap - EWW_RAM.free_swap) / EWW_RAM.total_swap) * 100, 0)}%"
+    :label_style ""
     :box_class "magic_swap_used_box"
     :circular_progress_class "magic_swap_used_progress"
     :button_class "magic_swap_used_button"
     :button_style "font-size: 20px; margin-left: 7px"
-    :label_class "magic_swap_used_label"
-    :label_style ""))
+    :label_class "magic_swap_used_label"))

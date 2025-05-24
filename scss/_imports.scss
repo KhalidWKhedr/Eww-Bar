@@ -1,36 +1,38 @@
-/** Imports ***************************************/
-
-// /** Base */
+/** Base Variables ***************************************/
 @import "variables/_global.scss";
 @import "variables/_colors.scss";
 @import "variables/_accents.scss";
 @import "variables/_shadows.scss";
 
+/** Core Widgets ******************************************/
+@import "widgets/bar/_bar.scss";
 
-/** Widgets: Launchers */
+/** Launchers *********************************************/
 @import "widgets/launchers/_launcher-box.scss";
 @import "widgets/launchers/_launcher-button.scss";
 
-// // /** Windows */
-@import "widgets/bar/_bar.scss";
+/** Manual Resources **************************************/
+@import "widgets/resources/manual/_workspaces.scss";
+
+/** Panel Menus *******************************************/
+@import "widgets/panels/menus/_menu-box.scss";
+@import "widgets/panels/menus/_menu-option.scss";
+
+/** Indicators ********************************************/
+@import "widgets/resources/indicators/_indicators.scss";
+
+/** Optional Windows & Panels *****************************
+ * Uncomment below as needed during development
+ **********************************************************/
+
 // @import "windows/resources/panel/_bluetooth.scss";
 // @import "windows/_calendar.scss";
 // @import "windows/_settings.scss";
-// // @import "windows/_media-player.scss";
+// @import "windows/_media-player.scss";
 
-// // /** Widgets: Core */
-//@import "widgets/resources/manual/_active-media.scss";
-@import "widgets/resources/manual/_active-window.scss";
-@import "widgets/panels/_calendar.scss";
-@import "widgets/panels/_date-time.scss";
-@import "widgets/panels/_systray.scss";
-@import "widgets/panels/_tooltip.scss";
-@import "widgets/resources/manual/_workspaces.scss";
-
-// /** Widgets: Menus */
-@import "widgets/panels/menus/_menu-box.scss";
-@import "widgets/panels/menus/_menu-option.scss";
-// // 
-
-// /** Widgets: Resources */
-@import "widgets/resources/indicators/_indicators.scss";
+// @import "widgets/resources/manual/_active-media.scss";
+// @import "widgets/resources/manual/_active-window.scss";
+// @import "widgets/panels/_calendar.scss";
+// @import "widgets/panels/_date-time.scss";
+// @import "widgets/panels/_systray.scss";
+// @import "widgets/panels/_tooltip.scss";

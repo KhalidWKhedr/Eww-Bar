@@ -1,12 +1,12 @@
 (defwidget temp_cpu []
   (base_resource_circular
+    :icon "󰈸"
     :tooltip "CPU Temp: ${EWW_TEMPS.K10TEMP_TCTL}°C"
     :value {EWW_TEMPS.K10TEMP_TCTL}
+    :label_text "${EWW_TEMPS.K10TEMP_TCTL}°C"
+    :label_style ""
     :box_class "magic_temp_cpu_box"
     :circular_progress_class "magic_temp_cpu_progress"
     :button_class "magic_temp_cpu_button"
     :button_style "font-size: 20px; margin-left: 7px"
-    :label_class "magic_temp_cpu_label"
-    :label "${EWW_TEMPS.K10TEMP_TCTL}°C"
-    :label_style ""
-    :icon "󰈸"))
+    :label_class "magic_temp_cpu_label"))

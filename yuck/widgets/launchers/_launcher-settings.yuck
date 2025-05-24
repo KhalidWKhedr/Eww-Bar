@@ -4,7 +4,7 @@
     :tooltip "Settings"
     :box_class "settings_box_launcher"
     :button_class "settings_button_launcher"
-    :height 41
+    :height 40
     :width 45
-    :style "font-size: 30px; margin-top: 2px; padding-right: 6px;"
+    :style "font-size: 30px; margin-top: 1px; padding-right: 6px;"
     :onclick toggle_settings_cmd))

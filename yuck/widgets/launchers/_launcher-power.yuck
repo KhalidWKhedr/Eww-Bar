@@ -5,6 +5,6 @@
     :box_class "power_box_launcher"
     :button_class "power_button_launcher"
     :height 33
-    :width 43
+    :width 38
     :style "font-size: 28px; padding-right: 0px"
     :onclick toggle_power_cmd))

@@ -1,12 +1,10 @@
 /** Mixins ***************************************/
 
-// Base styles for bar sections
 @mixin bar-section($bg, $accent) {
   background: linear-gradient(135deg, $bg 0%, $accent 100%);
   border-radius: 20px;
 }
 
-// Size variations
 @mixin bar-size($font-size, $padding-y, $padding-x, $radius) {
   font-size: $font-size;
 
@@ -20,12 +18,11 @@
   }
 }
 
-
 /** EWW Bar ***************************************/
 
-.bar_eww {
-  background-color: white;
-  border-radius: 12px;
+.eww_bar {
+  background: linear-gradient(135deg, $color1 0%, $accent1 100%); // Main background
+  border-radius: 20px;
   font-family: Hack;
 
   &.small {
@@ -33,35 +30,15 @@
   }
 
   &.large {
-    @include bar-size(14px, 3px, 3px, 20px);
+    @include bar-size(20px, 2px, 2px, 20px);
   }
 }
 
-.bar_left {
-  @include bar-section($color1, $accent1);
-  opacity: 0.95;
-  padding-right: 3px;
-}
-
-.bar_left_center {
-  @include bar-section($color1, $accent1);
-  padding-left: 3px;
-  padding-right: 3px;
-}
-
-.bar_center {
-  @include bar-section($color1, $accent1);
-  padding-left: 3px;
-  padding-right: 3px;
-}
-
-.bar_right_container {
-  @include bar-section($color1, $accent1);
-  padding-left: 3px;
-  padding-right: 3px;
-}
-
+.bar_left,
+.bar_left_center,
+.bar_center,
+.bar_right_container,
 .bar_right {
-  @include bar-section($color1, $accent1);
-  padding-left: 5px;
+  background: $color1; // Transparent to let parent background show
+  opacity: 0.95;
 }
