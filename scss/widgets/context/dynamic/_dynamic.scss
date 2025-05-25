@@ -1,6 +1,6 @@
 /** Mixins ***********************************/
 @mixin dynamic-box-style {
-  margin-left: 10px;
+  margin-left: 5px;
 }
 
 @mixin dynamic-sub-box-style {
@@ -8,11 +8,9 @@
 }
 
 @mixin dynamic-label-style {
-  margin-left: 20px;
 }
 
 @mixin dynamic-sub-label-style {
-  margin-left: 20px;
 }
 
 @mixin dynamic-icon-style {
@@ -23,8 +21,15 @@
 /** Active Media ***********************************/
 
 /* Container Boxes */
-.dynamic_box_container,
-.media_box_container {
+.workspace_box_container,
+.media_box_container, {
+  @include dynamic-box-style;
+}
+
+.workspace_box_icon,
+.media_box_icon{ 
+  font-size: 35px;
+  color: $color6;
 }
 
 /* Sub-containers */
@@ -33,20 +38,17 @@
   @include dynamic-sub-box-style;
 }
 
-/* Top Labels */
-.dynamic_workspace_label,
-.media_label_artist {
-  @include dynamic-label-style;
+.workspace_icon,
+.media_icon{
+
 }
 
-/* Bottom Labels */
-.workspace_label,
-.media_label_song {
-  @include dynamic-sub-label-style;
+.media_label_artist,
+.dynamic_workspace_label{
+
 }
 
-/* Icons */
-.window_icon,
-.media_icon {
-  @include dynamic-icon-style;
+.media_label_song,
+.workspace_label{
+
 }

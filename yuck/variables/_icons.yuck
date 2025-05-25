@@ -75,10 +75,10 @@
 ;; =========================
 ;;      EXTRA ICONS
 ;; =========================
-(defvar window_icon "󰊢")
-(defvar moon_icons_1 "             ")
-(defvar moon_icons_2 "             ")
-(defvar moon_choice_icons "        ")
-(defvar ghost_icons " 󱙝 󰊠 󱙜 󰧵")
-(defvar chess_icons "♔ ♕ ♖ ♗ ♘ ♙ ♚ ♛ ♜ ♝ ♞ ♟")
-(defvar window_icon_alternatives "󰄯 󰄰 󰨇 󰇄 󰇧 󰄮 󰲡 󰻂")
+(defvar window-icon "󰊢")
+(defvar moon-icons_1 "             ")
+(defvar moon-icons_2 "             ")
+(defvar moon-choice-icons "        ")
+(defvar ghost-icons " 󱙝 󰊠 󱙜 󰧵")
+(defvar chess-icons "♔ ♕ ♖ ♗ ♘ ♙ ♚ ♛ ♜ ♝ ♞ ♟")
+(defvar window-icon-alternatives "󰄯 󰄰 󰨇 󰇄 󰇧 󰄮 󰲡 󰻂")

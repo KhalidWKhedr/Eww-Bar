@@ -9,9 +9,9 @@
    box_class_icon
    box_class_content]
 
-
   (box 
     :class box_class_container
+    :space-evenly "false"
 
     (box
       :class box_class_icon
@@ -28,6 +28,7 @@
       :orientation "v"
       :vexpand false
       :space-evenly false
+      :halign "start"
 
       (label
         :class class_label_top
@@ -36,5 +37,5 @@
 
       (label
         :class class_label_bottom
-        :halign "start"
+        :halign "center"
         :text bottom_text))))
