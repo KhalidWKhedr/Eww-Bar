@@ -6,20 +6,25 @@
    class_label_top
    class_label_bottom
    box_class_container
-   box_class_sub_container]
+   box_class_icon
+   box_class_content]
 
-  (box
+
+  (box 
     :class box_class_container
-    :orientation "h"
-    :vexpand false
-    :space-evenly false
-
-    (label
-      :class class_label_icon
-      :text icon)
 
     (box
-      :class box_class_sub_container
+      :class box_class_icon
+      :orientation "h"
+      :vexpand false
+      :space-evenly false
+
+      (label
+        :class class_label_icon
+        :text icon))
+
+    (box
+      :class box_class_content
       :orientation "v"
       :vexpand false
       :space-evenly false

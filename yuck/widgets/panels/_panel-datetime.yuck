@@ -2,59 +2,69 @@
 (defwidget date_time []
 
   ;; Container for date and time components
-  (box :class "datetime_container"
-       :orientation "h"
-       :space-evenly false
-       :halign "center"
-       :valign "center"
+  (box 
+    :class "datetime_container"
+    :orientation "h"
+    :space-evenly false
+    :halign "center"
+    :valign "center"
 
-    (box :class "container_hours_minutes"
+    (box 
+      :class "container_hours_minutes"
       
       ;; Hour Button
-      (button :class "time_hour"
-              :width 40
-              :height 40
-              :tooltip "Hours"
-              :style "font-size: 25px; padding-left: 1px; font-family: 'Hack Nerd Font', monospace;"
-              :onclick toggle_calendar_cmd hour)
+      (button 
+        :class "time_hour"
+        :width 40
+        :height 40
+        :tooltip "Hours"
+        :style "font-size: 25px; padding-left: 1px; font-family: 'Hack Nerd Font', monospace;"
+        :onclick toggle_calendar_cmd hour)
 
       ;; Minute Button
-      (button :class "time_minute"
-              :tooltip "Minutes"
-              :style "font-size: 25px; padding-left: 1px; font-family: 'Hack Nerd Font', monospace;"
-              :onclick toggle_calendar_cmd min))
+      (button 
+        :class "time_minute"
+        :tooltip "Minutes"
+        :style "font-size: 25px; padding-left: 1px; font-family: 'Hack Nerd Font', monospace;"
+        :onclick toggle_calendar_cmd min))
 
     ;; Hover to show date
-    (eventbox :class "date_hoverbox"
-              :onhover "${eww} update reveal_date=true"
-              :onhoverlost "${eww} update reveal_date=false"
+    (eventbox 
+      :class "date_hoverbox"
+      :onhover "${eww} update reveal_date=true"
+      :onhoverlost "${eww} update reveal_date=false"
 
       ;; Date Container
-      (box :class "date_container"
-           :orientation "h"
-           :space-evenly false
-           :halign "center"
-           :valign "center"
+      (box 
+        :class "date_container"
+        :orientation "h"
+        :space-evenly false
+        :halign "center"
+        :valign "center"
 
         ;; Seconds Button
-        (button :class "time_second"
-                :tooltip "Seconds"
-                :width 40
-                :height 40
-                :style "font-size: 25px; padding-top: 0px; font-family: 'Hack Nerd Font', monospace;"
-                :onclick toggle_calendar_cmd sec)
+        (button 
+          :class "time_second"
+          :tooltip "Seconds"
+          :width 40
+          :height 40
+          :style "font-size: 25px; padding-top: 0px; font-family: 'Hack Nerd Font', monospace;"
+          :onclick toggle_calendar_cmd sec)
 
         ;; Revealer for date display
-        (revealer :class "date_revealer"
-                  :transition "slideleft"
-                  :reveal reveal_date
-                  :duration "250ms"
+        (revealer 
+          :class "date_revealer"
+          :transition "slideleft"
+          :reveal reveal_date
+          :duration "250ms"
 
           ;; Date Button
-          (box :class "date_buttons"
+          (box 
+            :class "date_buttons"
             
-            (button :class "time_date"
-                    :tooltip "Date Today"
-                    :width 225
-                    :style "font-size: 1.4em; padding-top: 0px; font-family: 'Hack Nerd Font', monospace;"
-                    :onclick toggle_calendar_cmd date)))))))
+            (button 
+              :class "time_date"
+              :tooltip "Date Today"
+              :width 225
+              :style "font-size: 1.4em; padding-top: 0px; font-family: 'Hack Nerd Font', monospace;"
+              :onclick toggle_calendar_cmd date)))))))

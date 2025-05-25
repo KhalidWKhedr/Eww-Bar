@@ -7,32 +7,46 @@
     :orientation "h"
     :style ""
 
-    (button :class "power_option" :tooltip "Shutdown"
-            :onclick "shutdown now" :height 25 :width 30
-            :style "font-size: 21px; padding-right: 5px; padding-bottom: 0px"
-            icon-shutdown)
+    (button 
+        :class "power_option" 
+        :tooltip "Shutdown"
+        :onclick "shutdown now" 
+        :height 25 
+        :width 30
+        :style "font-size: 21px; padding-right: 5px; padding-bottom: 0px"
+        icon-shutdown)
 
-    (button :class "power_option" :tooltip "Reboot"
-            :onclick "reboot"
-            :style "font-size: 21px; padding-right: 5px; padding-bottom: 0px"
-            icon-reboot)
+    (button 
+        :class "power_option" 
+        :tooltip "Reboot"
+        :onclick "reboot"           
+        :style "font-size: 21px; padding-right: 5px; padding-bottom: 0px"
+        icon-reboot)
 
-    (button :class "power_option" :tooltip "Lock Screen"
-            :onclick "hyprlock &"
-            :style "font-size: 21px; padding-right: 4px"
-            icon-lock)
+    (button 
+        :class "power_option" 
+        :tooltip "Lock Screen"
+        :onclick "hyprlock &"
+        :style "font-size: 21px; padding-right: 4px"
+        icon-lock)
 
-    (button :class "power_option" :tooltip "Logout"
-            :onclick "exec, hyprctl dispatch exit"
-            :style "font-size: 21px; padding-right: 5px"
-            icon-logout)
+    (button 
+        :class "power_option" 
+        :tooltip "Logout"
+        :onclick "exec, hyprctl dispatch exit"
+        :style "font-size: 21px; padding-right: 5px"
+        icon-logout)
 
-    (button :class "power_option" :tooltip "Hibernate"
-            :onclick "systemctl hibernate"
-            :style "font-size: 21px; padding-right: 4px"
-            icon-hibernate)
+    (button 
+        :class "power_option" 
+        :tooltip "Hibernate"
+        :onclick "systemctl hibernate"
+        :style "font-size: 21px; padding-right: 4px"
+        icon-hibernate)
 
-    (button :class "power_option" :tooltip "Suspend"
-            :onclick "systemctl suspend"
-            :style "font-size: 21px; padding-right: 4px"
-            icon-suspend)))
+    (button 
+        :class "power_option" 
+        :tooltip "Suspend"
+        :onclick "systemctl suspend"
+        :style "font-size: 21px; padding-right: 4px"
+        icon-suspend)))

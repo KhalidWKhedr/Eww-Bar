@@ -1,50 +1,61 @@
 (defwidget media []
-  (box :class "media_player"
-       :orientation "v"
-       :space-evenly false
+  (box 
+    :class "media_player"
+    :orientation "v"
+    :space-evenly false
 
     ;; Image Container
-    (box :class "box_image_container"
-         :orientation "v"
-         :space-evenly false
+    (box 
+        :class "box_image_container"
+        :orientation "v"
+        :space-evenly false
 
       ;; Player Name Label
-      (label :class "label_player"
-             :text "${media-player.status}"
-             :style "font-size: 16px; padding-right: 0px")
+      (label 
+        :class "label_player"
+        :text "${media-player.status}"
+        :style "font-size: 16px; padding-right: 0px")
 
       ;; Media Image
-      (image :class "box_image"
-             :height 300
-             :width 300
-             :preserve-aspect-ratio false
-             :style "background-image: url('${media-player.art_url}');
-                     background-size: 100% 100%;
-                     background-position: center;
-                     background-repeat: no-repeat;"))
+      (image 
+        :class "box_image"
+        :height 300
+        :width 300
+        :preserve-aspect-ratio false
+        :style "background-image: url('${media-player.art_url}');
+                background-size: 100% 100%;
+                background-position: center;
+                background-repeat: no-repeat;"))
 
     ;; Media Info and Progress Bar
-    (box :class "box_song_information"
-         :orientation "v"
-      (label :class "label_artist_song"
-             :text "${media-player.artist} - ${media-player.title}"))
+    (box 
+        :class "box_song_information"
+        :orientation "v"
+      (label 
+        :class "label_artist_song"
+        :text "${media-player.artist} - ${media-player.title}"))
 
     ;; Progress Bar and Time Info
-    (centerbox :class "box_progression"
-               :orientation "h"
-      (label :class "artist"
-             :text "${media-player.position}")
-      (progress :class "media_progress"
-                :orientation "h"
-                :width 230
-                :value "${100 * (((substring(media-player.position, 0, 1) * 60 + substring(media-player.position, 3, 2)) 
-                                 / (substring(media-player.duration, 0, 1) * 60 + substring(media-player.duration, 3, 2))))}")
-      (label :class "artist"
-             :text "${media-player.duration}"))
+    (centerbox 
+        :class "box_progression"
+        :orientation "h"
+      (label 
+        :class "artist"
+        :text "${media-player.position}")
+      (progress 
+        :class "media_progress"
+        :orientation "h"
+        :width 230          
+        :value "${100 * (((substring(media-player.position, 0, 1) * 60 + substring(media-player.position, 3, 2)) 
+                        / (substring(media-player.duration, 0, 1) * 60 + substring(media-player.duration, 3, 2))))}")
+      (label 
+        :class "artist"
+        :text "${media-player.duration}"))
 
     ;; Controls
-    (box :class "box_controls"
-         :orientation "h"
+    (box 
+        :class "box_controls"
+        :orientation "h"
       (base_control
         :icon icon-shuffle
         :tooltip "Shuffle"

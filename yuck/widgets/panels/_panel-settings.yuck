@@ -1,10 +1,15 @@
 (defvar tab 0)
 
 (defwidget settings []
-  (box :orientation "vertical" :space-evenly true :class "settings-container"
+  (box 
+    :class "settings-container" 
+    :orientation "vertical" 
+    :space-evenly true 
     
     ;; Tab buttons
-    (box :orientation "horizontal" :space-evenly true
+    (box 
+      :orientation "horizontal" 
+      :space-evenly true
       (button
         :label "Wi-Fi"
         :class {(tab == 0) ? "tab-button active" : "tab-button"}
@@ -15,13 +20,22 @@
         :onclick "tab = 1"))
 
     ;; Stack showing only one child
-    (stack :selected tab :transition "crossfade"
-      (box :orientation "vertical"
-        (label :text "Wi-Fi Settings")
-        (button :label "Toggle Wi-Fi"))
+    (stack 
+      :selected tab 
+      :transition "crossfade"
+      (box 
+        :orientation "vertical"
+        (label 
+          :text "Wi-Fi Settings")
+        (button 
+          :label "Toggle Wi-Fi"))
 
-      (box :orientation "vertical"
-        (label :text "Bluetooth Settings")
-        (button :label "Toggle Bluetooth")
-        (label :text "${media-player.play_icon}")))))
+      (box 
+        :orientation "vertical"
+        (label 
+          :text "Bluetooth Settings")
+        (button 
+          :label "Toggle Bluetooth")
+        (label 
+          :text "${media-player.play_icon}")))))
 

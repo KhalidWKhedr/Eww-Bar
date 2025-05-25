@@ -7,4 +7,6 @@
     :class_label_top "media_label_artist"
     :class_label_bottom "media_label_song"
     :box_class_container "media_box_container"
-    :box_class_sub_container "media_box_playing"))
+    :box_class_icon "media_box_icon"
+    :box_class_content "media_box_content"))
+

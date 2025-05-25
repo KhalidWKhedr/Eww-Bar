@@ -1,50 +1,56 @@
 (defwidget bar [gui_size]
      
-  (box  :class "eww_bar"
-        :orientation "h"
-        :space-evenly true
+  (box  
+     :class "eww_bar"
+     :orientation "h"       
+     :space-evenly true
 
    ;; Left Section
-   (box :class "bar_left"
-        :halign "start"
-        :hexpand true
-        :space-evenly false
-        (power_menu_launcher)
-        (power_menu)
-        (dynamic_window))
+   (box 
+     :class "bar_left"
+     :halign "start"
+     :hexpand true       
+     :space-evenly false
+     (power_menu_launcher)
+     (power_menu)
+     (dynamic_workspace))
 
    ;; Center-Left Section
-   (box :class "bar_left_center"
-        :halign "start"
-        :hexpand false
-        :space-evenly false
-        (directory_menu_launcher)
-        (directory_menu)
-        (tools_menu_launcher)
-        (tools_menu)
-        (dynamic_media))
+   (box 
+     :class "bar_left_center"
+     :halign "start"
+     :hexpand false
+     :space-evenly false
+     (directory_menu_launcher)
+     (directory_menu)
+     (tools_menu_launcher)
+     (tools_menu)
+     (dynamic_media))
 
    ;; Center Section
-   (box :class "bar_center"
-        :halign "center"
-        :hexpand false
-        :space-evenly false
-        (application_launcher)
-        (workspaces)
-        (media_player_launcher))
+   (box 
+     :class "bar_center"
+     :halign "center"
+     :hexpand false
+     :space-evenly false
+     (application_launcher)
+     (workspaces)
+     (media_player_launcher))
 
    ;; Right Container
-   (box :class "bar_right_container"
-        :halign "end"
-        :hexpand false
-        :space-evenly false
-        (indicators)
-        (settings_launcher))
+   (box 
+     :class "bar_right_container"
+     :halign "end"
+     :hexpand false
+     :space-evenly false
+     (indicators)
+     (settings_launcher))
 
    ;; Right Section
-   (box :class "bar_right"
-        :halign "end"
-        :hexpand false
-        :space-evenly false
-        (date_time)
-        (systemtray))))
+   (box 
+     :class "bar_right"
+     :halign "end"
+     :hexpand false
+     :space-evenly false
+     (date_time)
+     (systemtray))))

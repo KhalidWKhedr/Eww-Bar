@@ -7,28 +7,32 @@
     :orientation "h"
     :style ""
     
-    (button :class "tool_option"
-            :tooltip "Take Screenshot"
-            :onclick "bash scripts/tools/snapshots.sh"
-            :height 32
-            :width 35
-            :style "font-size: 25px; padding-top: 2px; padding-right: 2px"
-            icon-screenshot)
+    (button 
+        :class "tool_option"
+        :tooltip "Take Screenshot"
+        :onclick "bash scripts/tools/snapshots.sh"
+        :height 32
+        :width 35
+        :style "font-size: 25px; padding-top: 2px; padding-right: 2px"
+        icon-screenshot)
 
-    (button :class "tool_option"
-            :tooltip "Color Picker"
-            :onclick "hyprpicker -a &"
-            :style "font-size: 25px; padding-right: 5px"
-            icon-colorpicker)
+    (button 
+        :class "tool_option"
+        :tooltip "Color Picker"
+        :onclick "hyprpicker -a &"
+        :style "font-size: 25px; padding-right: 5px"
+        icon-colorpicker)
 
-    (button :class "tool_option"
-            :tooltip "Email"
-            :onclick ""
-            :style "font-size: 25px; padding-right: 5px"
-            icon-email)
+    (button 
+        :class "tool_option"
+        :tooltip "Email"
+        :onclick ""
+        :style "font-size: 25px; padding-right: 5px"
+        icon-email)
 
-    (button :class "tool_option"
-            :tooltip "GitHub"
-            :onclick ""
-            :style "font-size: 25px; padding-right: 5px"
-            icon-github)))
+    (button 
+        :class "tool_option"
+        :tooltip "GitHub"
+        :onclick ""
+        :style "font-size: 25px; padding-right: 5px"
+        icon-github)))

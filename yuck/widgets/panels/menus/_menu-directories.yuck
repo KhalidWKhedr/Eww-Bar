@@ -7,32 +7,45 @@
     :orientation "h"
     :style ""
     
-    (button :class "directory_option" :tooltip "Home"
-            :onclick "sh -c 'xdg-open $HOME'" :height 30 :width 35
-            :style "font-size: 25px; padding-right: 6px; padding-bottom: 2px"
-            icon-home)
+    (button 
+        :class "directory_option" 
+        :tooltip "Home"
+        :onclick "sh -c 'xdg-open $HOME'" 
+        :height 30 :width 35
+        :style "font-size: 25px; padding-right: 6px; padding-bottom: 2px"
+        icon-home)
 
-    (button :class "directory_option" :tooltip "Documents"
-            :onclick "sh -c 'xdg-open $HOME/Documents'"
-            :style "font-size: 25px; padding-right: 5px; padding-bottom: 2px"
-            icon-documents)
+    (button 
+        :class "directory_option" 
+        :tooltip "Documents"
+        :onclick "sh -c 'xdg-open $HOME/Documents'"
+        :style "font-size: 25px; padding-right: 5px; padding-bottom: 2px"
+        icon-documents)
 
-    (button :class "directory_option" :tooltip "Downloads"
-            :onclick "sh -c 'xdg-open $HOME/Downloads'"
-            :style "font-size: 25px; padding-right: 5px; padding-bottom: 2px"
-            icon-downloads)
+    (button 
+        :class "directory_option" 
+        :tooltip "Downloads"
+        :onclick "sh -c 'xdg-open $HOME/Downloads'"
+        :style "font-size: 25px; padding-right: 5px; padding-bottom: 2px"
+        icon-downloads)
 
-    (button :class "directory_option" :tooltip "Images"
-            :onclick "sh -c 'xdg-open $HOME/Pictures'"
-            :style "font-size: 25px; padding-right: 5px; padding-bottom: 2px"
-            icon-images)
+    (button 
+        :class "directory_option" 
+        :tooltip "Images"
+        :onclick "sh -c 'xdg-open $HOME/Pictures'"
+        :style "font-size: 25px; padding-right: 5px; padding-bottom: 2px"
+        icon-images)
 
-    (button :class "directory_option" :tooltip "Music"
-            :onclick "sh -c 'xdg-open $HOME/Music'"
-            :style "font-size: 25px; padding-right: 5px; padding-bottom: 2px"
-            icon-music)
+    (button 
+        :class "directory_option" 
+        :tooltip "Music"
+        :onclick "sh -c 'xdg-open $HOME/Music'"
+        :style "font-size: 25px; padding-right: 5px; padding-bottom: 2px"
+        icon-music)
 
-    (button :class "directory_option" :tooltip "Videos"
-            :onclick "sh -c 'xdg-open $HOME/Videos'"
-            :style "font-size: 25px; padding-right: 5px"
-            icon-videos)))
+    (button 
+        :class "directory_option" 
+        :tooltip "Videos"
+        :onclick "sh -c 'xdg-open $HOME/Videos'"
+        :style "font-size: 25px; padding-right: 5px"
+        icon-videos)))

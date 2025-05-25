@@ -1,22 +1,22 @@
 /** Mixins ***********************************/
 @mixin dynamic-box-style {
-  margin-left: 2px;
-  //box-shadow: $shadow-inset-soft;
+  margin-left: 10px;
 }
 
 @mixin dynamic-sub-box-style {
-  // Add styles for sub-containers
+
 }
 
 @mixin dynamic-label-style {
+  margin-left: 20px;
 }
 
 @mixin dynamic-sub-label-style {
-  margin-left: 2px;
+  margin-left: 20px;
 }
 
 @mixin dynamic-icon-style {
-  font-size: 40px;
+  font-size: 35px;
   color: $color5;
 }
 
@@ -25,11 +25,10 @@
 /* Container Boxes */
 .dynamic_box_container,
 .media_box_container {
-  @include dynamic-box-style;
 }
 
 /* Sub-containers */
-.workspace_box_info,
+.box_class_icon,
 .media_box_playing {
   @include dynamic-sub-box-style;
 }

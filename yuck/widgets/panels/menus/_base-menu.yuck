@@ -7,10 +7,13 @@
        :hexpand true
        :style style
 
-       (revealer :transition transition
-                 :reveal reveal_var
-                 :duration duration
+       (revealer 
+            :transition transition
+            :reveal reveal_var
+            :duration duration
 
-                 (box :orientation orientation
-                    ;; ⬇️ Use variadic children from parent widget here
-                    (children)))))
+            (box 
+                :orientation orientation
+                
+                ;; ⬇️ Use variadic children from parent widget here
+                (children)))))

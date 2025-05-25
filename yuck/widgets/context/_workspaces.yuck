@@ -1,8 +1,9 @@
 ;; Define the workspaces widget
 (defwidget workspaces []
-  (box :class "box_workspaces"
-       :orientation "h"
-       :halign "center"
-       :valign "center"
-       :space-evenly true
-       (literal :content workspace)))
+  (box 
+    :class "box_workspaces"
+    :orientation "h"
+    :halign "center"
+    :valign "center"
+    :space-evenly true
+    (literal :content workspace)))

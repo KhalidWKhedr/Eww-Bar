@@ -1,11 +1,12 @@
 ;; Resources 
 (defwidget indicators []
-  (box :class "indicator_box"
-       :orientation "h"
-       :halign "center"
-       :valign "center"
-       :space-evenly true
-       (indicator_volume)
-       (indicator_brightness)
-       (resource_battery)
-       (indicator_bluetooth)))
+  (box 
+    :class "indicator_box"
+    :orientation "h"
+    :halign "center"
+    :valign "center"
+    :space-evenly true
+    (indicator_volume)
+    (indicator_brightness)
+    (resource_battery)
+    (indicator_bluetooth)))
