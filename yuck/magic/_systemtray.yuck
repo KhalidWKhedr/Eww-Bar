@@ -5,4 +5,4 @@
     :orientation "h"
     :space-evenly true
     :icon-size 25
-    :prepend-new true))
+    :prepend-new true)) 

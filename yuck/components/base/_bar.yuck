@@ -1,5 +1,5 @@
+;; Base bar component that serves as the foundation for the window_bar
 (defwidget bar [gui_size]
-     
   (box  
      :class "eww_bar"
      :orientation "h"       
@@ -53,4 +53,4 @@
      :hexpand false
      :space-evenly false
      (date_time)
-     (systemtray))))
+     (systemtray)))) 

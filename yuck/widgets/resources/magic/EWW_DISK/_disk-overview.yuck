@@ -1,7 +1,0 @@
-(defwidget disk_overview []
-  (box 
-    :orientation "v"
-    (disk_mnt_Media)
-    (disk_home)
-    (disk_boot_efi)
-    (disk_root)))

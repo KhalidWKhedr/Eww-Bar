@@ -1,0 +1,42 @@
+(defvar disk_used_percent 0)
+(defvar disk_total "0B")
+(defvar disk_used "0B")
+(defvar disk_free "0B")
+
+(defpoll disk_info :interval "5s"
+  "df -h /home | awk 'NR==2 {print $3, $2, $4}'")
+
+(defwidget disk []
+  (base_resource_circular
+    :icon "󰋊"
+    :tooltip {disk_used " / " disk_total " (" disk_free " free)"}
+    :value disk_used_percent
+    :label_text {disk_used_percent "%"}
+    :label_style "font-size: 12px;"
+    :box_class "disk-box"
+    :circular_progress_class "disk-progress"
+    :button_class "disk-button"
+    :button_style "font-size: 16px;"
+    :label_class "disk-label"))
+
+;; /
+;; /
+;; / (Root)
+(defvar EWW_DISK_ROOT_used_perc "`eww get EWW_DISK | jq -r '.[\"/\"].used_perc'`")
+(defvar EWW_DISK_ROOT_label_text "`eww get EWW_DISK | jq -r '.[\"/\"].used / 1024^3' | awk '{printf \"%.2f GB\", $1}'`")
+(defvar EWW_DISK_ROOT_tooltip "`eww get EWW_DISK | jq -r '.[\"/\"].used_perc' | awk '{printf \"/: %.2f%%\", $1}'`")
+
+;; /boot/efi
+(defvar EWW_DISK_BOOT_used_perc "`eww get EWW_DISK | jq -r '.[\"/boot/efi\"].used_perc'`")
+(defvar EWW_DISK_BOOT_label_text "`eww get EWW_DISK | jq -r '.[\"/boot/efi\"].used / 1024^3' | awk '{printf \"%.2f GB\", $1}'`")
+(defvar EWW_DISK_BOOT_tooltip "`eww get EWW_DISK | jq -r '.[\"/boot/efi\"].used_perc' | awk '{printf \"/boot/efi: %.2f%%\", $1}'`")
+
+;; /home
+(defvar EWW_DISK_HOME_used_perc "`eww get EWW_DISK | jq -r '.[\"/home\"].used_perc'`")
+(defvar EWW_DISK_HOME_label_text "`eww get EWW_DISK | jq -r '.[\"/home\"].used / 1024^3' | awk '{printf \"%.2f GB\", $1}'`")
+(defvar EWW_DISK_HOME_tooltip "`eww get EWW_DISK | jq -r '.[\"/home\"].used_perc' | awk '{printf \"/home: %.2f%%\", $1}'`")
+
+;; /mnt/Media
+(defvar EWW_DISK_MEDIA_used_perc "`eww get EWW_DISK | jq -r '.[\"/mnt/Media\"].used_perc'`")
+(defvar EWW_DISK_MEDIA_label_text "`eww get EWW_DISK | jq -r '.[\"/mnt/Media\"].used / 1024^3' | awk '{printf \"%.2f GB\", $1}'`")
+(defvar EWW_DISK_MEDIA_tooltip "`eww get EWW_DISK | jq -r '.[\"/mnt/Media\"].used_perc' | awk '{printf \"/mnt/Media: %.2f%%\", $1}'`") 

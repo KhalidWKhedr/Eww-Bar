@@ -1,4 +1,4 @@
-(defwidget base_resource_circular
+(defwidget base_magic_circular
   [icon
    tooltip
    value
@@ -32,4 +32,4 @@
     (label
       :class label_class
       :text label_text
-      :style label_style)))
+      :style label_style))) 

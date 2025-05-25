@@ -1,5 +1,5 @@
 (defwidget ram_free []
-  (base_resource_circular
+  (base_magic_circular
     :icon "󰘚"
     :tooltip "RAM Free: ${round((EWW_RAM.available_mem / EWW_RAM.total_mem) * 100, 0)}%"
     :value {(EWW_RAM.available_mem / EWW_RAM.total_mem) * 100}
@@ -12,7 +12,7 @@
     :label_class "magic_ram_free_label"))
 
 (defwidget ram_used []
-  (base_resource_circular
+  (base_magic_circular
     :icon "󰍛"
     :tooltip "RAM Used: ${round(EWW_RAM.used_mem_perc, 0)}%"
     :value {EWW_RAM.used_mem_perc}

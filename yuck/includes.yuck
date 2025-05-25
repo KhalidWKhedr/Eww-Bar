@@ -13,74 +13,69 @@
 (include "yuck/windows/_window_media.yuck")
 (include "yuck/windows/_window_settings.yuck")
 
-;; Widgets - Bar
-(include "yuck/widgets/bar/_bar.yuck")
+;; Base Components
+(include "yuck/components/base/_bar.yuck")
 
-;; Widgets - Controls
-(include "yuck/widgets/controls/_base-control.yuck")
-(include "yuck/widgets/controls/_controls-media.yuck")
+;; Magic Components
+(include "yuck/magic/_base-magic-circular.yuck")
+(include "yuck/magic/_systemtray.yuck")
 
-;; Widgets - Context
-(include "yuck/widgets/context/_example.yuck")
-(include "yuck/widgets/context/_workspaces.yuck")
+;; Controls
+(include "yuck/components/controls/_base-control.yuck")
+(include "yuck/components/controls/_controls-media.yuck")
 
-;; Widgets - Context - Dynamic
-(include "yuck/widgets/context/dynamic/_base-dynamic.yuck")
-(include "yuck/widgets/context/dynamic/_dynamic-media.yuck")
-(include "yuck/widgets/context/dynamic/_dynamic-window.yuck")
+;; Launchers
+(include "yuck/components/launchers/_base-launcher.yuck")
+(include "yuck/components/launchers/_launcher-app.yuck")
+(include "yuck/components/launchers/_launcher-directories.yuck")
+(include "yuck/components/launchers/_launcher-media.yuck")
+(include "yuck/components/launchers/_launcher-power.yuck")
+(include "yuck/components/launchers/_launcher-settings.yuck")
+(include "yuck/components/launchers/_launcher-tools.yuck")
 
-;; Widgets - Launchers
-(include "yuck/widgets/launchers/_base-launcher.yuck")
-(include "yuck/widgets/launchers/_launcher-app.yuck")
-(include "yuck/widgets/launchers/_launcher-directories.yuck")
-(include "yuck/widgets/launchers/_launcher-media.yuck")
-(include "yuck/widgets/launchers/_launcher-power.yuck")
-(include "yuck/widgets/launchers/_launcher-settings.yuck")
-(include "yuck/widgets/launchers/_launcher-tools.yuck")
+;; Indicators
+(include "yuck/components/indicators/_base-indicator-circle.yuck")
+(include "yuck/components/indicators/_indicator-bluetooth.yuck")
+(include "yuck/components/indicators/_indicator-brightness.yuck")
+(include "yuck/components/indicators/_indicator-volume.yuck")
+(include "yuck/components/indicators/_indicators.yuck")
 
-;; Widgets - Panels
-(include "yuck/widgets/panels/_panel-bluetooth.yuck")
-(include "yuck/widgets/panels/_panel-datetime.yuck")
-(include "yuck/widgets/panels/_panel-media.yuck")
-(include "yuck/widgets/panels/_panel-settings.yuck")
+;; Dynamic Content
+(include "yuck/dynamic/workspaces/_workspaces.yuck")
+(include "yuck/dynamic/media/_base-dynamic.yuck")
+(include "yuck/dynamic/media/_dynamic-media.yuck")
+(include "yuck/dynamic/media/_dynamic-window.yuck")
 
-;; Widgets - Panels - Menus
-(include "yuck/widgets/panels/menus/_base-menu.yuck")
-(include "yuck/widgets/panels/menus/_menu-directories.yuck")
-(include "yuck/widgets/panels/menus/_menu-power.yuck")
-(include "yuck/widgets/panels/menus/_menu-tools.yuck")
+;; Panels - Menus
+(include "yuck/panels/menus/_base-menu.yuck")
+(include "yuck/panels/menus/_menu-directories.yuck")
+(include "yuck/panels/menus/_menu-power.yuck")
+(include "yuck/panels/menus/_menu-tools.yuck")
 
-;; Widgets - Resources
-(include "yuck/widgets/resources/_systemtray.yuck")
+;; Panels - Windows
+(include "yuck/panels/windows/_panel-bluetooth.yuck")
+(include "yuck/panels/windows/_panel-datetime.yuck")
+(include "yuck/panels/windows/_panel-media.yuck")
+(include "yuck/panels/windows/_panel-settings.yuck")
 
-;; Widgets - Resources - Indicators
-(include "yuck/widgets/resources/indicators/_base-indicator-circle.yuck")
-(include "yuck/widgets/resources/indicators/_indicator-bluetooth.yuck")
-(include "yuck/widgets/resources/indicators/_indicator-brightness.yuck")
-(include "yuck/widgets/resources/indicators/_indicator-volume.yuck")
-(include "yuck/widgets/resources/indicators/_indicators.yuck")
+;; Magic Resources - Battery
+(include "yuck/magic/battery/_battery.yuck")
 
-;; Widgets - Resources - Magic - Battery
-(include "yuck/widgets/resources/magic/EWW_BATTERY/_battery.yuck")
+;; Magic Resources - Disk
+;;(include "yuck/magic/disk/_disk.yuck")
+;;(include "yuck/magic/disk/_disk-overview.yuck")
 
-;; Widgets - Resources - Magic - Disks
-(include "yuck/widgets/resources/magic/EWW_DISK/_disk.yuck")
-(include "yuck/widgets/resources/magic/EWW_DISK/_disk-overview.yuck")
+;; Magic Resources - Network
+(include "yuck/magic/network/_wifi.yuck")
 
-;; Widgets - Resources - Magic - Network
-(include "yuck/widgets/resources/magic/EWW_NET/_wifi.yuck")
+;; Magic Resources - RAM
+(include "yuck/magic/ram/_ram.yuck")
+(include "yuck/magic/ram/_ram-overview.yuck")
+(include "yuck/magic/ram/_swap.yuck")
 
-;; Widgets - Resources - Magic - RAM
-(include "yuck/widgets/resources/magic/EWW_RAM/_ram.yuck")
-(include "yuck/widgets/resources/magic/EWW_RAM/_ram-overview.yuck")
-(include "yuck/widgets/resources/magic/EWW_RAM/_swap.yuck")
-
-;; Widgets - Resources - Magic - Temps
-(include "yuck/widgets/resources/magic/EWW_TEMPS/_cpu.yuck")
-(include "yuck/widgets/resources/magic/EWW_TEMPS/_gpu_amd.yuck")
-(include "yuck/widgets/resources/magic/EWW_TEMPS/_nvme1.yuck")
-(include "yuck/widgets/resources/magic/EWW_TEMPS/_nvme2.yuck")
-(include "yuck/widgets/resources/magic/EWW_TEMPS/_temps-overview.yuck")
-
-;; Widgets - Resources - Magic - Base Components
-(include "yuck/widgets/resources/magic/_base-magic-circle.yuck")
+;; Magic Resources - Temps
+(include "yuck/magic/temps/_cpu.yuck")
+(include "yuck/magic/temps/_gpu_amd.yuck")
+(include "yuck/magic/temps/_nvme1.yuck")
+(include "yuck/magic/temps/_nvme2.yuck")
+(include "yuck/magic/temps/_temps-overview.yuck")

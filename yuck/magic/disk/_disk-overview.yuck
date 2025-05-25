@@ -1,5 +1,13 @@
+(defwidget disk_overview []
+  (box 
+    :orientation "v"
+    (disk_mnt_Media)
+    (disk_home)
+    (disk_boot_efi)
+    (disk_root)))
+
 (defwidget disk_root []
-  (base_resource_circular
+  (base_magic_circular
     :icon "󰋊"
     :tooltip EWW_DISK_ROOT_tooltip
     :value EWW_DISK_ROOT_used_perc
@@ -12,7 +20,7 @@
     :label_class "magic_disk_root_label"))
 
 (defwidget disk_boot_efi []
-  (base_resource_circular
+  (base_magic_circular
     :icon "󰋊"
     :tooltip EWW_DISK_BOOT_tooltip
     :value EWW_DISK_BOOT_used_perc
@@ -25,7 +33,7 @@
     :label_class "magic_disk_boot_efi_label"))
 
 (defwidget disk_home []
-  (base_resource_circular
+  (base_magic_circular
     :icon "󰋊"
     :tooltip EWW_DISK_HOME_tooltip
     :value EWW_DISK_HOME_used_perc
@@ -38,7 +46,7 @@
     :label_class "magic_disk_home_label"))
 
 (defwidget disk_mnt_Media []
-  (base_resource_circular
+  (base_magic_circular
     :icon "󰋊"
     :tooltip EWW_DISK_MEDIA_tooltip
     :value EWW_DISK_MEDIA_used_perc
@@ -48,26 +56,4 @@
     :circular_progress_class "magic_disk_mnt_Media_progress"
     :button_class "magic_disk_mnt_Media_button"
     :button_style "font-size: 16px; margin-left: 7px"
-    :label_class "magic_disk_mnt_Media_label"))
-
-;; /
-;; /
-;; / (Root)
-(defvar EWW_DISK_ROOT_used_perc "`eww get EWW_DISK | jq -r '.[\"/\"].used_perc'`")
-(defvar EWW_DISK_ROOT_label_text "`eww get EWW_DISK | jq -r '.[\"/\"].used / 1024^3' | awk '{printf \"%.2f GB\", $1}'`")
-(defvar EWW_DISK_ROOT_tooltip "`eww get EWW_DISK | jq -r '.[\"/\"].used_perc' | awk '{printf \"/: %.2f%%\", $1}'`")
-
-;; /boot/efi
-(defvar EWW_DISK_BOOT_used_perc "`eww get EWW_DISK | jq -r '.[\"/boot/efi\"].used_perc'`")
-(defvar EWW_DISK_BOOT_label_text "`eww get EWW_DISK | jq -r '.[\"/boot/efi\"].used / 1024^3' | awk '{printf \"%.2f GB\", $1}'`")
-(defvar EWW_DISK_BOOT_tooltip "`eww get EWW_DISK | jq -r '.[\"/boot/efi\"].used_perc' | awk '{printf \"/boot/efi: %.2f%%\", $1}'`")
-
-;; /home
-(defvar EWW_DISK_HOME_used_perc "`eww get EWW_DISK | jq -r '.[\"/home\"].used_perc'`")
-(defvar EWW_DISK_HOME_label_text "`eww get EWW_DISK | jq -r '.[\"/home\"].used / 1024^3' | awk '{printf \"%.2f GB\", $1}'`")
-(defvar EWW_DISK_HOME_tooltip "`eww get EWW_DISK | jq -r '.[\"/home\"].used_perc' | awk '{printf \"/home: %.2f%%\", $1}'`")
-
-;; /mnt/Media
-(defvar EWW_DISK_MEDIA_used_perc "`eww get EWW_DISK | jq -r '.[\"/mnt/Media\"].used_perc'`")
-(defvar EWW_DISK_MEDIA_label_text "`eww get EWW_DISK | jq -r '.[\"/mnt/Media\"].used / 1024^3' | awk '{printf \"%.2f GB\", $1}'`")
-(defvar EWW_DISK_MEDIA_tooltip "`eww get EWW_DISK | jq -r '.[\"/mnt/Media\"].used_perc' | awk '{printf \"/mnt/Media: %.2f%%\", $1}'`")
+    :label_class "magic_disk_mnt_Media_label")) 
