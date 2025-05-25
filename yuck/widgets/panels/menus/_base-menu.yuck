@@ -12,5 +12,5 @@
                  :duration duration
 
                  (box :orientation orientation
-                      ;; ⬇️ Use variadic children from parent widget here
+                    ;; ⬇️ Use variadic children from parent widget here
                     (children)))))

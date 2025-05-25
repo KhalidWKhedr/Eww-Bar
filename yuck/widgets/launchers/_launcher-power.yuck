@@ -1,6 +1,6 @@
 (defwidget power_menu_launcher []
   (base_launcher
-    :icon "󱐌"
+    :icon icon-power
     :tooltip "Power"
     :box_class "power_box_launcher"
     :button_class "power_button_launcher"

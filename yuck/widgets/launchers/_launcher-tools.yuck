@@ -1,6 +1,6 @@
 (defwidget tools_menu_launcher []
   (base_launcher
-    :icon ""
+    :icon icon-tools
     :tooltip "Tools"
     :box_class "tools_box_launcher"
     :button_class "tools_button_launcher"

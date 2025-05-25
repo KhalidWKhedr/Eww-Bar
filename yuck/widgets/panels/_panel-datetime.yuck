@@ -54,7 +54,7 @@
                 ;; Revealer for the date section
                 (revealer :class "date_revealer"
                           :transition "slideleft"
-                          :reveal expand_date
+                          :reveal reveal_date
                           :duration "250ms"
 
                     ;; Container for date buttons

@@ -1,6 +1,6 @@
 (defwidget settings_launcher []
   (base_launcher
-    :icon "󰒓"
+    :icon icon-settings
     :tooltip "Settings"
     :box_class "settings_box_launcher"
     :button_class "settings_button_launcher"

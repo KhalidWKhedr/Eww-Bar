@@ -1,6 +1,6 @@
 (defwidget media_player_launcher []
   (base_launcher
-    :icon "󰝚"
+    :icon icon-media
     :tooltip "Media Player"
     :box_class "media_box_launcher"
     :button_class "media_button_launcher"
