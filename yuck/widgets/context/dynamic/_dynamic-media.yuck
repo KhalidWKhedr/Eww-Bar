@@ -1,0 +1,10 @@
+(defwidget dynamic_media []
+  (base_dynamic
+    :icon "󰝚"
+    :top_text "${media-player.artist}"
+    :bottom_text "${media-player.title}"
+    :class_label_icon "media_icon"
+    :class_label_top "media_label_artist"
+    :class_label_bottom "media_label_song"
+    :box_class_container "media_box_container"
+    :box_class_sub_container "media_box_playing"))

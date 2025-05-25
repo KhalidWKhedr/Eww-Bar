@@ -1,0 +1,84 @@
+;; =========================
+;;      LAUNCHER ICONS
+;; =========================
+(defvar icon-launcher     "󰣇")
+(defvar icon-directories  "")
+(defvar icon-media        "󰝚")
+(defvar icon-power        "󱐌")
+(defvar icon-settings     "󰒓")
+(defvar icon-tools        "")
+
+;; =========================
+;;   MEDIA CONTROL ICONS
+;; =========================
+(defvar icon-shuffle      "")
+(defvar icon-previous     "󰙤")
+(defvar icon-next         "󰙢")
+(defvar icon-loop         "󰑖")
+
+;; =========================
+;;     DIRECTORY ICONS
+;; =========================
+(defvar icon-home         "󱂵")
+(defvar icon-documents    "󱧶")
+(defvar icon-downloads    "󰉍")
+(defvar icon-images       "󰉏")
+(defvar icon-music        "󱍙")
+(defvar icon-videos       "󱧺")
+
+;; =========================
+;;     POWER MENU ICONS
+;; =========================
+(defvar icon-shutdown     "")
+(defvar icon-reboot       "")
+(defvar icon-lock         "")
+(defvar icon-logout       "")
+(defvar icon-hibernate    "")
+(defvar icon-suspend      "")
+
+;; =========================
+;;      TOOLS ICONS
+;; =========================
+(defvar icon-screenshot   "󰩭")
+(defvar icon-colorpicker  "")
+(defvar icon-email        "󰇮")
+(defvar icon-github       "")
+
+;; =========================
+;;     SYSTEM ICONS
+;; =========================
+(defvar icon-audio        "")
+(defvar icon-brightness   "")
+
+;; =========================
+;;   NOTIFICATION ICONS
+;; =========================
+(defvar icon-bell         "")
+(defvar icon-notif-1      "󱏧")
+(defvar icon-notif-2      "󱏨")
+(defvar icon-notif-3      "󱏩")
+(defvar icon-notif-4      "󱏪")
+(defvar icon-notif-5      "󱏫")
+(defvar icon-notif-6      "󱏬")
+
+;; =========================
+;;     BLUETOOTH ICONS
+;; =========================
+(defvar icon-bluetooth-1  "")
+(defvar icon-bluetooth-2  "󰂱")
+(defvar icon-bluetooth-3  "")
+(defvar icon-bluetooth-4  "󰂲")
+(defvar icon-bluetooth-5  "")
+(defvar icon-bluetooth-6  "󰂯")
+(defvar icon-bluetooth-7  "󱄙")
+
+;; =========================
+;;      EXTRA ICONS
+;; =========================
+(defvar window_icon "󰊢")
+(defvar moon_icons_1 "             ")
+(defvar moon_icons_2 "             ")
+(defvar moon_choice_icons "        ")
+(defvar ghost_icons " 󱙝 󰊠 󱙜 󰧵")
+(defvar chess_icons "♔ ♕ ♖ ♗ ♘ ♙ ♚ ♛ ♜ ♝ ♞ ♟")
+(defvar window_icon_alternatives "󰄯 󰄰 󰨇 󰇄 󰇧 󰄮 󰲡 󰻂")

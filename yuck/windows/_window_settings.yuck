@@ -13,4 +13,4 @@
   :namespace "window_settings"
   :exclusive true
   :focusable false
-  (example))
+  (disk_root))

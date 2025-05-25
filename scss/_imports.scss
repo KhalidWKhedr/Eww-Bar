@@ -7,32 +7,47 @@
 /** Core Widgets ******************************************/
 @import "widgets/bar/_bar.scss";
 
-/** Launchers *********************************************/
+/** Controls *********************************************/
+@import "widgets/controls/_base.scss";
+
+// /** Launchers *********************************************/
 @import "widgets/launchers/_launcher-box.scss";
 @import "widgets/launchers/_launcher-button.scss";
 
-/** Manual Resources **************************************/
-@import "widgets/resources/manual/_workspaces.scss";
+// /** Manual Resources **************************************/
+@import "widgets/context/_workspaces.scss";
 
-/** Panel Menus *******************************************/
+// /** Context Dynamic ***************************************/
+@import "widgets/context/dynamic/_active-media.scss";
+
+// /** Panel Menus *******************************************/
 @import "widgets/panels/menus/_menu-box.scss";
 @import "widgets/panels/menus/_menu-option.scss";
 
-/** Indicators ********************************************/
+// /** Indicators ********************************************/
 @import "widgets/resources/indicators/_indicators.scss";
-@import "/home/khalidwaleedkhedr/.config/eww/scss/widgets/resources/manual/example.scss"
+// @import "widgets/context/example.scss";
+
+/** Magic Resources ***************************************/
+// @import "widgets/resources/magic/_base.scss";
+// @import "widgets/resources/magic/_circular.scss";
+// @import "widgets/resources/magic/_text.scss";
+// @import "widgets/resources/magic/_linear.scss";
+// @import "widgets/resources/magic/_resources.scss";
+// @import "widgets/resources/magic/_battery.scss";
+
+/** Active Panels *****************************************/
+@import "widgets/panels/_calendar.scss";
+@import "widgets/panels/_date-time.scss";
+@import "widgets/panels/_systray.scss";
+@import "widgets/panels/_tooltip.scss";
+
 /** Optional Windows & Panels *****************************
  * Uncomment below as needed during development
  **********************************************************/
-
-// @import "windows/resources/panel/_bluetooth.scss";
-// @import "windows/_calendar.scss";
-// @import "windows/_settings.scss";
-// @import "windows/_media-player.scss";
-
+// @import "widgets/panels/_bluetooth.scss";
+// @import "widgets/panels/_calendar.scss";
+// @import "widgets/panels/_settings.scss";
+// @import "widgets/panels/__testmedia-player.scss";
 // @import "widgets/resources/manual/_active-media.scss";
 // @import "widgets/resources/manual/_active-window.scss";
-// @import "widgets/panels/_calendar.scss";
-// @import "widgets/panels/_date-time.scss";
-// @import "widgets/panels/_systray.scss";
-// @import "widgets/panels/_tooltip.scss";

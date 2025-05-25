@@ -11,7 +11,7 @@
         :space-evenly false
         (power_menu_launcher)
         (power_menu)
-        (active_window))
+        (dynamic_window))
 
    ;; Center-Left Section
    (box :class "bar_left_center"
@@ -22,7 +22,7 @@
         (directory_menu)
         (tools_menu_launcher)
         (tools_menu)
-        (active_media))
+        (dynamic_media))
 
    ;; Center Section
    (box :class "bar_center"

@@ -1,0 +1,53 @@
+/** Mixins ***********************************/
+@mixin dynamic-box-style {
+  margin-left: 2px;
+  //box-shadow: $shadow-inset-soft;
+}
+
+@mixin dynamic-sub-box-style {
+  // Add styles for sub-containers
+}
+
+@mixin dynamic-label-style {
+}
+
+@mixin dynamic-sub-label-style {
+  margin-left: 2px;
+}
+
+@mixin dynamic-icon-style {
+  font-size: 40px;
+  color: $color5;
+}
+
+/** Active Media ***********************************/
+
+/* Container Boxes */
+.dynamic_box_container,
+.media_box_container {
+  @include dynamic-box-style;
+}
+
+/* Sub-containers */
+.workspace_box_info,
+.media_box_playing {
+  @include dynamic-sub-box-style;
+}
+
+/* Top Labels */
+.dynamic_workspace_label,
+.media_label_artist {
+  @include dynamic-label-style;
+}
+
+/* Bottom Labels */
+.workspace_label,
+.media_label_song {
+  @include dynamic-sub-label-style;
+}
+
+/* Icons */
+.window_icon,
+.media_icon {
+  @include dynamic-icon-style;
+}

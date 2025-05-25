@@ -1,97 +1,79 @@
 ;; ====================================
-;; Variables
+;;             Variables
 ;; ====================================
 
-;; ------------- Eww Base Command ----------------
+;; ----- Eww Base Command -----
 (defvar eww "eww -c $HOME/.config/eww/")
 
 ;; ====================================
-;; Icons
-;; ====================================
-
-;; ------------- Launcher Icons -------
-(defvar icon-launcher "󰣇")
-(defvar icon-directories "")
-(defvar icon-media "󰝚")
-(defvar icon-power "󱐌")
-(defvar icon-settings "󰒓")
-(defvar icon-tools "")
-
-;; ----- Media Control Icons -----
-(defvar icon-shuffle "")
-(defvar icon-previous "󰙤")
-(defvar icon-next "󰙢")
-(defvar icon-loop "󰑖")
-
-;; ----- Directory Icons -----
-(defvar icon-home "󱂵")
-(defvar icon-documents "󱧶")
-(defvar icon-downloads "󰉍")
-(defvar icon-images "󰉏")
-(defvar icon-music "󱍙")
-(defvar icon-videos "󱧺")
-
-;; ----- Power Menu Icons -----
-(defvar icon-shutdown "")
-(defvar icon-reboot "")
-(defvar icon-lock "")
-(defvar icon-logout "")
-(defvar icon-hibernate "")
-(defvar icon-suspend "")
-
-;; ----- Tools Menu Icons -----
-(defvar icon-screenshot "󰩭")
-(defvar icon-colorpicker "")
-(defvar icon-email "󰇮")
-(defvar icon-github "")
-
-;; ====================================
-;; Actions and Commands
+;;         Actions and Commands
 ;; ====================================
 
 ;; ----- Playerctl Actions -----
-(defvar action-shuffle "bash -c 'playerctl shuffle toggle &'")
-(defvar action-previous "bash -c 'playerctl previous &'")
-(defvar action-play "bash -c 'playerctl play-pause &'")
-(defvar action-next "bash -c 'playerctl next &'")
-(defvar action-loop "bash -c 'playerctl loop toggle &'")
+(defvar action-shuffle    "bash -c 'playerctl shuffle toggle &'")
+(defvar action-previous   "bash -c 'playerctl previous &'")
+(defvar action-play       "bash -c 'playerctl play-pause &'")
+(defvar action-next       "bash -c 'playerctl next &'")
+(defvar action-loop       "bash -c 'playerctl loop toggle &'")
 
 ;; ----- Application Launchers & Settings -----
+(defvar application_launcher_cmd "fuzzel &")
 (defvar screenshot_mode "area")
 (defvar toggle_bluetooth false)
-(defvar application_launcher_cmd "fuzzel &")
 
 ;; ====================================
-;; Revealers (State Toggles)
+;;       Revealers (State Toggles)
 ;; ====================================
 
-;; ----- Toggle State Bools -----
+;; ----- Menu Revealer Booleans -----
 (defvar reveal_directories false)
-(defvar reveal_tools false)
-(defvar reveal_power false)
-(defvar reveal_date false)
+(defvar reveal_tools       false)
+(defvar reveal_power       false)
+(defvar reveal_date        false)
 
 ;; ----- Window Visibility States -----
-(defvar show_media false)
-(defvar show_calendar false)
-(defvar show_bluetooth false)
-(defvar show_settings false)
-(defvar bluetooth-enabled false)
+(defvar visible_media      false)
+(defvar visible_calendar   false)
+(defvar visible_bluetooth  false)
+(defvar visible_settings   false)
 
-;; ----- Toggle Commands -----
+(defvar bluetooth-enabled  false)
+
+;; ====================================
+;;       Window Toggle Commands
+;; ====================================
+
 (defvar toggle_settings_cmd 
-  "if eww get show_settings | grep -q true; then \
-     eww update show_settings=false && eww close window_settings; \
+  "if eww get visible_settings | grep -q true; then \
+     eww update visible_settings=false && eww close window_settings; \
    else \
-     eww update show_settings=true && eww open window_settings; \
+     eww update visible_settings=true && eww open window_settings; \
    fi")
 
 (defvar toggle_media_cmd 
-  "if eww get show_media | grep -q true; then \
-     eww update show_media=false && eww close window_media; \
+  "if eww get visible_media | grep -q true; then \
+     eww update visible_media=false && eww close window_media; \
    else \
-     eww update show_media=true && eww open window_media; \
+     eww update visible_media=true && eww open window_media; \
    fi")
+
+(defvar toggle_bluetooth_cmd
+  "if eww get visible_bluetooth | grep -q true; then \
+     eww update visible_bluetooth=false && eww close window_bluetooth; \
+   else \
+     eww update visible_bluetooth=true && eww open window_bluetooth; \
+   fi")
+
+(defvar toggle_calendar_cmd
+  "if eww get visible_calendar | grep -q true; then \
+     eww update visible_calendar=false && eww close window_calendar; \
+   else \
+     eww update visible_calendar=true && eww open window_calendar; \
+   fi")
+
+;; ====================================
+;;      Menu Revealer Toggle Cmds
+;; ====================================
 
 (defvar toggle_directories_cmd 
   "if eww get reveal_directories | grep -q true; then \
@@ -114,9 +96,3 @@
      eww update reveal_tools=true && eww open window_tools; \
    fi")
 
-(defvar toggle_bluetooth_cmd
-  "if eww get show_bluetooth | grep -q true; then \
-     eww update show_bluetooth=false && eww close window_bluetooth; \
-   else \
-     eww update show_bluetooth=true && eww open window_bluetooth; \
-   fi")
