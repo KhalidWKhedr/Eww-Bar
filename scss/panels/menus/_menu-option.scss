@@ -1,0 +1,30 @@
+@mixin menu-option-style($hover-color: $color3) {
+  color: $color1;
+  background-color: transparent;
+  border-radius: 20px;
+  transition: box-shadow 0.3s ease;
+  margin-right: 2px;
+  margin-left: 2px;
+
+  &:hover {
+    color: $hover-color;
+    background-color: $foreground;
+    box-shadow: $shadow-inset-soft;
+  }
+}
+
+/** Options ***************************************/
+
+.power_option {
+  @include menu-option-style;
+  padding-bottom: 1px;
+  padding-top: 1px;
+}
+
+.directory_option {
+  @include menu-option-style;
+}
+
+.tool_option{
+  @include menu-option-style;
+}
