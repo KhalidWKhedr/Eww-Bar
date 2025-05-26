@@ -14,11 +14,9 @@
 @import "components/launchers/_launcher-box.scss";
 @import "components/launchers/_launcher-button.scss";
 
-// /** Manual Resources **************************************/
+// /** Dynamic Content **************************************/
+@import "dynamic/_active.scss";
 @import "dynamic/_workspaces.scss";
-
-// /** Context Dynamic ***************************************/
-@import "dynamic/_dynamic.scss";
 
 // /** Panel Menus *******************************************/
 @import "panels/menus/_menu-box.scss";
@@ -32,6 +30,8 @@
 @import "panels/menus/_date-time.scss";
 @import "panels/windows/_systray.scss";
 @import "panels/windows/_tooltip.scss";
+
+@import "windows/windows.scss";
 
 /** Optional Windows & Panels *****************************
  * Uncomment below as needed during development

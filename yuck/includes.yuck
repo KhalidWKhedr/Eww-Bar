@@ -41,10 +41,10 @@
 (include "yuck/components/indicators/_indicators.yuck")
 
 ;; Dynamic Content
+(include "yuck/dynamic/active/_base-active.yuck")
 (include "yuck/dynamic/workspaces/_workspaces.yuck")
-(include "yuck/dynamic/media/_base-dynamic.yuck")
-(include "yuck/dynamic/media/_dynamic-media.yuck")
-(include "yuck/dynamic/media/_dynamic-window.yuck")
+(include "yuck/dynamic/active/_active-window.yuck")
+(include "yuck/dynamic/active/_active-media.yuck")
 
 ;; Panels - Menus
 (include "yuck/panels/menus/_base-menu.yuck")
@@ -62,8 +62,8 @@
 (include "yuck/magic/battery/_battery.yuck")
 
 ;; Magic Resources - Disk
-;;(include "yuck/magic/disk/_disk.yuck")
-;;(include "yuck/magic/disk/_disk-overview.yuck")
+; (include "yuck/magic/disk/_disk.yuck")
+; (include "yuck/magic/disk/_disk-overview.yuck")
 
 ;; Magic Resources - Network
 (include "yuck/magic/network/_wifi.yuck")

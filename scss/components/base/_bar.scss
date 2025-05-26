@@ -21,12 +21,8 @@
 /** EWW Bar ***************************************/
 
 .eww_bar {
-  background: linear-gradient(135deg, $color1 0%, $accent1 100%); // Main background
-  border-radius: 20px;
-  font-family: Hack;
-
   &.small {
-    @include bar-size(11px, 2px, 4px, 14px);
+    @include bar-size(11px, 2px, 2px, 20px);
   }
 
   &.large {
