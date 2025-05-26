@@ -43,10 +43,10 @@
 ;;       Window Toggle Commands
 ;; ====================================
 
-(defvar toggle_settings_cmd "eww open --toggle window_settings")
-(defvar toggle_media_cmd "eww open --toggle window_media")
-(defvar toggle_bluetooth_cmd "eww open --toggle window_bluetooth")
-(defvar toggle_calendar_cmd "eww open --toggle window_calendar")
+(defvar toggle_settings_cmd    "eww open --toggle window_settings")
+(defvar toggle_media_cmd       "eww open --toggle window_media")
+(defvar toggle_bluetooth_cmd   "eww open --toggle window_bluetooth")
+(defvar toggle_calendar_cmd    "eww open --toggle window_calendar")
 
 ;; ====================================
 ;;      Menu Revealer Toggle Cmds

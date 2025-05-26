@@ -22,4 +22,3 @@
 
 (deflisten current-workspace :initial ""
   "scripts/workspaces/current_workspace.sh")
-

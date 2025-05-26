@@ -29,8 +29,9 @@
 
     ;; Media Info and Progress Bar
     (box 
-        :class "box_song_information"
-        :orientation "v"
+      :class "box_song_information"
+      :orientation "v"
+      
       (label 
         :class "label_artist_song"
         :text "${media-player.artist} - ${media-player.title}"))

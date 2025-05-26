@@ -11,7 +11,7 @@
 @mixin media-label {
   color: $foreground;
   background-color: $color3;
-  box-shadow: $box-shadow-deep;
+  box-shadow: $shadow-bottom-subtle;
   border-top: 1px solid $color3;
   padding: 3px;
   font-weight: bold;
@@ -21,7 +21,7 @@
 
 @mixin image-container {
   background-color: $color4;
-  box-shadow: $box-shadow-deep;
+  box-shadow: $shadow-bottom-subtle;
   border-radius: 8px;
   padding: 3px;
 }

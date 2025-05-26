@@ -30,7 +30,7 @@
 @import "panels/menus/_date-time.scss";
 @import "panels/windows/_systray.scss";
 @import "panels/windows/_tooltip.scss";
-
+@import "panels/windows/_media-player.scss";
 @import "windows/windows.scss";
 
 /** Optional Windows & Panels *****************************
@@ -38,7 +38,6 @@
  **********************************************************/
 // @import "panels/windows/_bluetooth.scss";
 // @import "panels/windows/_settings.scss";
-// @import "panels/windows/_media-player.scss";
 // @import "components/base/_active-media.scss";
 // @import "components/base/_active-window.scss";
 // @import "magic/_base.scss";
