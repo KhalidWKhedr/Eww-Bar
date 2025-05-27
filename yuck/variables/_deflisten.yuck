@@ -22,3 +22,8 @@
 
 (deflisten current-workspace :initial ""
   "scripts/workspaces/current_workspace.sh")
+
+
+(deflisten notif_data :initial ""
+  "scripts/notif-buffer.sh {max_notifs}")
+

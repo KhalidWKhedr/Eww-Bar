@@ -11,3 +11,29 @@
   	border-radius: 20px;
   	font-family: Hack;
 }
+
+
+
+.notification {
+  padding: 0.5em;
+  margin: 0.3em;
+  background-color: white;
+  border-radius: 0.4em;
+  color: white;
+}
+
+.notif-app {
+  color: black;
+  font-weight: bold;
+  font-size: 1.1em;
+}
+
+.notif-summary {
+  font-size: 1em;
+  color: black;
+}
+
+.notif-body {
+  font-size: 0.9em;
+  color: black;
+}

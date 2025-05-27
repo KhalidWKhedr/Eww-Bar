@@ -13,4 +13,30 @@
   :namespace "window_settings"
   :exclusive true
   :focusable false
-  (disk_root))
+  (notification-list))
+
+
+(deflisten notifications "jq -c . ~/.cache/eww_notifications.json")
+
+
+(defwidget notification-box [notif]
+  (box :class "notification"
+    (image :path {notif.icon} :width 24 :height 24)
+    (box :orientation "vertical"
+      (label :text {notif.app} :class "notif-app")
+      (label :text {notif.summary} :class "notif-summary")
+      (label :text {notif.body} :class "notif-body"))))
+
+
+(defwidget notification-list []
+  (box :orientation "vertical"
+    (for notif in notifications
+      (notification-box :notif notif))))
+
+
+  
+
+
+    
+  
+
