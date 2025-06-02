@@ -23,9 +23,9 @@
     :box_class "magic_battery_box"
     :circular_progress_class "magic_battery_progress"
     :button_class "magic_battery_button"
-    :button_style "font-size: 20px; margin-left: 0px"
+    :button_style "font-size: 18px; margin-right: 1px"
     :label_class "magic_battery_label"
     :label_text "${EWW_BATTERY.BAT0.capacity}"
-    :label_style "font-size: 15px; margin-left: 3px"
+    :label_style "font-size: 15px; margin-left: 5px"
     :tooltip "Battery ${EWW_BATTERY.BAT0.capacity}% - ${EWW_BATTERY.BAT0.status}"
     :value {EWW_BATTERY.BAT0.capacity}))

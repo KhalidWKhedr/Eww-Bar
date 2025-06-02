@@ -15,7 +15,8 @@
 (defvar icon-previous     "󰙤")
 (defvar icon-next         "󰙢")
 (defvar icon-loop         "󰑖")
-
+(defvar icon-pause        "󰏦")
+(defvar icon-play         "󰐍")
 ;; =========================
 ;;     DIRECTORY ICONS
 ;; =========================

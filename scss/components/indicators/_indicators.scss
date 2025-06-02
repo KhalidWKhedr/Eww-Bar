@@ -3,15 +3,13 @@
 // ========================
 
 @mixin indicator-box {
-  margin-bottom: 2px;
-  margin-top: 2px;
   background-color: $color3;
   box-shadow: $shadow-inset-soft;
   border-radius: 20px;
   transition: all 0.3s ease;
-  margin-right: 1px;
-  margin-left: 1px;
+  margin-right: 5px;
 }
+
 @mixin indiactor-box-individal {
   border-radius: 20px;
   border: 1px solid $color2;
@@ -23,8 +21,8 @@
 }
 
 @mixin indicator-button {
-  color: $color1;
-  background-color: $foreground;
+  color: $foreground;
+  background-color: $color1;
   box-shadow: $shadow-inset-soft;
   border-radius: 20%;;
   transition: all 0.3s ease;

@@ -4,7 +4,7 @@
     :tooltip "Media Player"
     :box_class "media_box_launcher"
     :button_class "media_button_launcher"
-    :height 40
-    :width 45
-    :style "font-size: 30px; padding: 0 8px 1px 0"
+    :height media-launcher-height
+    :width media-launcher-width 
+    :style "font-size: 25px; padding: 0 8px 1px 0"
     :onclick toggle_media_cmd))

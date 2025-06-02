@@ -1,59 +1,59 @@
-(defwidget disk_overview []
-  (box 
-    :orientation "v"
-    (disk_mnt_Media)
-    (disk_home)
-    (disk_boot_efi)
-    (disk_root)))
+  (defwidget disk_overview []
+    (box 
+      :orientation "v"
+      (disk_mnt_Media)
+      (disk_home)
+      (disk_boot_efi)
+      (disk_root)))
 
-(defwidget disk_root []
-  (base_magic_circular
-    :icon "󰋊"
-    :tooltip EWW_DISK_ROOT_tooltip
-    :value EWW_DISK_ROOT_used_perc
-    :label_text EWW_DISK_ROOT_label_text
-    :label_style ""
-    :box_class "magic_disk_root_box"
-    :circular_progress_class "magic_disk_root_progress"
-    :button_class "magic_disk_root_button"
-    :button_style "font-size: 16px; margin-left: 7px"
-    :label_class "magic_disk_root_label"))
+  (defwidget disk_root []
+    (base_magic_circular
+      :icon "󰋊"
+      :tooltip EWW_DISK_ROOT_tooltip
+      :value EWW_DISK_ROOT_used_perc
+      :label_text EWW_DISK_ROOT_label_text
+      :label_style ""
+      :box_class "magic_disk_root_box"
+      :circular_progress_class "magic_disk_root_progress"
+      :button_class "magic_disk_root_button"
+      :button_style "font-size: 16px; margin-left: 7px"
+      :label_class "magic_disk_root_label"))
 
-(defwidget disk_boot_efi []
-  (base_magic_circular
-    :icon "󰋊"
-    :tooltip EWW_DISK_BOOT_tooltip
-    :value EWW_DISK_BOOT_used_perc
-    :label_text EWW_DISK_BOOT_label_text
-    :label_style ""
-    :box_class "magic_disk_boot_efi_box"
-    :circular_progress_class "magic_disk_boot_efi_progress"
-    :button_class "magic_disk_boot_efi_button"
-    :button_style "font-size: 16px; margin-left: 7px"
-    :label_class "magic_disk_boot_efi_label"))
+  (defwidget disk_boot_efi []
+    (base_magic_circular
+      :icon "󰋊"
+      :tooltip EWW_DISK_BOOT_tooltip
+      :value EWW_DISK_BOOT_used_perc
+      :label_text EWW_DISK_BOOT_label_text
+      :label_style ""
+      :box_class "magic_disk_boot_efi_box"
+      :circular_progress_class "magic_disk_boot_efi_progress"
+      :button_class "magic_disk_boot_efi_button"
+      :button_style "font-size: 16px; margin-left: 7px"
+      :label_class "magic_disk_boot_efi_label"))
 
-(defwidget disk_home []
-  (base_magic_circular
-    :icon "󰋊"
-    :tooltip EWW_DISK_HOME_tooltip
-    :value EWW_DISK_HOME_used_perc
-    :label_text EWW_DISK_HOME_label_text
-    :label_style ""
-    :box_class "magic_disk_home_box"
-    :circular_progress_class "magic_disk_home_progress"
-    :button_class "magic_disk_home_button"
-    :button_style "font-size: 16px; margin-left: 7px"
-    :label_class "magic_disk_home_label"))
+  (defwidget disk_home []
+    (base_magic_circular
+      :icon "󰋊"
+      :tooltip EWW_DISK_HOME_tooltip
+      :value EWW_DISK_HOME_used_perc
+      :label_text EWW_DISK_HOME_label_text
+      :label_style ""
+      :box_class "magic_disk_home_box"
+      :circular_progress_class "magic_disk_home_progress"
+      :button_class "magic_disk_home_button"
+      :button_style "font-size: 16px; margin-left: 7px"
+      :label_class "magic_disk_home_label"))
 
-(defwidget disk_mnt_Media []
-  (base_magic_circular
-    :icon "󰋊"
-    :tooltip EWW_DISK_MEDIA_tooltip
-    :value EWW_DISK_MEDIA_used_perc
-    :label_text EWW_DISK_MEDIA_label_text
-    :label_style ""
-    :box_class "magic_disk_mnt_Media_box"
-    :circular_progress_class "magic_disk_mnt_Media_progress"
-    :button_class "magic_disk_mnt_Media_button"
-    :button_style "font-size: 16px; margin-left: 7px"
-    :label_class "magic_disk_mnt_Media_label")) 
+  (defwidget disk_mnt_Media []
+    (base_magic_circular
+      :icon "󰋊"
+      :tooltip EWW_DISK_MEDIA_tooltip
+      :value EWW_DISK_MEDIA_used_perc
+      :label_text EWW_DISK_MEDIA_label_text
+      :label_style ""
+      :box_class "magic_disk_mnt_Media_box"
+      :circular_progress_class "magic_disk_mnt_Media_progress"
+      :button_class "magic_disk_mnt_Media_button"
+      :button_style "font-size: 16px; margin-left: 7px"
+      :label_class "magic_disk_mnt_Media_label")) 

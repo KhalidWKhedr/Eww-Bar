@@ -17,14 +17,21 @@
 
 .power_option {
   @include menu-option-style;
-  padding-bottom: 1px;
-  padding-top: 1px;
+  font-size: 21px;
+  padding-right: 5px;
+  padding-bottom: 0px;
 }
 
 .directory_option {
   @include menu-option-style;
+  font-size: 23px;
+  padding-right: 5px;
+  padding-bottom: 2px;
 }
 
-.tool_option{
+.tool_option {
   @include menu-option-style;
+  font-size: 25px;
+  padding-top: 2px;
+  padding-right: 5px;
 }

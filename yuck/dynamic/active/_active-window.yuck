@@ -1,11 +1,7 @@
 (defwidget dynamic_workspace []
   (base_dynamic
-    :icon window-icon
     :top_text "${current-workspace.title}"
     :bottom_text "${current-workspace.sublabel}"
-    :class_label_icon "workspace_icon"
     :class_label_top "dynamic_workspace_label"
     :class_label_bottom "workspace_label"
-    :box_class_container "workspace_box_container"
-    :box_class_icon "workspace_box_icon"
-    :box_class_content "workspace_box_content"))
+    :box_class_container "workspace_box_container"))

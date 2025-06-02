@@ -4,7 +4,7 @@
     :tooltip "Application Launcher"
     :box_class "application_box_launcher"
     :button_class "application_button_launcher"
-    :height 40
-    :width 45
-    :style "font-size: 30px; padding: 0 8px 1px 0"
+    :height app-launcher-height
+    :width app-launcher-width
+    :style "font-size: 25px; padding: 0 8px 1px 0"
     :onclick application_launcher_cmd))

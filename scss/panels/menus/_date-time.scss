@@ -1,13 +1,21 @@
 /** Mixins ****************************************/
 
 @mixin time-style {
+  // Layout & box model
   margin-right: 2px;
+  padding-left: 1px;
   border-radius: 20px;
-  font-size: 14px;
+
+  // Typography
+  font-size: 22px;
   letter-spacing: -0.5px;
   color: $color1;
+
+  // Appearance
   background-color: $foreground;
   box-shadow: $shadow-bottom-subtle;
+
+  // Animation
   transition: all 0.2s ease;
 
   &:hover {
@@ -17,20 +25,30 @@
   }
 }
 
-@mixin container-style($bg: $color3) {
+@mixin container-style {
+  // Layout & appearance
   border-radius: 20px;
-  background-color: $bg;
+  background-color: $color3;
   box-shadow: $shadow-inset-soft;
+
+  // Animation
   transition: all 0.2s ease;
 }
 
 @mixin date-style {
-  font-size: 12px;
-  padding: 1px 1px;
-  color: $foreground;
-  background-color: transparent;
-  text-shadow: 0 0 2px $color2;
+  // Layout & box model
+  padding-top: 0px;
   border-radius: 20px;
+
+  // Typography
+  font-size: 20px;
+  color: $foreground;
+  text-shadow: 0 0 2px $color2;
+
+  // Appearance
+  background-color: transparent;
+
+  // Animation
   transition: all 0.2s ease;
 
   &:hover {
@@ -41,6 +59,7 @@
 }
 
 @mixin hover-revealer-style {
+  // Appearance
   color: $color3;
   border-radius: 20px;
 
@@ -54,6 +73,7 @@
 
 .datetime_container {
   @include container-style;
+  margin-right: 5px;
 }
 
 .container_hours_minutes {
@@ -80,5 +100,5 @@
 
 // Date and time panel styles
 .date-time {
-  // Add your date-time styles here
+  // Optional: Additional styles if needed
 }

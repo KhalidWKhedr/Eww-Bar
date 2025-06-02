@@ -7,8 +7,10 @@
 
 /** Launcher Boxes ********************************************/
 
+// Left-margin boxes — width must be adjusted in Yuck by +5px
 // Base box — no margin applied; width is true to Yuck widget size
 .directory_box_launcher {
+  margin-left: 5px;
   @include launcher_box_style;
 }
 

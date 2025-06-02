@@ -1,56 +1,48 @@
-;; Base bar component that serves as the foundation for the window_bar
+;; Eww Bar Config - Organized into Left, Center, and Right sections
+
 (defwidget bar [gui_size]
+
   (box  
-     :class "eww_bar"
-     :orientation "h"       
-     :space-evenly true
+    :class "eww_bar"
+    :orientation "h"
+    :valgin "center"
+    :space-evenly true
 
-   ;; Left Section
-   (box 
-     :class "bar_left"
-     :halign "start"
-     :hexpand true       
-     :space-evenly false
-     (power_menu_launcher)
-     (power_menu)
-     (dynamic_workspace))
+    ;; Left Section: User Menus & Launchers
+    (box 
+      :class "bar_left"
+      :halign "start"
+      :valign "center"
+      :hexpand true
+      :space-evenly false
+      (power_menu_launcher)
+      (power_menu)
+      (directory_menu_launcher)
+      (directory_menu)
+      (tools_menu_launcher)
+      (tools_menu)
+      (dynamic_workspace))
 
-   ;; Center-Left Section
-   (box 
-     :class "bar_left_center"
-     :halign "start"
-     :hexpand false
-     :space-evenly false
-     (directory_menu_launcher)
-     (directory_menu)
-     (tools_menu_launcher)
-     (tools_menu)
-     (dynamic_media))
+    ;; Center Section: Workspaces & Media
+    (box 
+      :class "bar_center"
+      :halign "center"
+      :valign "center"
+      :hexpand false
+      :space-evenly false
+      (application_launcher)
+      (workspaces)
+      (media_player_launcher))
 
-   ;; Center Section
-   (box 
-     :class "bar_center"
-     :halign "center"
-     :hexpand false
-     :space-evenly false
-     (application_launcher)
-     (workspaces)
-     (media_player_launcher))
-
-   ;; Right Container
-   (box 
-     :class "bar_right_container"
-     :halign "end"
-     :hexpand false
-     :space-evenly false
-     (indicators)
-     (settings_launcher))
-
-   ;; Right Section
-   (box 
-     :class "bar_right"
-     :halign "end"
-     :hexpand false
-     :space-evenly false
-     (date_time)
-     (systemtray)))) 
+    ;; Right Section: System Status
+    (box 
+      :class "bar_right"
+      :halign "end"
+      :valign "center"
+      :hexpand true
+      :space-evenly false
+      (dynamic_media)
+      (indicators)
+      (systemtray)
+      (date_time)
+      (settings_launcher))))

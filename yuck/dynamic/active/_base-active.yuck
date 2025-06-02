@@ -1,41 +1,22 @@
 (defwidget base_dynamic 
-  [icon
-   top_text
+  [top_text
    bottom_text
-   class_label_icon
    class_label_top
    class_label_bottom
-   box_class_container
-   box_class_icon
-   box_class_content]
+   box_class_container]
 
   (box 
     :class box_class_container
     :space-evenly "false"
+    :orientation "v"
+    :valign "center"
 
-    (box
-      :class box_class_icon
-      :orientation "h"
-      :vexpand false
-      :space-evenly false
-
-      (label
-        :class class_label_icon
-        :text icon))
-
-    (box
-      :class box_class_content
-      :orientation "v"
-      :vexpand false
-      :space-evenly false
+    (label
+      :class class_label_top
       :halign "start"
+      :text top_text)
 
-      (label
-        :class class_label_top
-        :halign "start"
-        :text top_text)
-
-      (label
-        :class class_label_bottom
-        :halign "center"
-        :text bottom_text))))
+    (label
+      :class class_label_bottom
+      :halign "center"
+      :text bottom_text)))

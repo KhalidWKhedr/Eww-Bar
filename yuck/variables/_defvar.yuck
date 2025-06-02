@@ -16,10 +16,56 @@
 (defvar action-next       "bash -c 'playerctl next &'")
 (defvar action-loop       "bash -c 'playerctl loop toggle &'")
 
-;; ----- Application Launchers & Settings -----
+;; ----- Application Launchers -----
 (defvar application_launcher_cmd "fuzzel &")
+
+;; ----- Screenshot Settings -----
 (defvar screenshot_mode "area")
+
+;; ----- Bluetooth State -----
 (defvar toggle_bluetooth false)
+(defvar bluetooth-enabled false)
+
+;; ====================================
+;;          Widget Dimensions
+;; ====================================
+
+;; ---------- Indicator Circles ----------
+(defvar indicators-width              38)
+(defvar indicators-height             38)
+
+;; ---------- Launchers ----------
+(defvar app-launcher-height           38)
+(defvar app-launcher-width            43)
+
+(defvar tools-launcher-height         38)
+(defvar tools-launcher-width          43)
+
+(defvar dir-launcher-height           38)
+(defvar dir-launcher-width            43)
+
+(defvar media-launcher-height         38)
+(defvar media-launcher-width          43)
+
+(defvar power-launcher-height         28)
+(defvar power-launcher-width          35)
+
+(defvar settings-launcher-height      38)
+(defvar settings-launcher-width       43)
+
+;; ---------- Directory Menu Icon Button Sizes ----------
+(defvar menu-icon-directory-height    33)
+(defvar menu-icon-directory-width     38)
+
+;; ---------- Power Menu Icon Button Sizes ----------
+(defvar menu-icon-power-height        28)
+(defvar menu-icon-power-width         32)
+
+;; ---------- Tools Menu Icon Button Sizes ----------
+(defvar menu-icon-tools-height        33)
+(defvar menu-icon-tools-width         38)
+
+
 
 ;; ====================================
 ;;       Revealers (State Toggles)
@@ -36,8 +82,6 @@
 (defvar visible_calendar   false)
 (defvar visible_bluetooth  false)
 (defvar visible_settings   false)
-
-(defvar bluetooth-enabled  false)
 
 ;; ====================================
 ;;       Window Toggle Commands
@@ -72,5 +116,3 @@
    else \
      eww update reveal_tools=true; \
    fi")
-
-

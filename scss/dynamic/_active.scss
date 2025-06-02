@@ -3,52 +3,31 @@
   margin-left: 5px;
 }
 
-@mixin dynamic-sub-box-style {
-
-}
-
 @mixin dynamic-label-style {
+  font-weight: bold;
+  font-size: 14px;
 }
 
 @mixin dynamic-sub-label-style {
-}
-
-@mixin dynamic-icon-style {
-  font-size: 35px;
-  color: $color5;
+  font-size: 12px;
+  color: $foreground;
 }
 
 /** Active Media ***********************************/
 
 /* Container Boxes */
 .workspace_box_container,
-.media_box_container, {
+.media_box_container {
   @include dynamic-box-style;
 }
 
-.workspace_box_icon,
-.media_box_icon{ 
-  font-size: 35px;
-  color: $color6;
-}
-
-/* Sub-containers */
-.box_class_icon,
-.media_box_playing {
-  @include dynamic-sub-box-style;
-}
-
-.workspace_icon,
-.media_icon{
-
-}
-
+/* Labels */
 .media_label_artist,
-.dynamic_workspace_label{
-
+.dynamic_workspace_label {
+  @include dynamic-label-style;
 }
 
 .media_label_song,
-.workspace_label{
-
+.workspace_label {
+  @include dynamic-sub-label-style;
 }

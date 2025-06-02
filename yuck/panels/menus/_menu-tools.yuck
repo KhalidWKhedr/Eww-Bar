@@ -5,34 +5,29 @@
     :transition "slideright"
     :duration "350ms"
     :orientation "h"
-    :style ""
-    
-    (button 
-        :class "tool_option"
-        :tooltip "Take Screenshot"
-        :onclick "bash scripts/tools/snapshots.sh"
-        :height 32
-        :width 35
-        :style "font-size: 25px; padding-top: 2px; padding-right: 2px"
-        icon-screenshot)
 
     (button 
-        :class "tool_option"
-        :tooltip "Color Picker"
-        :onclick "hyprpicker -a &"
-        :style "font-size: 25px; padding-right: 5px"
-        icon-colorpicker)
+      :class "tool_option"
+      :tooltip "Take Screenshot"
+      :onclick "bash scripts/tools/snapshots.sh"
+      :height menu-icon-tools-height
+      :width menu-icon-tools-width
+      icon-screenshot)
 
     (button 
-        :class "tool_option"
-        :tooltip "Email"
-        :onclick ""
-        :style "font-size: 25px; padding-right: 5px"
-        icon-email)
+      :class "tool_option"
+      :tooltip "Color Picker"
+      :onclick "hyprpicker -a &"
+      icon-colorpicker)
 
     (button 
-        :class "tool_option"
-        :tooltip "GitHub"
-        :onclick ""
-        :style "font-size: 25px; padding-right: 5px"
-        icon-github)))
+      :class "tool_option"
+      :tooltip "Email"
+      :onclick ""
+      icon-email)
+
+    (button 
+      :class "tool_option"
+      :tooltip "GitHub"
+      :onclick ""
+      icon-github)))

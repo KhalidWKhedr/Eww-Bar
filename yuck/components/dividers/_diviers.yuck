@@ -1,0 +1,9 @@
+(defwidget divider []
+  (box  
+    :class "divider"
+    :valign "center"
+    :orientation "h"
+    :space-evenly true
+    :height 32
+    :width 4
+    ))

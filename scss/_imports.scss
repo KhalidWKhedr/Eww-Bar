@@ -4,28 +4,28 @@
 @import "variables/_accents.scss";
 @import "variables/_shadows.scss";
 
-/** Core Widgets ******************************************/
+/** Core Widgets *****************************************/
 @import "components/base/_bar.scss";
 
 /** Controls *********************************************/
 // @import "components/controls/_base.scss";
 
-// /** Launchers *********************************************/
+// /** Launchers *****************************************/
 @import "components/launchers/_launcher-box.scss";
 @import "components/launchers/_launcher-button.scss";
 
-// /** Dynamic Content **************************************/
+// /** Dynamic Content ***********************************/
 @import "dynamic/_active.scss";
 @import "dynamic/_workspaces.scss";
 
-// /** Panel Menus *******************************************/
+// /** Panel Menus ***************************************/
 @import "panels/menus/_menu-box.scss";
 @import "panels/menus/_menu-option.scss";
 
-// /** Indicators ********************************************/
+// /** Indicators ****************************************/
 @import "components/indicators/_indicators.scss";
 
-// /** Active Panels *****************************************/
+// /** Active Panels *************************************/
 @import "panels/windows/_calendar.scss";
 @import "panels/menus/_date-time.scss";
 @import "panels/windows/_systray.scss";
@@ -33,9 +33,10 @@
 @import "panels/windows/_media-player.scss";
 @import "windows/windows.scss";
 
-/** Optional Windows & Panels *****************************
- * Uncomment below as needed during development
- **********************************************************/
+@import "components/dividers/_divider.scss"
+/** Optional Windows & Panels ****************************/
+// * Uncomment below as needed during development
+// *******************************************************/
 // @import "panels/windows/_bluetooth.scss";
 // @import "panels/windows/_settings.scss";
 // @import "components/base/_active-media.scss";

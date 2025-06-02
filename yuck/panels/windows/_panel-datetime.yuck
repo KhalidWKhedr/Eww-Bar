@@ -8,25 +8,15 @@
     :space-evenly false
     :halign "center"
     :valign "center"
-
-    (box 
-      :class "container_hours_minutes"
       
       ;; Hour Button
       (button 
         :class "time_hour"
         :width 40
-        :height 40
+        :height 35
         :tooltip "Hours"
-        :style "font-size: 25px; padding-left: 1px; font-family: 'Hack Nerd Font', monospace;"
         :onclick toggle_calendar_cmd hour)
 
-      ;; Minute Button
-      (button 
-        :class "time_minute"
-        :tooltip "Minutes"
-        :style "font-size: 25px; padding-left: 1px; font-family: 'Hack Nerd Font', monospace;"
-        :onclick toggle_calendar_cmd min))
 
     ;; Hover to show date
     (eventbox 
@@ -43,14 +33,14 @@
         :valign "center"
 
         ;; Seconds Button
+          ;; Minute Button
         (button 
-          :class "time_second"
-          :tooltip "Seconds"
+          :class "time_minute"
           :width 40
-          :height 40
-          :style "font-size: 25px; padding-top: 0px; font-family: 'Hack Nerd Font', monospace;"
-          :onclick toggle_calendar_cmd sec)
-
+          :height 35
+          :tooltip "Minutes"
+          :onclick toggle_calendar_cmd min)
+      
         ;; Revealer for date display
         (revealer 
           :class "date_revealer"
@@ -66,5 +56,4 @@
               :class "time_date"
               :tooltip "Date Today"
               :width 225
-              :style "font-size: 1.4em; padding-top: 0px; font-family: 'Hack Nerd Font', monospace;"
               :onclick toggle_calendar_cmd date)))))))

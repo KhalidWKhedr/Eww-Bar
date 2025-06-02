@@ -1,0 +1,46 @@
+(defwidget notification-list []
+  (box :orientation "vertical"
+    (for notif in notifications
+      (notification-box :notif notif))))
+
+(defwidget notification-box [notif]
+  (eventbox
+    :onclick "end close ${notif.id}"
+    :valign "start"
+    :height 100
+    (box
+      :class "end-default-notification-box"
+      :orientation "horizontal"
+      :space-evenly false
+      (image
+        :path {notif.image}
+        :image-width 100
+        :image-height 100)
+      (image
+        :path {notif.icon}
+        :image-width 100
+        :image-height 100)
+      (box
+        :class "content-box"
+        :orientation "vertical"
+        :space-evenly "false"
+        (label
+          :class "notification-text notification-title"
+          :valign "start"
+          :yalign 0
+          :xalign 0
+          :text {notif.summary})
+        (label
+          :class "notification-text notification-content"
+          :valign "start"
+          :yalign 0
+          :xalign 0
+          :vexpand true
+          :wrap true
+          :text {notif.body})
+        (label
+          :class "notification-text notification-timestamp"
+          :valign "start"
+          :yalign 0
+          :xalign 0
+          :text (sh "date -d @${notif.timestamp} '+%H:%M:%S %d-%m-%Y'"))))))

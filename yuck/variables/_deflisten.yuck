@@ -3,27 +3,28 @@
 ;; ====================================
 
 ;; Volume control listener
-(deflisten current-volume
-  :initial "initial-value"
+(deflisten current-volume 
+  :initial ""
   `tail -F extra_stuff/logs/current_volume`)
 
 ;; Brightness control listener
-(deflisten current-brightness
-  :initial "initial-value"
+(deflisten current-brightness 
+  :initial ""
   `tail -F extra_stuff/logs/current_brightness`)
 
 ;; Media player metadata listener
-(deflisten media-player 
-  "/home/khalidwaleedkhedr/.config/eww/scripts/music/media_listen.sh")
+(deflisten media-player
+  :initial ""
+  "playerctl --player=spotify metadata --format '{\"playerName\": \"{{playerName}}\", \"artist\": \"{{artist}}\", \"title\": \"{{title}}\", \"position\": \"{{duration(position)}}\", \"duration\": \"{{duration(mpris:length)}}\", \"image\": \"{{mpris:artUrl}}\", \"status\": \"{{status}}\"}' --follow 2>/dev/null || echo '{\"status\": \"Stopped\"}'")
 
 ;; Workspace listener
 (deflisten workspace
+  :initial ""
   "scripts/workspaces/workspace.sh")
 
-(deflisten current-workspace :initial ""
-  "scripts/workspaces/current_workspace.sh")
+(deflisten current-workspace 
+  :initial ""
+  "scripts/workspaces/current_workspace.sh 1")
 
-
-(deflisten notif_data :initial ""
-  "scripts/notif-buffer.sh {max_notifs}")
-
+(deflisten notifications :initial "[]"
+  "/tmp/eww_notifications.json")
