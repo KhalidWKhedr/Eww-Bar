@@ -13,8 +13,7 @@
       ;; Player Name Label
       (label 
         :class "label_player"
-        :text "${media-player.playerName}"
-        :style "font-size: 16px; padding-right: 0px")
+        :text "${media-player.playerName}")
 
       ;; Media Image
       (image 
@@ -22,10 +21,8 @@
         :height 300
         :width 300
         :preserve-aspect-ratio false
-        :style "background-image: url('${media-player.image}');
-                background-size: 100% 100%;
-                background-position: center;
-                background-repeat: no-repeat;"))
+        :style "background-image: url('${media-player.image}');"))
+
 
     ;; Media Info and Progress Bar
     (box 
@@ -60,43 +57,37 @@
     (box 
       :class "box_controls"
       :orientation "h"
-
       (base_control
         :icon icon-shuffle
         :tooltip "Shuffle"
-        :button_class "media"
+        :button_class "media_shuffle"
         :box_class "media_box"
-        :onclick action-shuffle
-        :style "font-size: 20px;")
+        :onclick action-shuffle)
 
       (base_control
         :icon icon-previous
         :tooltip "Previous"
-        :button_class "media"
+        :button_class "media_previous"
         :box_class "media_box"
-        :onclick action-previous
-        :style "font-size: 24px;")
+        :onclick action-previous)
 
       (base_control
         :icon {media-player.status == "Playing" ? icon-pause : icon-play}
         :tooltip "Play/Pause"
-        :button_class "media"
+        :button_class "media_play"
         :box_class "media_box"
-        :onclick action-play
-        :style "font-size: 24px;")
+        :onclick action-play)
 
       (base_control
         :icon icon-next
         :tooltip "Next"
-        :button_class "media"
+        :button_class "media_next"
         :box_class "media_box"
-        :onclick action-next
-        :style "font-size: 24px; margin-left: 5px;")
+        :onclick action-next)
 
       (base_control
         :icon icon-loop
         :tooltip "Loop"
-        :button_class "media"
+        :button_class "media_loop"
         :box_class "media_box"
-        :onclick action-loop
-        :style "font-size: 23px;"))))
+        :onclick action-loop))))

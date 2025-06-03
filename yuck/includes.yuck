@@ -49,13 +49,13 @@
 
 ;; Panels - Menus
 (include "yuck/panels/menus/_base-menu.yuck")
+(include "yuck/panels/menus/_menu-datetime.yuck")
 (include "yuck/panels/menus/_menu-directories.yuck")
 (include "yuck/panels/menus/_menu-power.yuck")
 (include "yuck/panels/menus/_menu-tools.yuck")
 
 ;; Panels - Windows
 (include "yuck/panels/windows/_panel-bluetooth.yuck")
-(include "yuck/panels/windows/_panel-datetime.yuck")
 (include "yuck/panels/windows/_panel-media.yuck")
 (include "yuck/panels/windows/_panel-notification.yuck")
 (include "yuck/panels/windows/_panel-settings.yuck")

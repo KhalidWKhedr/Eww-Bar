@@ -48,7 +48,7 @@
 (defvar media-launcher-width          43)
 
 (defvar power-launcher-height         28)
-(defvar power-launcher-width          35)
+(defvar power-launcher-width          33)
 
 (defvar settings-launcher-height      38)
 (defvar settings-launcher-width       43)

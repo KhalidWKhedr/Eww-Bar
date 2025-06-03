@@ -3,15 +3,13 @@
    onclick
    tooltip
    button_class
-   box_class
-   style]
+   box_class]
 
   (box
     :class box_class
 
     (button
       :class button_class
-      :style style
       :title tooltip
       :onclick onclick
       icon)))

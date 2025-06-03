@@ -6,5 +6,4 @@
     :button_class "tools_button_launcher"
     :height app-launcher-height
     :width app-launcher-width
-    :style "font-size: 25px; padding: 0 8px 1px 0"
     :onclick toggle_tools_cmd))

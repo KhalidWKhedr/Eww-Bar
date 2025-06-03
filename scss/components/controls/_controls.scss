@@ -1,0 +1,42 @@
+/** Mixins ******************************************/
+
+@mixin media-control-default {
+  font-size: 24px;
+}
+
+@mixin media-control-shuffle {
+  font-size: 20px;
+}
+
+@mixin media-control-next {
+  margin-left: 5px;
+}
+
+@mixin media-control-loop {
+  font-size: 23px;
+}
+
+
+/** Media Controls **********************************/
+
+.media_shuffle {
+  @include media-control-shuffle;
+}
+
+.media_previous {
+  @include media-control-default;
+}
+
+.media_play {
+  @include media-control-default;
+}
+
+.media_next {
+  @include media-control-default;
+  @include media-control-next;
+}
+
+.media_loop {
+  @include media-control-default;
+  @include media-control-loop;
+}

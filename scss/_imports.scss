@@ -6,44 +6,43 @@
 
 /** Core Widgets *****************************************/
 @import "components/base/_bar.scss";
-
+@import "/home/khalidwaleedkhedr/.config/eww/scss/components/controls/_controls.scss";
 /** Controls *********************************************/
 // @import "components/controls/_base.scss";
 
-// /** Launchers *****************************************/
+/** Launchers ********************************************/
 @import "components/launchers/_launcher-box.scss";
 @import "components/launchers/_launcher-button.scss";
 
-// /** Dynamic Content ***********************************/
+/** Dynamic Content **************************************/
 @import "dynamic/_active.scss";
 @import "dynamic/_workspaces.scss";
 
-// /** Panel Menus ***************************************/
+/** Panel Menus ******************************************/
 @import "panels/menus/_menu-box.scss";
 @import "panels/menus/_menu-option.scss";
+@import "panels/menus/_menu-date-time.scss";
 
-// /** Indicators ****************************************/
+/** Indicators *******************************************/
 @import "components/indicators/_indicators.scss";
 
-// /** Active Panels *************************************/
+/** Active Panels ****************************************/
 @import "panels/windows/_calendar.scss";
-@import "panels/menus/_date-time.scss";
-@import "panels/windows/_systray.scss";
-@import "panels/windows/_tooltip.scss";
 @import "panels/windows/_media-player.scss";
-@import "windows/windows.scss";
+@import "magic/_systray.scss";
+@import "magic/_tooltip.scss";
+@import "windows/_windows.scss";
 
-@import "components/dividers/_divider.scss"
+@import "components/dividers/_divider.scss";
+
 /** Optional Windows & Panels ****************************/
-// * Uncomment below as needed during development
-// *******************************************************/
 // @import "panels/windows/_bluetooth.scss";
-// @import "panels/windows/_settings.scss";
-// @import "components/base/_active-media.scss";
-// @import "components/base/_active-window.scss";
-// @import "magic/_base.scss";
+// @import "variables/_settings.scss";
 // @import "magic/_circular.scss";
-// @import "magic/_text.scss";
 // @import "magic/_linear.scss";
 // @import "magic/_resources.scss";
 // @import "magic/_battery.scss";
+// @import "magic/_text.scss";
+// @import "magic/_base.scss";
+// @import "components/base/_active-media.scss";
+// @import "components/base/_active-window.scss";

@@ -6,5 +6,4 @@
     :button_class "directory_button_launcher"
     :height  dir-launcher-height
     :width  dir-launcher-width
-    :style "font-size: 25px; padding: 0 8px 1px 0"
     :onclick toggle_directories_cmd))

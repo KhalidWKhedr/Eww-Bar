@@ -5,8 +5,7 @@
    tooltip
    onclick
    height
-   width
-   style]
+   width]
     
   (box
     :class box_class
@@ -22,5 +21,4 @@
     (button
       :class button_class
       :onclick onclick
-      :style style
       icon)))

@@ -4,7 +4,6 @@
       transition 
       duration 
       orientation] 
-      
 
   (box :orientation orientation
        :class box_class

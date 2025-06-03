@@ -1,0 +1,39 @@
+;; Eww Bar Config - Organized into Left, Center, and Right sections
+
+(defwidget bar [gui_size]
+
+  (box  
+    :class "eww_bar"
+    :orientation "h"
+    :valgin "center"
+    :space-evenly true
+
+    ;; Left Section: User Menus & Launchers
+    (box 
+      :class "bar_left"
+      :halign "start"
+      :valign "center"
+      :hexpand true
+      :space-evenly false
+      (workspaces))
+   
+
+    ;; Center Section: Workspaces & Media
+    (box 
+      :class "bar_center"
+      :halign "center"
+      :valign "center"
+      :hexpand false
+      :space-evenly false
+      (date_time)
+
+    ;; Right Section: System Status
+    (box 
+      :class "bar_right"
+      :halign "end"
+      :valign "center"
+      :hexpand true
+      :space-evenly false
+      (dynamic_media)
+      (indicators)
+      (systemtray))))

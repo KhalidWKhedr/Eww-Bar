@@ -6,5 +6,4 @@
     :button_class "settings_button_launcher"
     :height settings-launcher-height
     :width settings-launcher-width
-    :style "font-size: 30px; margin-top: 1px; padding-right: 6px;"
     :onclick toggle_settings_cmd))
