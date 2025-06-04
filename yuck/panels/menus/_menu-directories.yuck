@@ -7,39 +7,39 @@
     :orientation "h"
 
     (button 
-        :class "directory_option directory_option--home" 
-        :height menu-icon-directory-height
-        :width menu-icon-directory-width
-        :tooltip "Home"
-        :onclick "sh -c 'xdg-open $HOME'" 
-        icon-home)
+      :class "directory_option directory_option--home" 
+      :height menu-icon-directory-height
+      :width menu-icon-directory-width
+      :tooltip "Home"
+      :onclick open-home
+      icon-home)
 
     (button 
-        :class "directory_option" 
-        :tooltip "Documents"
-        :onclick "sh -c 'xdg-open $HOME/Documents'"
-        icon-documents)
+      :class "directory_option" 
+      :tooltip "Documents"
+      :onclick open-documents
+      icon-documents)
 
     (button 
-        :class "directory_option" 
-        :tooltip "Downloads"
-        :onclick "sh -c 'xdg-open $HOME/Downloads'"
-        icon-downloads)
+      :class "directory_option" 
+      :tooltip "Downloads"
+      :onclick open-downloads
+      icon-downloads)
 
     (button 
-        :class "directory_option" 
-        :tooltip "Images"
-        :onclick "sh -c 'xdg-open $HOME/Pictures'"
-        icon-images)
+      :class "directory_option" 
+      :tooltip "Images"
+      :onclick open-pictures
+      icon-images)
 
     (button 
-        :class "directory_option" 
-        :tooltip "Music"
-        :onclick "sh -c 'xdg-open $HOME/Music'"
-        icon-music)
+      :class "directory_option" 
+      :tooltip "Music"
+      :onclick open-music
+      icon-music)
 
     (button 
-        :class "directory_option" 
-        :tooltip "Videos"
-        :onclick "sh -c 'xdg-open $HOME/Videos'"
-        icon-videos)))
+      :class "directory_option" 
+      :tooltip "Videos"
+      :onclick open-videos
+      icon-videos)))

@@ -5,20 +5,21 @@
       duration 
       orientation] 
 
-  (box :orientation orientation
-       :class box_class
-       :space-evenly true
-       :valign "center"
-       :halign "center"
-       :hexpand true 
+  (box 
+     :orientation orientation
+     :class box_class
+     :space-evenly true
+     :valign "center"
+     :halign "center"
+     :hexpand true 
 
-       (revealer 
-            :transition transition
-            :reveal reveal_var
-            :duration duration
+     (revealer 
+          :transition transition
+          :reveal reveal_var
+          :duration duration
 
-            (box 
-                :orientation orientation
+          (box 
+               :orientation orientation
                 
                 ;; ⬇️ Use variadic children from parent widget here
-                (children)))))
+               (children)))))

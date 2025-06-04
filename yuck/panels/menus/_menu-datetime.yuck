@@ -1,59 +1,41 @@
-;; Date and Time Widget
 (defwidget date_time []
-
-  ;; Container for date and time components
-  (box 
+  (box
     :class "datetime_container"
     :orientation "h"
-    :space-evenly false
-    :halign "center"
-    :valign "center"
-      
-      ;; Hour Button
-      (button 
-        :class "time_hour"
-        :width 40
-        :height 35
-        :tooltip "Hours"
-        :onclick toggle_calendar_cmd hour)
 
-
-    ;; Hover to show date
     (eventbox 
-      :class "date_hoverbox"
-      :onhover "${eww} update reveal_date=true"
-      :onhoverlost "${eww} update reveal_date=false"
+      :onhover toggle_date_reveal_onhover
+      :onhoverlost toggle_date_reveal_onhoverlost
 
-      ;; Date Container
       (box 
-        :class "date_container"
         :orientation "h"
         :space-evenly false
         :halign "center"
         :valign "center"
 
-        ;; Seconds Button
-          ;; Minute Button
+        (button 
+          :class "time_hour"
+          :width time-button-width
+          :height time-button-height
+          :tooltip "Time"
+          :onclick toggle_calendar_hour_cmd hour)
+
         (button 
           :class "time_minute"
-          :width 40
-          :height 35
-          :tooltip "Minutes"
-          :onclick toggle_calendar_cmd min)
-      
-        ;; Revealer for date display
+          :width time-button-width
+          :height time-button-height
+          :tooltip "Time"
+          :onclick toggle_calendar_min_cmd min)
+
         (revealer 
           :class "date_revealer"
           :transition "slideleft"
           :reveal reveal_date
           :duration "250ms"
 
-          ;; Date Button
-          (box 
-            :class "date_buttons"
-            
-            (button 
-              :class "time_date"
-              :tooltip "Date Today"
-              :width 225
-              :onclick toggle_calendar_cmd date)))))))
+          (button 
+            :class "time_date"
+            :tooltip "Date Today"
+            :width date-button-width
+            :height date-button-height
+            :onclick toggle_calendar_date_cmd date))))))

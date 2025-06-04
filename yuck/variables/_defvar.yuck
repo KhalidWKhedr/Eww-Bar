@@ -1,99 +1,66 @@
 ;; ====================================
-;;             Variables
+;;             Core Settings
 ;; ====================================
 
-;; ----- Eww Base Command -----
-(defvar eww "eww -c $HOME/.config/eww/")
-
-;; ====================================
-;;         Actions and Commands
-;; ====================================
-
-;; ----- Playerctl Actions -----
-(defvar action-shuffle    "bash -c 'playerctl shuffle toggle &'")
-(defvar action-previous   "bash -c 'playerctl previous &'")
-(defvar action-play       "bash -c 'playerctl play-pause &'")
-(defvar action-next       "bash -c 'playerctl next &'")
-(defvar action-loop       "bash -c 'playerctl loop toggle &'")
-
-;; ----- Application Launchers -----
-(defvar application_launcher_cmd "fuzzel &")
-
-;; ----- Screenshot Settings -----
+(defvar eww            "eww -c $HOME/.config/eww/")
 (defvar screenshot_mode "area")
 
-;; ----- Bluetooth State -----
-(defvar toggle_bluetooth false)
+;; ====================================
+;;        Application Launchers
+;; ====================================
+
+(defvar application_launcher_cmd "fuzzel &")
+
+;; ====================================
+;;         Bluetooth State
+;; ====================================
+
 (defvar bluetooth-enabled false)
+(defvar toggle_bluetooth  false)
 
 ;; ====================================
-;;          Widget Dimensions
+;;     Date/Time Widget Commands
 ;; ====================================
 
-;; ---------- Indicator Circles ----------
-(defvar indicators-width              38)
-(defvar indicators-height             38)
+(defvar toggle_date_reveal_onhover     "eww update reveal_date=true")
+(defvar toggle_date_reveal_onhoverlost "eww update reveal_date=false")
 
-;; ---------- Launchers ----------
-(defvar app-launcher-height           38)
-(defvar app-launcher-width            43)
-
-(defvar tools-launcher-height         38)
-(defvar tools-launcher-width          43)
-
-(defvar dir-launcher-height           38)
-(defvar dir-launcher-width            43)
-
-(defvar media-launcher-height         38)
-(defvar media-launcher-width          43)
-
-(defvar power-launcher-height         28)
-(defvar power-launcher-width          33)
-
-(defvar settings-launcher-height      38)
-(defvar settings-launcher-width       43)
-
-;; ---------- Directory Menu Icon Button Sizes ----------
-(defvar menu-icon-directory-height    33)
-(defvar menu-icon-directory-width     38)
-
-;; ---------- Power Menu Icon Button Sizes ----------
-(defvar menu-icon-power-height        28)
-(defvar menu-icon-power-width         32)
-
-;; ---------- Tools Menu Icon Button Sizes ----------
-(defvar menu-icon-tools-height        33)
-(defvar menu-icon-tools-width         38)
-
-
+(defvar toggle_calendar_hour_cmd  "eww open --toggle window_calendar")
+(defvar toggle_calendar_min_cmd   "eww open --toggle window_calendar")
+(defvar toggle_calendar_date_cmd  "eww open --toggle window_calendar")
 
 ;; ====================================
-;;       Revealers (State Toggles)
+;;     Directory Open Commands
 ;; ====================================
 
-;; ----- Menu Revealer Booleans -----
-(defvar reveal_directories false)
-(defvar reveal_tools       false)
-(defvar reveal_power       false)
+(defvar open-documents "sh -c 'xdg-open $HOME/Documents'")
+(defvar open-downloads "sh -c 'xdg-open $HOME/Downloads'")
+(defvar open-home      "sh -c 'xdg-open $HOME'")
+(defvar open-music     "sh -c 'xdg-open $HOME/Music'")
+(defvar open-pictures  "sh -c 'xdg-open $HOME/Pictures'")
+(defvar open-videos    "sh -c 'xdg-open $HOME/Videos'")
+
+;; ====================================
+;;         Playerctl Actions
+;; ====================================
+
+(defvar action-loop     "bash -c 'playerctl loop toggle &'")
+(defvar action-next     "bash -c 'playerctl next &'")
+(defvar action-play     "bash -c 'playerctl play-pause &'")
+(defvar action-previous "bash -c 'playerctl previous &'")
+(defvar action-shuffle  "bash -c 'playerctl shuffle toggle &'")
+
+;; ====================================
+;;       Reveal States (Booleans)
+;; ====================================
+
 (defvar reveal_date        false)
-
-;; ----- Window Visibility States -----
-(defvar visible_media      false)
-(defvar visible_calendar   false)
-(defvar visible_bluetooth  false)
-(defvar visible_settings   false)
+(defvar reveal_directories false)
+(defvar reveal_power       false)
+(defvar reveal_tools       false)
 
 ;; ====================================
-;;       Window Toggle Commands
-;; ====================================
-
-(defvar toggle_settings_cmd    "eww open --toggle window_settings")
-(defvar toggle_media_cmd       "eww open --toggle window_media")
-(defvar toggle_bluetooth_cmd   "eww open --toggle window_bluetooth")
-(defvar toggle_calendar_cmd    "eww open --toggle window_calendar")
-
-;; ====================================
-;;      Menu Revealer Toggle Cmds
+;;        Toggle Commands (Menus)
 ;; ====================================
 
 (defvar toggle_directories_cmd 
@@ -116,3 +83,67 @@
    else \
      eww update reveal_tools=true; \
    fi")
+
+;; ====================================
+;;      Toggle Commands (Windows)
+;; ====================================
+
+(defvar toggle_bluetooth_cmd "eww open --toggle window_bluetooth")
+(defvar toggle_calendar_cmd  "eww open --toggle window_calendar")
+(defvar toggle_media_cmd     "eww open --toggle window_media")
+(defvar toggle_settings_cmd  "eww open --toggle window_settings")
+
+;; ====================================
+;;     Widget Dimensions (Buttons)
+;; ====================================
+
+(defvar power-launcher-height      28)
+(defvar power-launcher-width       33)
+
+(defvar dir-launcher-height        38)
+(defvar dir-launcher-width         43)
+
+(defvar tools-launcher-height      38)
+(defvar tools-launcher-width       43)
+
+(defvar app-launcher-height        38)
+(defvar app-launcher-width         43)
+
+(defvar media-launcher-height      38)
+(defvar media-launcher-width       43)
+
+(defvar settings-launcher-height   38)
+(defvar settings-launcher-width    43)
+
+(defvar time-button-height         35)
+(defvar time-button-width          40)
+
+(defvar date-button-height         35) 
+(defvar date-button-width         225)
+
+;; ====================================
+;;  Widget Dimensions (Menu Icon Btns)
+;; ====================================
+
+(defvar menu-icon-directory-height 33)
+(defvar menu-icon-directory-width  38)
+(defvar menu-icon-power-height     28)
+(defvar menu-icon-power-width      32)
+(defvar menu-icon-tools-height     33)
+(defvar menu-icon-tools-width      38)
+
+;; ====================================
+;;   Widget Dimensions (Indicators)
+;; ====================================
+
+(defvar indicators-height 38)
+(defvar indicators-width  38)
+
+;; ====================================
+;;     Window Visibility States
+;; ====================================
+
+(defvar visible_bluetooth false)
+(defvar visible_calendar  false)
+(defvar visible_media     false)
+(defvar visible_settings  false)

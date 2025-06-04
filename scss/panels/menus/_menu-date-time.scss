@@ -1,21 +1,17 @@
 /** Mixins ****************************************/
 
 @mixin time-style {
-  // Layout & box model
   margin-right: 2px;
   padding-left: 1px;
   border-radius: 20px;
 
-  // Typography
   font-size: 22px;
   letter-spacing: -0.5px;
   color: $color1;
 
-  // Appearance
   background-color: $foreground;
   box-shadow: $shadow-bottom-subtle;
 
-  // Animation
   transition: all 0.2s ease;
 
   &:hover {
@@ -26,46 +22,27 @@
 }
 
 @mixin container-style {
-  // Layout & appearance
   border-radius: 20px;
   background-color: $color3;
   box-shadow: $shadow-inset-soft;
-
-  // Animation
   transition: all 0.2s ease;
 }
 
 @mixin date-style {
-  // Layout & box model
   padding-top: 0px;
   border-radius: 20px;
 
-  // Typography
   font-size: 20px;
   color: $foreground;
   text-shadow: 0 0 2px $color2;
 
-  // Appearance
   background-color: transparent;
-
-  // Animation
   transition: all 0.2s ease;
 
   &:hover {
     color: $color9;
     background-color: $color6;
     box-shadow: 0 0 5px $color6;
-  }
-}
-
-@mixin hover-revealer-style {
-  // Appearance
-  color: $color3;
-  border-radius: 20px;
-
-  &:hover {
-    color: $color3;
-    box-shadow: $shadow-inset-soft;
   }
 }
 
@@ -76,29 +53,11 @@
   margin-right: 5px;
 }
 
-.container_hours_minutes {
-  @include container-style;
-}
-
 .time_hour,
-.time_minute,
-.time_second {
+.time_minute {
   @include time-style;
-}
-
-.date_container {
-  @include container-style;
 }
 
 .time_date {
   @include date-style;
-}
-
-.hover_revealer {
-  @include hover-revealer-style;
-}
-
-// Date and time panel styles
-.date-time {
-  // Optional: Additional styles if needed
 }
