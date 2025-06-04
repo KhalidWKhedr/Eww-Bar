@@ -4,8 +4,6 @@
     :tooltip "Brightness ${current-brightness}%"
     :value current-brightness
     :label "${current-brightness}"
-    :button_style "font-size: 27px; margin-right: 1px; margin-top: 1px"
-    :label_style "font-size: 15px; margin-right: 5px"
     :box_class "indicator_brightness_box"
     :circular_progress_class "indicator_brightness_progress"
     :button_class "indicator_brightness_button"

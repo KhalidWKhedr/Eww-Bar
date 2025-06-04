@@ -5,5 +5,5 @@
     :orientation "h"
     :space-evenly true
     :height 32
-    :width 4
-    ))
+    :width 4))
+    

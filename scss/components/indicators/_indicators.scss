@@ -14,7 +14,6 @@
 
 @mixin indiactor-box-individal {
   border-radius: 20px;
-  border: 1px solid $foreground;
   box-shadow: $shadow-inset-soft; 
 }
 
@@ -46,25 +45,29 @@
 // ====================
 // Boxes
 // ====================
-
 .indicator_box {
   @include indicator-box;
 }
 
+// ====================
+// Individual Boxes
+// ====================
+
 .indicator_volume_box,
 .indicator_brightness_box,
 .indicator_bluetooth_box,
-.magic_battery_box, {
+.magic_battery_box {
   @include indiactor-box-individal;
 }
+
 // ====================
-// Circular Progress
+// Circular Progress 
 // ====================
 
 .indicator_volume_progress,
 .indicator_brightness_progress,
 .indicator_bluetooth_progress,
-.magic_battery_progress, {
+.magic_battery_progress {
   @include indicator-circle;
 }
 
@@ -72,20 +75,53 @@
 // Buttons
 // ====================
 
-.indicator_volume_button,
-.indicator_brightness_button,
-.indicator_bluetooth_button,
-.magic_battery_button, {
+.indicator_volume_button {
   @include indicator-button;
+  font-size: 16px;
+  padding-right: 11px;
+}
+
+.indicator_brightness_button {
+  @include indicator-button;
+  font-size: 27px;
+  margin-right: 1px;
+  margin-top: 1px;
+}
+
+.indicator_bluetooth_button {
+  @include indicator-button;
+  font-size: 23px;
+  margin-right: 1px;
+}
+
+.magic_battery_button {
+  @include indicator-button;
+  // add specific style if needed
 }
 
 // ====================
 // Labels
 // ====================
 
-.indicator_volume_label,
-.indicator_brightness_label,
-.indicator_bluetooth_label,
+.indicator_volume_label {
+  @include indicator-label;
+  font-size: 15px;
+  margin-right: 5px;
+}
+
+.indicator_brightness_label {
+  @include indicator-label;
+  font-size: 15px;
+  margin-right: 5px;
+}
+
+.indicator_bluetooth_label {
+  @include indicator-label;
+  font-size: 15px;
+  margin-right: 5px;
+}
+
 .magic_battery_label {
   @include indicator-label;
+  // add specific style if needed
 }

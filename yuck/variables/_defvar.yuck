@@ -125,10 +125,12 @@
 ;;  Widget Dimensions (Menu Icon Btns)
 ;; ====================================
 
-(defvar menu-icon-directory-height 33)
-(defvar menu-icon-directory-width  38)
 (defvar menu-icon-power-height     28)
 (defvar menu-icon-power-width      32)
+
+(defvar menu-icon-directory-height 33)
+(defvar menu-icon-directory-width  38)
+
 (defvar menu-icon-tools-height     33)
 (defvar menu-icon-tools-width      38)
 

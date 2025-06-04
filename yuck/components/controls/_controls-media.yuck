@@ -20,8 +20,7 @@
     :onclick action-play
     :tooltip "Play/Pause"
     :button_class "media"
-    :box_class "media_play"
-    :style "font-size: 24px;"))
+    :box_class "media_play"))
 
 (defwidget media_next []
   (base_control

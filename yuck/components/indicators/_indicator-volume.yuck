@@ -4,8 +4,6 @@
     :tooltip "Volume ${current-volume}%"
     :value current-volume
     :label "${current-volume}"
-    :button_style "font-size: 16px; padding-right: 11px"
-    :label_style "font-size: 15px; margin-right: 5px"
     :box_class "indicator_volume_box"
     :circular_progress_class "indicator_volume_progress"
     :button_class "indicator_volume_button"

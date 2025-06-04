@@ -4,8 +4,6 @@
     :tooltip "Bluetooth Battery ${bluetooth-battery}%"
     :value bluetooth-battery
     :label "${bluetooth-battery}"
-    :button_style "font-size: 23px; margin-right: 1px"
-    :label_style "font-size: 15px; margin-right: 5px"
     :box_class "indicator_bluetooth_box"
     :circular_progress_class "indicator_bluetooth_progress"
     :button_class "indicator_bluetooth_button"

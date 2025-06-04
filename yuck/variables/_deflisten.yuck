@@ -26,5 +26,6 @@
   :initial ""
   "scripts/workspaces/current_workspace.sh 1")
 
-(deflisten notifications :initial "[]"
+(deflisten notifications 
+  :initial ""
   "/tmp/eww_notifications.json")

@@ -3,13 +3,9 @@
 .window_calendar,
 .window_media,
 .window_settings {
-	background: transparent;
-	background: linear-gradient(135deg, $color1 0%, $color2 100%, 
-										$color3 100%, $color4 100%, 
-										$color5 100%, $color6 100%, 
-										$color7 100%, $color8 100%,  $accent1 100%); // Main background
-  	border-radius: 20px;
-  	font-family: Hack;
+	background: $color13;
+  border-radius: 20px;
+
 }
 
 

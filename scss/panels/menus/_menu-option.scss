@@ -1,6 +1,5 @@
 @mixin menu-option-style($hover-color: $color3) {
-  color: $color1;
-  background-color: transparent;
+  color: $foreground;
   border-radius: 20px;
   transition: box-shadow 0.3s ease;
   margin-right: 2px;
@@ -19,7 +18,6 @@
   @include menu-option-style;
   font-size: 21px;
   padding-right: 5px;
-  padding-bottom: 0px;
 }
 
 .directory_option {
@@ -31,6 +29,5 @@
 .tool_option {
   @include menu-option-style;
   font-size: 27px;
-  padding-top: 2px;
   padding-right: 5px;
 }
