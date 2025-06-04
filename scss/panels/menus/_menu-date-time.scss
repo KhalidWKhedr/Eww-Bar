@@ -1,5 +1,14 @@
 /** Mixins ****************************************/
 
+@mixin container-style {
+  border-radius: 20px;
+  background-color: $color3;
+  box-shadow: $shadow-inset-soft;
+  transition: all 0.2s ease;
+  margin-top: 2px;
+  margin-bottom: 2px;
+}
+
 @mixin time-style {
   margin-right: 2px;
   padding-left: 1px;
@@ -7,10 +16,9 @@
 
   font-size: 22px;
   letter-spacing: -0.5px;
-  color: $color1;
-
-  background-color: $foreground;
-  box-shadow: $shadow-bottom-subtle;
+  color: $foreground;
+  background-color: transparent;
+  box-shadow: $shadow-inset-soft;
 
   transition: all 0.2s ease;
 
@@ -19,13 +27,6 @@
     background-color: $color6;
     box-shadow: 0 0 5px $color6;
   }
-}
-
-@mixin container-style {
-  border-radius: 20px;
-  background-color: $color3;
-  box-shadow: $shadow-inset-soft;
-  transition: all 0.2s ease;
 }
 
 @mixin date-style {
@@ -37,6 +38,7 @@
   text-shadow: 0 0 2px $color2;
 
   background-color: transparent;
+  box-shadow: $shadow-inset-soft;
   transition: all 0.2s ease;
 
   &:hover {
