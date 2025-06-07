@@ -1,9 +1,6 @@
 /** Mixins ****************************************/
 
 @mixin container-style {
-  border-radius: 20px;
-  background-color: $color3;
-  box-shadow: $shadow-inset-soft;
   transition: all 0.2s ease;
   margin-top: 2px;
   margin-bottom: 2px;
@@ -17,7 +14,7 @@
   font-size: 22px;
   letter-spacing: -0.5px;
   color: $foreground;
-  background-color: transparent;
+  background-color: $color3;
   box-shadow: $shadow-inset-soft;
 
   transition: all 0.2s ease;
@@ -37,7 +34,7 @@
   color: $foreground;
   text-shadow: 0 0 2px $color2;
 
-  background-color: transparent;
+  background-color: $color3;
   box-shadow: $shadow-inset-soft;
   transition: all 0.2s ease;
 

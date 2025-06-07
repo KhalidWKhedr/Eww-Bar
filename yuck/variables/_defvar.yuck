@@ -115,10 +115,10 @@
 (defvar settings-launcher-height   38)
 (defvar settings-launcher-width    43)
 
-(defvar time-button-height         35)
+(defvar time-button-height         38)
 (defvar time-button-width          40)
 
-(defvar date-button-height         35) 
+(defvar date-button-height         38) 
 (defvar date-button-width         225)
 
 ;; ====================================

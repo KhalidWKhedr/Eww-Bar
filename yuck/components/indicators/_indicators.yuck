@@ -8,5 +8,5 @@
     :space-evenly true
     (indicator_volume)
     (indicator_brightness)
-    (resource_battery)
+    (magic_battery)
     (indicator_bluetooth)))

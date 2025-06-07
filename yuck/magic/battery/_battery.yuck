@@ -1,4 +1,4 @@
-(defwidget resource_battery []
+(defwidget magic_battery []
   (base_magic_circular
     :icon {EWW_BATTERY.BAT0.status == "Discharging" 
             ? (EWW_BATTERY.BAT0.capacity > 90 ? "󰂂"

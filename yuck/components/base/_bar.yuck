@@ -44,5 +44,5 @@
       (dynamic_media)
       (indicators)
       (systemtray)
-      (date_time)
-      (settings_launcher))))
+      (settings_launcher)
+      (date_time))))
