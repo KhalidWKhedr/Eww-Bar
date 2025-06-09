@@ -1,39 +1,17 @@
-/** Mixins ***************************************/
 
-@mixin bar-section($bg, $accent) {
-  background: linear-gradient(135deg, $bg 0%, $accent 100%);
-  border-radius: 20px;
-}
-
-@mixin bar-size($font-size, $padding-y, $padding-x, $radius) {
-  font-size: $font-size;
-
-  .bar_left,
-  .bar_center,
-  .bar_right {
-    padding: $padding-y $padding-x;
-    border-radius: $radius;
-  }
-}
-
-/** EWW Bar ***************************************/
-
-.eww_bar {
-  //background: ;
-  &.small {
-    @include bar-size(11px, 2px, 2px, 20px);
-  }
-
-  &.large {
-    @include bar-size(20px, 2px, 2px, 20px);
-  }
-}
+/*** EWW Bar ***************************************/
 
 .bar_left,
-.bar_left_center,
-.bar_center,
-.bar_right_container,
+.bar_center,,
 .bar_right {
-  opacity: 1;
-  border-radius: 20px;
+ //border-radius: 20px;
+ //background: $color2;
+}
+
+.bar_left {
+  margin-left: 10px;
+}
+
+.bar_right {
+  margin-right: 10px;
 }

@@ -3,33 +3,13 @@
 .window_calendar,
 .window_media,
 .window_settings {
-	background: $color13;
+  background:
+    repeating-linear-gradient(
+      45deg,
+      $color13,
+      $color13 10px,
+      lighten($color13, 5%) 10px,
+      lighten($color13, 5%) 11px
+    );
   border-radius: 20px;
-
-}
-
-
-
-.notification {
-  padding: 0.5em;
-  margin: 0.3em;
-  background-color: white;
-  border-radius: 0.4em;
-  color: white;
-}
-
-.notif-app {
-  color: black;
-  font-weight: bold;
-  font-size: 1.1em;
-}
-
-.notif-summary {
-  font-size: 1em;
-  color: black;
-}
-
-.notif-body {
-  font-size: 0.9em;
-  color: black;
 }

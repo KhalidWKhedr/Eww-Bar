@@ -2,7 +2,7 @@
 ;;             Core Settings
 ;; ====================================
 
-(defvar eww            "eww -c $HOME/.config/eww/")
+(defvar eww             "eww -c $HOME/.config/eww/")
 (defvar screenshot_mode "area")
 
 ;; ====================================
@@ -98,7 +98,7 @@
 ;; ====================================
 
 (defvar power-launcher-height      28)
-(defvar power-launcher-width       33)
+(defvar power-launcher-width       28)
 
 (defvar dir-launcher-height        38)
 (defvar dir-launcher-width         43)

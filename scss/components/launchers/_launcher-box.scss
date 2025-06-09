@@ -7,6 +7,12 @@
 
 /** Launcher Boxes ********************************************/
 
+// Power box — leftmost box in the widget section
+// No margin needed; spacing handled by the container
+.power_box_launcher {
+  @include launcher_box_style;
+}
+
 // Left-margin boxes — width must be adjusted in Yuck by +5px
 // Base box — no margin applied; width is true to Yuck widget size
 .directory_box_launcher {
@@ -16,7 +22,6 @@
 
 // Left-margin boxes — width must be adjusted in Yuck by +5px
 // (Eww adds margin outside box, but Yuck sizing doesn't compensate)
-.power_box_launcher,
 .tools_box_launcher,
 .media_box_launcher {
   margin-left: 5px;
