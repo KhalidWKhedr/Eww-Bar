@@ -3,46 +3,47 @@
 @import "variables/_colors.scss";
 @import "variables/_accents.scss";
 @import "variables/_shadows.scss";
+@import "variables/_settings.scss";
 
 /** Core Widgets *****************************************/
 @import "components/base/_bar.scss";
-@import "/home/khalidwaleedkhedr/.config/eww/scss/components/controls/_controls.scss";
-/** Controls *********************************************/
-// @import "components/controls/_base.scss";
+@import "components/controls/_controls.scss";
 
-/** Launchers ********************************************/
-@import "components/launchers/_launcher-box.scss";
-@import "components/launchers/_launcher-button.scss";
+/** Dividers *********************************************/
+@import "components/dividers/_divider.scss";
 
 /** Dynamic Content **************************************/
-@import "dynamic/_active.scss";
-@import "dynamic/_workspaces.scss";
-
-/** Panel Menus ******************************************/
-@import "panels/menus/_menu-box.scss";
-@import "panels/menus/_menu-option.scss";
-@import "panels/menus/_menu-date-time.scss";
+@import "components/dynamic/_active.scss";
+@import "components/dynamic/_workspaces.scss";
 
 /** Indicators *******************************************/
 @import "components/indicators/_indicators.scss";
 
-/** Active Panels ****************************************/
-@import "panels/windows/_calendar.scss";
-@import "panels/windows/_media-player.scss";
-@import "magic/_systray.scss";
-@import "magic/_tooltip.scss";
+/** Magic ***********************************************/
+// Uncomment if you want to use these magic components
+// @import "components/magic/_circular.scss";
+// @import "components/magic/_linear.scss";
+// @import "components/magic/_resources.scss";
+@import "components/magic/_systray.scss";
+@import "components/magic/_tooltip.scss";
+
+/** Launchers ********************************************/
+@import "components/panels/launchers/_launcher-box.scss";
+@import "components/panels/launchers/_launcher-button.scss";
+
+/** Panel Menus ******************************************/
+@import "components/panels/menus/_menu-box.scss";
+@import "components/panels/menus/_menu-date-time.scss";
+@import "components/panels/menus/_menu-option.scss";
+
+/** Panel Windows ****************************************/
+//@import "components/panels/windows/_window-bluetooth.scss";
+@import "components/panels/windows/_window-calendar.scss";
+@import "components/panels/windows/_window-media.scss";
+@import "components/panels/windows/_window-option.scss";
+
+/** Windows **********************************************/
 @import "windows/_windows.scss";
 
-@import "components/dividers/_divider.scss";
-
-/** Optional Windows & Panels ****************************/
-// @import "panels/windows/_bluetooth.scss";
-// @import "variables/_settings.scss";
-// @import "magic/_circular.scss";
-// @import "magic/_linear.scss";
-// @import "magic/_resources.scss";
-// @import "magic/_battery.scss";
-// @import "magic/_text.scss";
-// @import "magic/_base.scss";
-// @import "components/base/_active-media.scss";
-// @import "components/base/_active-window.scss";
+/** Optional / Commented Out *****************************/
+// Add any optional imports here if needed

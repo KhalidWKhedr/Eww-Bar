@@ -7,7 +7,7 @@
     :orientation "h"
 
     (button 
-      :class "directory_option directory_option--home" 
+      :class "directory_home" 
       :height menu-icon-directory-height
       :width menu-icon-directory-width
       :tooltip "Home"
@@ -15,31 +15,31 @@
       icon-home)
 
     (button 
-      :class "directory_option" 
+      :class "directory_documents" 
       :tooltip "Documents"
       :onclick open-documents
       icon-documents)
 
     (button 
-      :class "directory_option" 
+      :class "directory_downloads" 
       :tooltip "Downloads"
       :onclick open-downloads
       icon-downloads)
 
     (button 
-      :class "directory_option" 
+      :class "directory_images" 
       :tooltip "Images"
       :onclick open-pictures
       icon-images)
 
     (button 
-      :class "directory_option" 
+      :class "directory_music" 
       :tooltip "Music"
       :onclick open-music
       icon-music)
 
     (button 
-      :class "directory_option" 
+      :class "directory_videos" 
       :tooltip "Videos"
       :onclick open-videos
       icon-videos)))

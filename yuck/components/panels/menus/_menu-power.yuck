@@ -7,7 +7,7 @@
     :orientation "h"
 
     (button 
-        :class "power_option" 
+        :class "power_shutdown"
         :height menu-icon-power-height
         :width menu-icon-power-width
         :tooltip "Shutdown"
@@ -15,31 +15,31 @@
         icon-shutdown)
 
     (button 
-        :class "power_option" 
+        :class "power_reboot"
         :tooltip "Reboot"
         :onclick "reboot"           
         icon-reboot)
 
     (button 
-        :class "power_option" 
+        :class "power_lock"
         :tooltip "Lock Screen"
         :onclick "hyprlock &"
         icon-lock)
 
     (button 
-        :class "power_option" 
+        :class "power_logout"
         :tooltip "Logout"
         :onclick "exec, hyprctl dispatch exit"
         icon-logout)
 
     (button 
-        :class "power_option" 
+        :class "power_hibernate"
         :tooltip "Hibernate"
         :onclick "systemctl hibernate"
         icon-hibernate)
 
     (button 
-        :class "power_option" 
+        :class "power_suspend"
         :tooltip "Suspend"
         :onclick "systemctl suspend"
         icon-suspend)))

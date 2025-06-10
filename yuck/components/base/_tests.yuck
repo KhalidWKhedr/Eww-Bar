@@ -36,4 +36,4 @@
       :space-evenly false
       (dynamic_media)
       (indicators)
-      (systemtray))))
+      (systemtray)))))

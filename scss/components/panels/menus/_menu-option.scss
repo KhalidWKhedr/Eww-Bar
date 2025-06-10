@@ -1,3 +1,5 @@
+/** Mixins ***************************************/
+
 @mixin menu-option-style($hover-color: $color3) {
   color: $foreground;
   border-radius: 20px;
@@ -12,21 +14,35 @@
   }
 }
 
-/** Options ***************************************/
 
-.power_option {
+/** Menu Options *************************************/
+
+.power_shutdown,
+.power_reboot,
+.power_lock,
+.power_logout,
+.power_hibernate,
+.power_suspend {
   @include menu-option-style;
   font-size: 21px;
   padding-right: 5px;
 }
 
-.directory_option {
+.directory_home,
+.directory_documents,
+.directory_downloads,
+.directory_images,
+.directory_music,
+.directory_videos {
   @include menu-option-style;
   font-size: 27px;
   padding-right: 5px;
 }
 
-.tool_option {
+.tool_option_screenshot,
+.tool_option_picker,
+.tool_option_email,
+.tool_option_github {
   @include menu-option-style;
   font-size: 27px;
   padding-right: 5px;

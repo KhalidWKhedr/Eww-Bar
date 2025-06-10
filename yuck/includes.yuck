@@ -1,85 +1,122 @@
-;;** Includes ***********************************;
+;; ** Includes *********************************** ;
 
+;; ========================
 ;; Variables
+;; ========================
 (include "yuck/variables/_deflisten.yuck")
 (include "yuck/variables/_defpoll.yuck")
 (include "yuck/variables/_defvar.yuck")
 (include "yuck/variables/_icons.yuck")
 
+;; ========================
 ;; Windows
-(include "yuck/windows/_window_bar.yuck")
-(include "yuck/windows/_window_bluetooth.yuck")
-(include "yuck/windows/_window_calendar.yuck")
-(include "yuck/windows/_window_media.yuck")
-(include "yuck/windows/_window_notification.yuck")
+;; ========================
+(include "yuck/windows/_window-bar.yuck")
+(include "yuck/windows/_window-bluetooth.yuck")
+(include "yuck/windows/_window-calendar.yuck")
+(include "yuck/windows/_window-media.yuck")
+(include "yuck/windows/_window-notification.yuck")
 
+;; ========================
 ;; Base Components
+;; ========================
 (include "yuck/components/base/_bar.yuck")
+;;(include "yuck/components/base/_tests.yuck")
 
-;; Magic Components
-(include "yuck/magic/_base-magic-circular.yuck")
-(include "yuck/magic/_systemtray.yuck")
+;; ========================
+;; Magic Components - Base
+;; ========================
+(include "yuck/components/magic/_base-magic-circular.yuck")
+(include "yuck/components/magic/_systemtray.yuck")
 
+;; ========================
+;; Magic Components - Battery
+;; ========================
+(include "yuck/components/magic/battery/_battery.yuck")
+
+;; ========================
+;; Magic Components - Disk
+;; ========================
+; (include "yuck/components/magic/disk/_disk.yuck")
+; (include "yuck/components/magic/disk/_disk-overview.yuck")
+
+;; ========================
+;; Magic Components - Network
+;; ========================
+(include "yuck/components/magic/network/_wifi.yuck")
+
+;; ========================
+;; Magic Components - RAM
+;; ========================
+(include "yuck/components/magic/ram/_ram.yuck")
+(include "yuck/components/magic/ram/_ram-overview.yuck")
+(include "yuck/components/magic/ram/_swap.yuck")
+
+;; ========================
+;; Magic Components - Temps
+;; ========================
+(include "yuck/components/magic/temps/_cpu.yuck")
+(include "yuck/components/magic/temps/_gpu_amd.yuck")
+(include "yuck/components/magic/temps/_nvme1.yuck")
+(include "yuck/components/magic/temps/_nvme2.yuck")
+(include "yuck/components/magic/temps/_temps-overview.yuck")
+
+;; ========================
 ;; Controls
+;; ========================
 (include "yuck/components/controls/_base-control.yuck")
 (include "yuck/components/controls/_controls-media.yuck")
 
+;; ========================
 ;; Launchers
-(include "yuck/components/launchers/_base-launcher.yuck")
-(include "yuck/components/launchers/_launcher-app.yuck")
-(include "yuck/components/launchers/_launcher-directories.yuck")
-(include "yuck/components/launchers/_launcher-media.yuck")
-(include "yuck/components/launchers/_launcher-power.yuck")
-(include "yuck/components/launchers/_launcher-settings.yuck")
-(include "yuck/components/launchers/_launcher-tools.yuck")
+;; ========================
+(include "yuck/components/panels/launchers/_base-launcher.yuck")
+(include "yuck/components/panels/launchers/_launcher-app.yuck")
+(include "yuck/components/panels/launchers/_launcher-directories.yuck")
+(include "yuck/components/panels/launchers/_launcher-media.yuck")
+(include "yuck/components/panels/launchers/_launcher-power.yuck")
+(include "yuck/components/panels/launchers/_launcher-settings.yuck")
+(include "yuck/components/panels/launchers/_launcher-tools.yuck")
 
+;; ========================
 ;; Indicators
+;; ========================
 (include "yuck/components/indicators/_base-indicator-circle.yuck")
 (include "yuck/components/indicators/_indicator-bluetooth.yuck")
 (include "yuck/components/indicators/_indicator-brightness.yuck")
 (include "yuck/components/indicators/_indicator-volume.yuck")
 (include "yuck/components/indicators/_indicators.yuck")
 
-(include "yuck/components/dividers/_diviers.yuck")
-;; Dynamic Content
-(include "yuck/dynamic/active/_base-active.yuck")
-(include "yuck/dynamic/workspaces/_workspaces.yuck")
-(include "yuck/dynamic/active/_active-window.yuck")
-(include "yuck/dynamic/active/_active-media.yuck")
+;; ========================
+;; Dividers
+;; ========================
+(include "yuck/components/dividers/_dividers.yuck")
 
+;; ========================
+;; Dynamic Content - Active
+;; ========================
+(include "yuck/components/dynamic/active/_base-active.yuck")
+(include "yuck/components/dynamic/active/_active-media.yuck")
+(include "yuck/components/dynamic/active/_active-window.yuck")
+
+;; ========================
+;; Dynamic Content - Workspaces
+;; ========================
+(include "yuck/components/dynamic/workspaces/_workspaces.yuck")
+
+;; ========================
 ;; Panels - Menus
-(include "yuck/panels/menus/_base-menu.yuck")
-(include "yuck/panels/menus/_menu-datetime.yuck")
-(include "yuck/panels/menus/_menu-directories.yuck")
-(include "yuck/panels/menus/_menu-power.yuck")
-(include "yuck/panels/menus/_menu-tools.yuck")
+;; ========================
+(include "yuck/components/panels/menus/_base-menu.yuck")
+(include "yuck/components/panels/menus/_menu-datetime.yuck")
+(include "yuck/components/panels/menus/_menu-directories.yuck")
+(include "yuck/components/panels/menus/_menu-power.yuck")
+(include "yuck/components/panels/menus/_menu-tools.yuck")
 
+;; ========================
 ;; Panels - Windows
-(include "yuck/panels/windows/_panel-bluetooth.yuck")
-(include "yuck/panels/windows/_panel-media.yuck")
-(include "yuck/panels/windows/_panel-notification.yuck")
-(include "yuck/panels/windows/_panel-settings.yuck")
-
-
-;; Magic Resources - Battery
-(include "yuck/magic/battery/_battery.yuck")
-
-;; Magic Resources - Disk
-; (include "yuck/magic/disk/_disk.yuck")
-; (include "yuck/magic/disk/_disk-overview.yuck")
-
-;; Magic Resources - Network
-(include "yuck/magic/network/_wifi.yuck")
-
-;; Magic Resources - RAM
-(include "yuck/magic/ram/_ram.yuck")
-(include "yuck/magic/ram/_ram-overview.yuck")
-(include "yuck/magic/ram/_swap.yuck")
-
-;; Magic Resources - Temps
-(include "yuck/magic/temps/_cpu.yuck")
-(include "yuck/magic/temps/_gpu_amd.yuck")
-(include "yuck/magic/temps/_nvme1.yuck")
-(include "yuck/magic/temps/_nvme2.yuck")
-(include "yuck/magic/temps/_temps-overview.yuck")
-
+;; ========================
+(include "yuck/components/panels/windows/_window-bluetooth.yuck")
+(include "yuck/components/panels/windows/_window-media.yuck")
+(include "yuck/components/panels/windows/_window-notification.yuck")
+(include "yuck/components/panels/windows/_window-settings.yuck")
