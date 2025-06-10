@@ -1,41 +1,47 @@
 (defwidget date_time []
-  (box
-    :class "datetime_container"
-    :orientation "h"
 
-    (eventbox 
-      :onhover toggle_date_reveal_onhover
-      :onhoverlost toggle_date_reveal_onhoverlost
+  (eventbox 
+    :onhover toggle_date_reveal_onhover
+    :onhoverlost toggle_date_reveal_onhoverlost
 
+    (box 
+      :class "datetime_container"
+      :orientation "h"
+      :space-evenly false
+      :halign "center"
+      :valign "center"
+
+      ;; Group: hour | divider | minute
       (box 
+        :class "time_group"
         :orientation "h"
         :space-evenly false
-        :halign "center"
-        :valign "center"
 
         (button 
           :class "time_hour"
-          :width time-button-width
-          :height time-button-height
+          :width time-hour-button-width
+          :height time-hour-button-height
           :tooltip "Time"
           :onclick toggle_calendar_hour_cmd hour)
 
         (button 
           :class "time_minute"
-          :width time-button-width
-          :height time-button-height
+          :width time-minute-button-width
+          :height time-minute-button-height
           :tooltip "Time"
-          :onclick toggle_calendar_min_cmd min)
+          :onclick toggle_calendar_min_cmd min))
+      
 
-        (revealer 
-          :class "date_revealer"
-          :transition "slideleft"
-          :reveal reveal_date
-          :duration "250ms"
+      ;; Separate: date
+      (revealer 
+        :class "date_revealer"
+        :transition "slideleft"
+        :reveal reveal_date
+        :duration "250ms"
 
-          (button 
-            :class "time_date"
-            :tooltip "Date Today"
-            :width date-button-width
-            :height date-button-height
-            :onclick toggle_calendar_date_cmd date))))))
+        (button 
+          :class "time_date"
+          :tooltip "Date"
+          :width date-button-width
+          :height date-button-height
+          :onclick toggle_calendar_date_cmd date)))))

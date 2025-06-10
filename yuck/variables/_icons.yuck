@@ -76,6 +76,7 @@
 ;; =========================
 ;;      EXTRA ICONS
 ;; =========================
+(defvar time-divider "∶")
 (defvar window-icon "󰊢")
 (defvar moon-icons_1 "             ")
 (defvar moon-icons_2 "             ")

@@ -97,29 +97,32 @@
 ;;     Widget Dimensions (Buttons)
 ;; ====================================
 
-(defvar power-launcher-height      28)
-(defvar power-launcher-width       28)
+(defvar power-launcher-height       28)
+(defvar power-launcher-width        28)
 
-(defvar dir-launcher-height        38)
-(defvar dir-launcher-width         43)
+(defvar dir-launcher-height         38)
+(defvar dir-launcher-width          43)
 
-(defvar tools-launcher-height      38)
-(defvar tools-launcher-width       43)
+(defvar tools-launcher-height       38)
+(defvar tools-launcher-width        43)
 
-(defvar app-launcher-height        38)
-(defvar app-launcher-width         43)
+(defvar app-launcher-height         38)
+(defvar app-launcher-width          43)
 
-(defvar media-launcher-height      38)
-(defvar media-launcher-width       43)
+(defvar media-launcher-height       38)
+(defvar media-launcher-width        43)
 
-(defvar settings-launcher-height   38)
-(defvar settings-launcher-width    43)
+(defvar settings-launcher-height    38)
+(defvar settings-launcher-width     43)
 
-(defvar time-button-height         38)
-(defvar time-button-width          40)
+(defvar time-hour-button-height     38)
+(defvar time-hour-button-width      43)
 
-(defvar date-button-height         38) 
-(defvar date-button-width         225)
+(defvar time-minute-button-height   38)
+(defvar time-minute-button-width    38)
+
+(defvar date-button-height          38) 
+(defvar date-button-width          225)
 
 ;; ====================================
 ;;  Widget Dimensions (Menu Icon Btns)
