@@ -1,5 +1,12 @@
 # Eww-Bar
 
+## 📺 Demo
+
+[![Watch the Eww-bar demo on Vimeo](https://i.vimeocdn.com/video/1820848590-0c6f437b29fd146cb22101687d7a3b03867ef7d4c389f6a61c579dc77d2a02cc-d_640)](https://vimeo.com/1092604137)
+
+[Click here to watch on Vimeo](https://vimeo.com/1092604137)
+
+
 A highly modular and customizable GTK bar for Linux desktops, built using [EWW (ElKowar's Wacky Widgets)](https://elkowar.github.io/eww/) and the Yuck configuration language.
 
 > **Author:** [KhalidWKhedr](https://github.com/KhalidWKhedr)  
