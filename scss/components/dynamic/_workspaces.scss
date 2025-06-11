@@ -6,7 +6,7 @@
   box-shadow: $shadow-inset-soft;
 }
 
-@mixin workspace-shared {
+@mixin workspace-shared-margin {
   margin-left: 1px;
   margin-right: 1px;
 }
@@ -37,9 +37,10 @@
   @include workspace-style;
 }
 
-// Apply margins to all
-.w0,.w1,.w2, {
-  @include workspace-shared;
+// Apply margins to all workspace states
+.w0, .w1, .w2 {
+  @include workspace-shared-margin;
+  @include workspace-hover;
 }
 
 .icon {
@@ -48,22 +49,16 @@
 
 .subscript {
   font-size: 5px;
-  margin-left: 0px;
+  margin-left: 0;
 }
+
 // Unoccupied workspace
-.w0, {
+.w0 {
   @include workspace-unoccupied;
-  @include workspace-hover;
 }
 
 // Occupied workspaces
-.w1, {
+.w1,
+.w2 {
   @include workspace-occupied;
-  @include workspace-hover;
-}
-
-// Focused workspaces (same style as occupied)
-.w2, {
-  @include workspace-occupied;
-  @include workspace-hover;
 }

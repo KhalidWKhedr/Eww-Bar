@@ -4,8 +4,7 @@
   color: $foreground;
   border-radius: 20px;
   transition: box-shadow 0.3s ease;
-  margin-right: 2px;
-  margin-left: 2px;
+  margin: 0 2px;
 
   &:hover {
     color: $hover-color;
@@ -14,9 +13,9 @@
   }
 }
 
-
 /** Menu Options *************************************/
 
+// Power options
 .power_shutdown,
 .power_reboot,
 .power_lock,
@@ -28,22 +27,24 @@
   padding-right: 5px;
 }
 
+// Directory options
 .directory_home,
 .directory_documents,
 .directory_downloads,
 .directory_images,
 .directory_music,
-.directory_videos {
-  @include menu-option-style;
-  font-size: 27px;
-  padding-right: 5px;
-}
-
-.tool_option_screenshot,
+.directory_videos,
 .tool_option_picker,
 .tool_option_email,
 .tool_option_github {
   @include menu-option-style;
   font-size: 27px;
   padding-right: 5px;
+}
+
+// Screenshot tool option (unique padding)
+.tool_option_screenshot {
+  @include menu-option-style;
+  font-size: 29px;
+  padding-right: 3px;
 }

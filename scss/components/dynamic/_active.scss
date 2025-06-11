@@ -1,20 +1,19 @@
 /** Mixins ***********************************/
-@mixin dynamic-box-style {
-  margin-left: 5px;
-  padding-right: 5px;
-  padding-left: 5px;
+
+@mixin box-style {
+  padding: 0 5px; // shorthand for left and right padding
   background-color: $color3;
   box-shadow: $shadow-inset-soft;
   border-radius: 10px;
 }
 
-@mixin dynamic-label-style {
+@mixin label-style {
   font-weight: bold;
   color: $color5;
   font-size: 16px;
 }
 
-@mixin dynamic-sub-label-style {
+@mixin sub-label-style {
   font-size: 14px;
   color: $foreground;
 }
@@ -22,18 +21,23 @@
 /** Active Media ***********************************/
 
 /* Container Boxes */
-.workspace_box_container,
+.workspace_box_container {
+  @include box-style;
+  margin-left: 5px;
+}
+
 .media_box_container {
-  @include dynamic-box-style;
+  @include box-style;
+  margin-right: 5px;
 }
 
 /* Labels */
 .media_label_artist,
 .dynamic_workspace_label {
-  @include dynamic-label-style;
+  @include label-style;
 }
 
 .media_label_song,
 .workspace_label {
-  @include dynamic-sub-label-style;
+  @include sub-label-style;
 }

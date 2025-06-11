@@ -2,27 +2,17 @@
 // GENERIC INDICATOR MIXINS
 // ========================
 
-@mixin indicator-box {
-  margin-right: 5px;
-  margin-top: 2px;
-  margin-bottom: 2px;
-}
-
-@mixin indicator-box-individal {
+@mixin indicator-box-individual {
   border-radius: 20px;
-  box-shadow: $shadow-inset-soft; 
+  box-shadow: $shadow-inset-soft;
   background-color: $color3;
-}
-
-@mixin indicator-circle {
-  color: $foreground;
 }
 
 @mixin indicator-button {
   color: $foreground;
   background-color: $color1;
   box-shadow: $shadow-inset-soft;
-  border-radius: 20%;;
+  border-radius: 20%;
   transition: all 0.3s ease;
 
   &:hover {
@@ -39,86 +29,53 @@
   text-shadow: 0 0 2px $color5;
 }
 
-// ====================
-// Boxes
-// ====================
-.indicator_box {
-  @include indicator-box;
-}
+// ========================
+// COMPONENT STYLES
+// ========================
 
-// ====================
-// Individual Boxes
-// ====================
-
+// Shared styles for boxes and progress indicators
 .indicator_volume_box,
 .indicator_brightness_box,
 .indicator_bluetooth_box,
-.magic_battery_box {
-  @include indicator-box-individal;
-}
-
-// ====================
-// Circular Progress 
-// ====================
-
+.magic_battery_box,
 .indicator_volume_progress,
 .indicator_brightness_progress,
 .indicator_bluetooth_progress,
 .magic_battery_progress {
-  @include indicator-box-individal;
+  @include indicator-box-individual;
+  margin-right: 5px;
 }
 
-// ====================
 // Buttons
-// ====================
+.indicator_volume_button,
+.indicator_brightness_button,
+.indicator_bluetooth_button,
+.magic_battery_button {
+  @include indicator-button;
+}
 
 .indicator_volume_button {
-  @include indicator-button;
   font-size: 16px;
   padding-right: 11px;
 }
 
 .indicator_brightness_button {
-  @include indicator-button;
   font-size: 27px;
   margin-right: 1px;
   margin-top: 1px;
 }
 
 .indicator_bluetooth_button {
-  @include indicator-button;
   font-size: 23px;
   margin-right: 1px;
 }
 
-.magic_battery_button {
-  @include indicator-button;
-  // add specific style if needed
-}
-
-// ====================
 // Labels
-// ====================
-
-.indicator_volume_label {
-  @include indicator-label;
-  font-size: 15px;
-  margin-right: 5px;
-}
-
-.indicator_brightness_label {
-  @include indicator-label;
-  font-size: 15px;
-  margin-right: 5px;
-}
-
-.indicator_bluetooth_label {
-  @include indicator-label;
-  font-size: 15px;
-  margin-right: 5px;
-}
-
+.indicator_volume_label,
+.indicator_brightness_label,
+.indicator_bluetooth_label,
 .magic_battery_label {
   @include indicator-label;
-  // add specific style if needed
+  font-size: 15px;
+  margin-right: 5px;
 }

@@ -21,8 +21,8 @@
       :start-at 0
       :thickness 3
       :clockwise true
-      :width 38
-      :height 38
+      :width indicators-width
+      :height indicators-height
 
       (button
         :class button_class

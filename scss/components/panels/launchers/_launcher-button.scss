@@ -5,6 +5,7 @@
   background-color: $color2;
   border-radius: 20px;
   box-shadow: $shadow-bottom-subtle;
+  transition: box-shadow 0.3s ease, color 0.3s ease;
 }
 
 @mixin button-hover-style {
@@ -22,6 +23,11 @@
 
 /** Individual Button Classes ************************************/
 
+// Shared padding helpers for buttons with similar padding patterns
+@mixin padding-right($right, $top: 0, $bottom: 0, $left: 0) {
+  padding: $top $right $bottom $left;
+}
+
 .power_button_launcher {
   font-size: 23px;
   margin-top: 1px;
@@ -31,8 +37,7 @@
 
 .directory_button_launcher {
   font-size: 25px;
-  padding-right: 8px;
-  padding-bottom: 1px;
+  @include padding-right(8px, 0, 1px);
   @include full-button-style;
 }
 
@@ -48,18 +53,10 @@
   @include full-button-style;
 }
 
-.media_button_launcher {
-  font-size: 30px;
-  padding-right: 7px;
-  padding-top: 2px;
-  @include full-button-style;
-}
-
+.media_button_launcher,
 .settings_button_launcher {
   font-size: 30px;
   padding-right: 7px;
   padding-top: 2px;
   @include full-button-style;
 }
-
-

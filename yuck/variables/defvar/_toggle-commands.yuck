@@ -1,0 +1,39 @@
+;; ===============================
+;;       toggle-commands.yuck
+;; ===============================
+
+;; Date/Time Hover Commands
+(defvar toggle_date_reveal_onhover      "eww update reveal_date=true")
+(defvar toggle_date_reveal_onhoverlost  "eww update reveal_date=false")
+
+;; Calendar Toggles
+(defvar toggle_calendar_hour_cmd  "eww open --toggle window_calendar")
+(defvar toggle_calendar_min_cmd   "eww open --toggle window_calendar")
+(defvar toggle_calendar_date_cmd  "eww open --toggle window_calendar")
+
+(defvar toggle_directories_cmd 
+  "if eww get reveal_directories | grep -q true; then \
+     eww update reveal_directories=false; \
+   else \
+     eww update reveal_directories=true; \
+   fi")
+
+(defvar toggle_power_cmd 
+  "if eww get reveal_power | grep -q true; then \
+     eww update reveal_power=false; \
+   else \
+     eww update reveal_power=true; \
+   fi")
+
+(defvar toggle_tools_cmd 
+  "if eww get reveal_tools | grep -q true; then \
+     eww update reveal_tools=false; \
+   else \
+     eww update reveal_tools=true; \
+   fi")
+
+;; Window Toggles
+(defvar toggle_bluetooth_cmd  "eww open --toggle window_bluetooth")
+(defvar toggle_calendar_cmd   "eww open --toggle window_calendar")
+(defvar toggle_media_cmd      "eww open --toggle window_media")
+(defvar toggle_settings_cmd   "eww open --toggle window_settings")

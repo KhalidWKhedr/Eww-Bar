@@ -1,0 +1,18 @@
+;; ===============================
+;;       system-actions.yuck
+;; ===============================
+
+;; Open Folder Commands
+(defvar open-documents   "sh -c 'xdg-open $HOME/Documents'")
+(defvar open-downloads   "sh -c 'xdg-open $HOME/Downloads'")
+(defvar open-home        "sh -c 'xdg-open $HOME'")
+(defvar open-music       "sh -c 'xdg-open $HOME/Music'")
+(defvar open-pictures    "sh -c 'xdg-open $HOME/Pictures'")
+(defvar open-videos      "sh -c 'xdg-open $HOME/Videos'")
+
+;; Playerctl
+(defvar action-loop      "sh -c 'playerctl loop toggle &'")
+(defvar action-next      "sh -c 'playerctl next &'")
+(defvar action-play      "sh -c 'playerctl play-pause &'")
+(defvar action-previous  "sh -c 'playerctl previous &'")
+(defvar action-shuffle   "sh -c 'playerctl shuffle toggle &'")

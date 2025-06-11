@@ -21,11 +21,22 @@ fi
 # Ignore SIGPIPE to handle broken pipe gracefully
 trap '' SIGPIPE
 
-# Function to escape JSON strings
-escape_json() {
+# Function to escape JSON strings and force single line output
+escape_json_single_line() {
     local str="$1"
-    str="${str//\"/\\\"}"  # Escape double quotes
-    str="${str//$'\n'/\\n}" # Escape newlines
+    # Remove carriage returns and newlines characters (real ones)
+    str="${str//$'\r'/ }"
+    str="${str//$'\n'/ }"
+    # Replace literal backslash + n (two chars) with a space
+    str="${str//\\n/ }"
+    # Replace literal backslash + r (two chars) with a space
+    str="${str//\\r/ }"
+    # Remove multiple spaces
+    str="$(echo "$str" | tr -s ' ')"
+    # Trim spaces on both ends
+    str="$(echo "$str" | sed -e 's/^[[:space:]]*//' -e 's/[[:space:]]*$//')"
+    # Escape double quotes
+    str="${str//\"/\\\"}"
     printf '%s' "$str"
 }
 
@@ -39,7 +50,7 @@ process_events() {
             IFS=',' read -r app_name config_name <<< "$window_info"
             [[ -n "$DEBUG" ]] && echo "App name: '$app_name', Config name: '$config_name'" >&2
             if [[ ! "$app_name" =~ ^[0-9a-f]{12}$ && -n "$app_name" ]]; then
-                printf '{"title":"%s","sublabel":"%s"}\n' "$(escape_json "$app_name")" "$(escape_json "$config_name")"
+                printf '{"title":"%s","sublabel":"%s"}\n' "$(escape_json_single_line "$app_name")" "$(escape_json_single_line "$config_name")"
             else
                 [[ -n "$DEBUG" ]] && echo "Filtered out: app_name='$app_name' is invalid or empty" >&2
             fi

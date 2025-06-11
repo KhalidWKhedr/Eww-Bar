@@ -1,0 +1,23 @@
+;; ===============================
+;;       core-vars.yuck
+;; ===============================
+
+;; Core Settings
+(defvar eww "eww -c $HOME/.config/eww/")
+(defvar screenshot_mode "area")
+(defvar application_launcher_cmd "fuzzel &")
+
+;; Visibility States
+(defvar visible_bluetooth    false)
+(defvar visible_calendar     false)
+(defvar visible_media        false)
+(defvar visible_settings     false)
+
+;; Reveal States
+(defvar reveal_date          false)
+(defvar reveal_directories   false)
+(defvar reveal_power         false)
+(defvar reveal_tools         false)
+
+(defvar bluetooth-enabled    false)
+(defvar toggle_bluetooth     false)

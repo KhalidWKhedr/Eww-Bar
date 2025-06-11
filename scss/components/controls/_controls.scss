@@ -1,18 +1,22 @@
 /** Mixins ******************************************/
 
-@mixin media-control-default {
+// Base font size for main controls
+@mixin control-base-font {
   font-size: 24px;
 }
 
-@mixin media-control-shuffle {
+// Smaller font size for shuffle control
+@mixin control-shuffle-font {
   font-size: 20px;
 }
 
-@mixin media-control-next {
+// Margin-left for next control button
+@mixin control-next-margin {
   margin-left: 5px;
 }
 
-@mixin media-control-loop {
+// Slightly smaller font size for loop control
+@mixin control-loop-font {
   font-size: 23px;
 }
 
@@ -20,23 +24,23 @@
 /** Media Controls **********************************/
 
 .media_shuffle {
-  @include media-control-shuffle;
+  @include control-shuffle-font;
 }
 
 .media_previous {
-  @include media-control-default;
+  @include control-base-font;
 }
 
 .media_play {
-  @include media-control-default;
+  @include control-base-font;
 }
 
 .media_next {
-  @include media-control-default;
-  @include media-control-next;
+  @include control-base-font;
+  @include control-next-margin;
 }
 
 .media_loop {
-  @include media-control-default;
-  @include media-control-loop;
+  @include control-base-font;
+  @include control-loop-font;
 }

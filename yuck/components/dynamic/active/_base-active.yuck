@@ -14,9 +14,15 @@
     (label
       :class class_label_top
       :halign "start"
-      :text top_text)
+      :text top_text
+      :limit-width base-limit-width-top
+      :lines base-lines-top 
+      :wrap false)
 
     (label
       :class class_label_bottom
       :halign "center"
-      :text bottom_text)))
+      :text bottom_text
+      :limit-width base-limit-width-bottom
+      :lines base-lines-bottom
+      :wrap false)))

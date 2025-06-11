@@ -3,10 +3,15 @@
 ;; ========================
 ;; Variables
 ;; ========================
+
+(include "yuck/variables/defvar/_core-vars.yuck")
+(include "yuck/variables/defvar/_widget-dimensions.yuck")
+(include "yuck/variables/defvar/_toggle-commands.yuck")
+(include "yuck/variables/defvar/_system-actions.yuck")
+(include "yuck/variables/defvar/_icons.yuck")
+
 (include "yuck/variables/_deflisten.yuck")
 (include "yuck/variables/_defpoll.yuck")
-(include "yuck/variables/_defvar.yuck")
-(include "yuck/variables/_icons.yuck")
 
 ;; ========================
 ;; Windows

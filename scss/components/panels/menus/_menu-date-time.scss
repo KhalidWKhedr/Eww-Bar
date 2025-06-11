@@ -2,47 +2,34 @@
 
 @mixin container-style {
   transition: all 0.2s ease;
-  margin-top: 2px;
-  margin-bottom: 2px;
+  margin: 2px 0;
+}
+
+@mixin common-time-date-style {
+  border-radius: 20px;
+  color: $foreground;
+  background-color: $color3;
+  box-shadow: $shadow-inset-soft;
+  transition: all 0.2s ease;
+
+  &:hover {
+    color: $color9;
+    background-color: $color6;
+    box-shadow: 0 0 5px $color6;
+  }
 }
 
 @mixin time-style {
-  margin-right: 2px;
-  padding-left: 1px;
-  border-radius: 20px;
-
-  font-size: 22px;
+  @include common-time-date-style;
+  font-size: 24px;
   letter-spacing: -0.5px;
-  color: $foreground;
-  background-color: $color3;
-  box-shadow: $shadow-inset-soft;
-
-  transition: all 0.2s ease;
-
-  &:hover {
-    color: $color9;
-    background-color: $color6;
-    box-shadow: 0 0 5px $color6;
-  }
 }
 
 @mixin date-style {
-  padding-top: 0px;
-  border-radius: 20px;
-
+  @include common-time-date-style;
+  padding-top: 0;
   font-size: 20px;
-  color: $foreground;
   text-shadow: 0 0 2px $color2;
-
-  background-color: $color3;
-  box-shadow: $shadow-inset-soft;
-  transition: all 0.2s ease;
-
-  &:hover {
-    color: $color9;
-    background-color: $color6;
-    box-shadow: 0 0 5px $color6;
-  }
 }
 
 /** Styles ****************************************/
@@ -51,9 +38,15 @@
   @include container-style;
 }
 
-.time_hour,
+.time_group,
 .time_minute {
   @include time-style;
+}
+
+.time_hour {
+  @include time-style;
+  margin-right: 5px;
+  padding-right: 2px;
 }
 
 .time_date {

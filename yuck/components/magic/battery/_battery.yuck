@@ -28,4 +28,6 @@
     :label_text "${EWW_BATTERY.BAT0.capacity}"
     :label_style "font-size: 15px; margin-left: 5px"
     :tooltip "Battery ${EWW_BATTERY.BAT0.capacity}% - ${EWW_BATTERY.BAT0.status}"
-    :value {EWW_BATTERY.BAT0.capacity}))
+    :value {EWW_BATTERY.BAT0.capacity}
+    :height indicators-height
+    :width indicators-width))
