@@ -1,4 +1,4 @@
-(defwidget media []
+(defwidget window_media []
   (box 
     :class "media_player"
     :orientation "v"

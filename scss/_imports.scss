@@ -39,8 +39,9 @@
 /** Panel Windows ****************************************/
 //@import "components/panels/windows/_window-bluetooth.scss";
 @import "components/panels/windows/_window-calendar.scss";
+@import "components/panels/windows/_window-dashboard.scss"
 @import "components/panels/windows/_window-media.scss";
-@import "components/panels/windows/_window-option.scss";
+@import "components/panels/windows/_window-notification.scss"
 
 /** Windows **********************************************/
 @import "windows/_windows.scss";

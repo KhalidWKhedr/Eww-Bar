@@ -2,15 +2,15 @@
 ;;                        window_settings (window definition)           ;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-(defwindow window_notification
+(defwindow window_dashboard
   :monitor 1
-  :geometry (geometry :x "50%"
-                      :y "50%"
+  :geometry (geometry :x "35.5%"
+                      :y "20%"
                       :height "45%"
                       :width "30%"
                       :anchor "top right")
   :stacking "fg"
-  :namespace "window_notification"
+  :namespace "window_dashboard"
   :exclusive true
   :focusable false
   (dashboard))

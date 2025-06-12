@@ -6,6 +6,12 @@
   border-radius: 20px;
   box-shadow: $shadow-inset-soft;
   background-color: $color3;
+  margin-right: 5px;
+}
+
+@mixin indicator-circle-progress{
+  color: $foreground;
+
 }
 
 @mixin indicator-button {
@@ -37,13 +43,16 @@
 .indicator_volume_box,
 .indicator_brightness_box,
 .indicator_bluetooth_box,
-.magic_battery_box,
+.magic_battery_box{
+  @include indicator-box-individual;
+
+}
+
 .indicator_volume_progress,
 .indicator_brightness_progress,
 .indicator_bluetooth_progress,
 .magic_battery_progress {
-  @include indicator-box-individual;
-  margin-right: 5px;
+  @include indicator-circle-progress;
 }
 
 // Buttons

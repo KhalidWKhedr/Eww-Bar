@@ -1,0 +1,32 @@
+
+.tab-button {
+  background-color: #3b4252;  /* dark gray-blue */
+  color: #d8dee9;             /* light text */
+  border: 1px solid #4c566a;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-weight: 600;
+}
+
+.tab-button.active {
+  background-color: #88c0d0;  /* lighter blue */
+  color: #2e3440;             /* dark text */
+  border-color: #81a1c1;
+}
+
+.tab-content {
+  background-color: #2e3440;  /* dark background */
+  color: #eceff4;             /* light text */
+  padding: 12px;
+  border: 1px solid #4c566a;
+  border-radius: 8px;
+  margin-top: 10px;
+}
+
+/* For quick color debugging, add a distinct background color to each tab */
+.tab-content:nth-child(1) { background-color: #5e81ac; }  /* Notifications */
+.tab-content:nth-child(2) { background-color: #a3be8c; }  /* Bluetooth */
+.tab-content:nth-child(3) { background-color: #b48ead; }  /* Media */
+.tab-content:nth-child(4) { background-color: #d08770; }  /* Output */
+.tab-content:nth-child(5) { background-color: #ebcb8b; }  /* Input */
+.tab-content:nth-child(6) { background-color: #bf616a; }  /* System */

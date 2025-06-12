@@ -1,0 +1,83 @@
+(defvar tab-index 0)
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;                Individual Tab Content Widgets             ;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+(defwidget notifications []
+  (box 
+    :class "tab-content" 
+    :height 550
+    :width 700
+    (label 
+      :text "Notifications panel")))
+
+(defwidget bluetooth []
+  (box 
+    :class "tab-content" 
+    (label 
+      :text "Bluetooth settings")))
+
+(defwidget media []
+  (box 
+    :class "tab-content" 
+    (label 
+      :text "Media controls")))
+
+(defwidget output-devices []
+  (box 
+    :class "tab-content" 
+    (label 
+      :text "Output devices")))
+
+(defwidget input-devices []
+  (box 
+    :class "tab-content" 
+    (label 
+      :text "Input devices")))
+
+(defwidget system []
+  (box 
+    :class "tab-content" 
+    (label 
+      :text "System settings")))
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;                       Tab Container                       ;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+(defwidget tab-button [index]
+
+  (button
+    :class {(tab-index == index) ? "tab-button active" : "tab-button"}
+    :onclick "${EWW_CMD} update tab-index=${index}"
+    :width 43
+    :height 43))
+
+(defwidget dashboard []
+  (box
+    :orientation "vertical"
+    :space-evenly false
+    :halign "center"
+    ;; Button Row
+    (box 
+      :orientation "horizontal"
+      :space-evenly false
+      :halign "center"
+      (tab-button :index 0)
+      (tab-button :index 1)
+      (tab-button :index 2)
+      (tab-button :index 3)
+      (tab-button :index 4)
+      (tab-button :index 5))
+
+    ;; Stack Area
+    (stack
+      :selected "${tab-index}"
+      :transition "crossfade"
+      :same-size true
+      (notifications)
+      (bluetooth)
+      (media)
+      (output-devices)
+      (input-devices)
+      (system))))
